@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "kwagner-development-site",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "Development website for Kristopher Wagner",
+  "version": "0.0.1",
+  "author": "Kristopher Wagner <kristopher.wagner@outlook.com>",
   "dependencies": {
     "gatsby": "^5.12.1",
     "gatsby-plugin-image": "^3.12.0",
