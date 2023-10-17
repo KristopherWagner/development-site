@@ -12,7 +12,7 @@ import {
   About,
   Covid,
   EventDetails,
-  FAQ,
+  Faq,
   Navigation,
   Parallax,
   Section,
@@ -69,7 +69,7 @@ export default function WeddingPage() {
       <Parallax aspectRatio="5000/3271" url={WheelWalking} />
       <Parallax aspectRatio="2787/4270" mobile url={EskimoKisses} />
       <Section anchor="faq" variant="light">
-        <FAQ />
+        <Faq />
       </Section>
     </>
   );
