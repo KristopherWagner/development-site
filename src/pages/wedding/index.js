@@ -75,42 +75,33 @@ export default function WeddingPage() {
 }
 
 export function Head() {
+  const title = 'Swanson/Wagner Wedding';
+  const url = 'https://kwagner.dev/wedding';
+  const description = 'All of the details for our Disney Fairy Tale Wedding';
+  const imageUrl =
+    'https://kwagner.dev/static/starlight_lounge-cf67d74b7be4b4baf494389267fa8e60.webp';
+
   return (
     <>
-      <title>Swanson/Wagner Wedding</title>
-      <meta
-        name="description"
-        content="All of the details for our Disney Fairy Tale Wedding"
-      />
+      <title>{title}</title>
+      <meta name="description" content={description} />
       <meta name="robots" content="nofollow, noimageindex, noarchive" />
-      <link rel="canonical" href="https://swansonwagner.wedding" />
+      <link rel="canonical" href={url} />
 
       {/* Facebook */}
-      <meta property="og:url" content="https://swansonwagner.wedding" />
+      <meta property="og:url" content={url} />
       <meta property="og:type" content="website" />
-      <meta property="og:title" content="Swanson/Wagner Wedding" />
-      <meta
-        property="og:description"
-        content="All of the details for our Disney Fairy Tale Wedding"
-      />
-      <meta
-        property="og:image"
-        content="https://swansonwagner.wedding/static/starlight_lounge-cf67d74b7be4b4baf494389267fa8e60.webp"
-      />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={imageUrl} />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta property="twitter:domain" content="swansonwagner.wedding" />
-      <meta property="twitter:url" content="https://swansonwagner.wedding" />
-      <meta name="twitter:title" content="Swanson/Wagner Wedding" />
-      <meta
-        name="twitter:description"
-        content="All of the details for our Disney Fairy Tale Wedding"
-      />
-      <meta
-        name="twitter:image"
-        content="https://swansonwagner.wedding/static/starlight_lounge-cf67d74b7be4b4baf494389267fa8e60.webp"
-      />
+      <meta property="twitter:domain" content="kwagner.dev" />
+      <meta property="twitter:url" content={url} />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={imageUrl} />
     </>
   );
 }
