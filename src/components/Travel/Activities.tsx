@@ -1,22 +1,8 @@
 import React from 'react';
-import styled from 'styled-components';
 
 import Link from '../Link';
 
-const List = styled.ul`
-    list-style-type: none;
-    padding: 0;
-`;
-
-// eslint-disable-next-line react/prop-types
-function BodyLI({ className, children }) {
-  return <li className={`${className} body1`}>{children}</li>;
-}
-
-const Bold = styled(BodyLI)`
-    font-weight: bold;
-    margin: 0 auto;
-`;
+import * as styles from './Activities.module.css';
 
 export default function Activities() {
   return (
@@ -30,8 +16,8 @@ export default function Activities() {
         <i className="fa-duotone fa-pizza-slice" />
         {' Eat'}
       </h5>
-      <List>
-        <Bold>EPCOT</Bold>
+      <ul className={styles.list}>
+        <b>EPCOT</b>
         <li className="body2">
           <Link
             href="https://disneyworld.disney.go.com/dining/epcot/teppan-edo/"
@@ -44,67 +30,69 @@ export default function Activities() {
             text="International Flower & Garden Festival"
           />
         </li>
-      </List>
-      <List>
-        <Bold>Disney&apos;s Animal Kingdom</Bold>
+      </ul>
+      <ul className={styles.list}>
+        <b>Disney&apos;s Animal Kingdom</b>
         <li className="body2">
           <Link
             href="https://disneyworld.disney.go.com/dining/animal-kingdom/satuli-canteen/"
             text="Satu'li Canteen"
           />
         </li>
-      </List>
-      <List>
-        <Bold>Disney&apos;s Hollywood Studios</Bold>
+      </ul>
+      <ul className={styles.list}>
+        <li className="body2">
+          <b>Disney&apos;s Hollywood Studios</b>
+        </li>
         <li className="body2">
           <Link
             href="https://disneyworld.disney.go.com/dining/hollywood-studios/docking-bay-7-food-and-cargo/"
             text="Docking Bay 7"
           />
         </li>
-      </List>
-      <List>
-        <Bold>Disney Springs</Bold>
+      </ul>
+      <ul className={styles.list}>
+        <b>Disney Springs</b>
         <li className="body2">
           <Link
             href="https://disneyworld.disney.go.com/dining/disney-springs/city-works/"
             text="City Works Eatery & Pour House"
           />
         </li>
-      </List>
-      <List>
-        <Bold>Disney&apos;s Wilderness Lodge</Bold>
+      </ul>
+      <ul className={styles.list}>
+        <b>Disney&apos;s Wilderness Lodge</b>
         <li className="body2">
           <Link
             href="https://disneyworld.disney.go.com/dining/wilderness-lodge-resort/whispering-canyon-cafe/"
             text="Whispering Canyon Cafe"
           />
         </li>
-      </List>
+      </ul>
       <h5 className="montserrat">
         <i className="fa-duotone fa-beer-mug" />
         {' Drink'}
       </h5>
-      <List>
-        <Bold>Disney&apos;s Boardwalk</Bold>
+      <ul className={styles.list}>
+        <b>Disney&apos;s Boardwalk</b>
         <li className="body2">
           <Link
             href="https://disneyworld.disney.go.com/entertainment/boardwalk/jellyrolls/"
             text="Jellyrolls"
           />
         </li>
-      </List>
-      <List>
-        <Bold>Disney&apos;s Polynesian Village Resort</Bold>
+      </ul>
+      <ul className={styles.list}>
+        <b>Disney&apos;s Polynesian Village Resort</b>
         <li className="body2">
           <Link
             href="https://disneyworld.disney.go.com/dining/polynesian-resort/trader-sams-grog-grotto/"
             text="Trader Sam's Grog Grotto"
           />
         </li>
-      </List>
-      <List>
-        <Bold>Disney Springs</Bold>
+      </ul>
+      <ul className={styles.list}>
+        <b>Disney Springs</b>
         <li className="body2">
           <Link
             href="https://disneyworld.disney.go.com/dining/disney-springs/jock-lindseys-hangar-bar/"
@@ -117,37 +105,37 @@ export default function Activities() {
             text="City Works Eatery & Pour House"
           />
         </li>
-      </List>
-      <List>
-        <Bold>Disney&apos;s Hollywood Studios</Bold>
+      </ul>
+      <ul className={styles.list}>
+        <b>Disney&apos;s Hollywood Studios</b>
         <li className="body2">
           <Link
             href="https://disneyworld.disney.go.com/dining/hollywood-studios/ogas-cantina/"
             text="Oga's Cantina"
           />
         </li>
-      </List>
-      <List>
-        <Bold>EPCOT</Bold>
+      </ul>
+      <ul className={styles.list}>
+        <b>EPCOT</b>
         <li className="body2">
           <Link
             href="https://disneyworld.disney.go.com/events-tours/epcot/epcot-international-flower-and-garden-festival/"
             text="International Flower & Garden Festival"
           />
         </li>
-      </List>
+      </ul>
       <h5 className="montserrat">
         <i className="fa-duotone fa-roller-coaster" />
         {' Play'}
       </h5>
-      <List>
+      <ul className={styles.list}>
         <li className="body1">EPCOT</li>
         <li className="body1">Magic Kingdom</li>
         <li className="body1">Disney&apos;s Hollywood Studios</li>
         <li className="body1">Disney&apos;s Animal Kingdom</li>
         <li className="body1">Disney&apos;s Typhoon Lagoon Water Park</li>
         <li className="body1">Disney Springs</li>
-      </List>
+      </ul>
     </>
   );
 }

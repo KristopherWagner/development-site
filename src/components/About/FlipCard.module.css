@@ -1,0 +1,58 @@
+div.root {
+  align-self: center;
+  background-color: transparent;
+  display: inline-block;
+  justify-self: center;
+  margin-top: 16px;
+  perspective: 1000px;
+
+  height: 300px;
+  width: 300px;
+}
+
+div.container {
+  position: relative;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  transform: none;
+
+  height: 300px;
+  width: 300px;
+}
+
+div.flipped {
+  transform: rotateY(180deg);
+
+  div.front {
+    box-shadow: none;
+  }
+
+  div.back {
+    box-shadow: 0 3px 6px black;
+  }
+}
+
+div.front {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  box-shadow: 0 3px 6px black;
+  position: absolute;
+  transition: box-shadow 1.6s;
+  z-index: 1;
+
+  height: 300px;
+  width: 300px;
+}
+
+div.back {
+  background-color: var(--primary-container);
+  box-shadow: none;
+  color: var(--primary-container-tex);
+  padding: 16px 8px;
+  transition: box-shadow 1.6s;
+  transform: rotateY(180deg);
+
+  height: calc(300px - 32px);
+  width: calc(300px - 16px);
+}

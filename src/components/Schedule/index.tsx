@@ -1,6 +1,5 @@
 import React from 'react';
 
-import { PRIMARY_CONTAINER_TEXT } from '../Colors';
 import HorizontalRule from '../HorizontalRule';
 import ScheduleItem from './ScheduleItem';
 
@@ -8,7 +7,7 @@ export default function Schedule() {
   return (
     <>
       <h3>Schedule of Events</h3>
-      <HorizontalRule color={PRIMARY_CONTAINER_TEXT} />
+      <HorizontalRule variant="primaryContainerText" />
       <h4 className="Montserray">Thursday</h4>
       <ScheduleItem
         dress="Smart casual"
@@ -16,11 +15,14 @@ export default function Schedule() {
         when="7:00pm - 9:00pm"
         where="Fantasmic! Disney's Hollywood Studios"
         who="All guests (optional)"
-        note={(
-          <strong>Please meet at the entrance to Disney&apos;s Hollywood Studios at 6:30pm</strong>
-        )}
+        note={
+          <strong>
+            Please meet at the entrance to Disney&apos;s Hollywood Studios at
+            6:30pm
+          </strong>
+        }
       />
-      <HorizontalRule color={PRIMARY_CONTAINER_TEXT} />
+      <HorizontalRule variant="primaryContainerText" />
       <h4 className="Montserray">Friday</h4>
       <ScheduleItem
         dress="Cocktail attire"
@@ -36,7 +38,7 @@ export default function Schedule() {
         where="Italy Isola, EPCOT"
         who="All adult guests"
       />
-      <HorizontalRule color={PRIMARY_CONTAINER_TEXT} />
+      <HorizontalRule variant="primaryContainerText" />
       <h4 className="Montserray">Sunday</h4>
       <ScheduleItem
         name="Park day"

@@ -1,0 +1,19 @@
+section.root {
+  padding: 24px;
+  text-align: center;
+}
+
+section.light {
+  background-color: var(--background-light);
+  color: var(--background-light-text);
+}
+
+section.primary {
+  background-color: var(--primary-container);
+  color: var(--primary-container-tex);
+}
+
+section.secondary {
+  background-color: var(--secondary-container);
+  color: var(--secondary-container-text);
+}

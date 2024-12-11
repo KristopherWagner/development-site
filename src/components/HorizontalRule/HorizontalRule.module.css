@@ -1,0 +1,21 @@
+div.root {
+  border: 1px solid;
+  margin: 16px auto;
+  width: 75%;
+}
+
+div.background-light-text {
+  border-color: var(--background-light-text);
+}
+
+div.primary {
+  border-color: var(--primary);
+}
+
+div.primary-container-text {
+  border-color: var(--primary-container-text);
+}
+
+div.secondary-continer-text {
+  border-color: var(--secondary-container-text);
+}
