@@ -1,6 +1,16 @@
 import React from 'react';
 
-export default function Seo({ description, imageUrl, title, url }) {
+export default function Seo({
+  description,
+  imageUrl,
+  title,
+  url,
+}: {
+  description: string;
+  imageUrl: string;
+  title: string;
+  url: string;
+}) {
   return (
     <>
       <title>{title}</title>

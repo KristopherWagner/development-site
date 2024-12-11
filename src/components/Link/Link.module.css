@@ -1,0 +1,9 @@
+a.link {
+  color: var(--primary-container-tex);
+  text-decoration: none;
+  text-decoration-line: underline;
+
+  &:hover {
+    color: var(--secondary);
+  }
+}

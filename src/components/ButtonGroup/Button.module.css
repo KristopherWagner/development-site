@@ -1,0 +1,15 @@
+button.button {
+  border-radius: 20px;
+  border: 1px solid;
+  color: var(--primary-container-tex);
+  height: 50px;
+  background-color: transparent;
+
+  &:hover {
+    background-color: var(--secondary-container);
+  }
+}
+
+button.button.selected {
+  background-color: var(--secondary-container);
+}

@@ -1,0 +1,29 @@
+div.bride-and-groom {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (min-width: 616px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+div.card-container {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (min-width: 640px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: 948px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: 1256px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media (min-width: 1564px) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
