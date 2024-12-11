@@ -1,0 +1,22 @@
+div.desktop-parallax {
+  display: none;
+
+  @media (min-width: 1080px) {
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    display: block;
+    min-height: 100vh;
+  }
+}
+
+div.mobile-parallax {
+  background-attachment: scroll;
+  background-position-y: 0;
+  background-size: contain;
+  width: 100vw;
+
+  @media (min-width: 1080px) {
+    display: none;
+  }
+}
