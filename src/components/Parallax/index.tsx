@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 
 import useProgressiveImage from './useProgressiveImage';
@@ -18,8 +17,6 @@ export default function Parallax({
   const imgSrc = useProgressiveImage(url);
 
   const className = mobile ? mobileParallax : desktopParallax;
-
-  console.log(className);
 
   return (
     <div
