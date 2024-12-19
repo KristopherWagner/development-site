@@ -5,8 +5,8 @@
   "version": "0.0.1",
   "author": "Kristopher Wagner <kristopher.wagner@outlook.com>",
   "dependencies": {
-    "@fontsource/montserrat": "^5.0.8",
-    "@fontsource/roboto": "^5.0.8",
+    "@fontsource/montserrat": "^5.1.0",
+    "@fontsource/roboto": "^5.1.0",
     "clsx": "^2.1.1",
     "gatsby": "^5.12.1",
     "gatsby-plugin-image": "^3.12.0",
