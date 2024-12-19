@@ -1,3 +1,4 @@
+import { Link } from "gatsby"
 import React from 'react';
 
 import Seo from '../components/SEO';
@@ -9,7 +10,7 @@ export default function IndexPage() {
       <p>This is my work-in-progress development website</p>
       <p>
         If you're looking for an archive of our wedding website, you can find it{' '}
-        <a href="/wedding">here</a>
+        <Link to="/wedding">here</Link>
       </p>
     </>
   );
