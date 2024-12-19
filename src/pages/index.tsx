@@ -1,4 +1,4 @@
-import { Link } from "gatsby"
+import { Link } from 'gatsby';
 import React from 'react';
 
 import Seo from '../components/SEO';
@@ -17,10 +17,13 @@ export default function IndexPage() {
 }
 
 export const Head = () => (
-  <Seo
-    description="A page dedicated to my personal coding projects"
-    imageUrl="https://kwagner.dev/static/starlight_lounge-cf67d74b7be4b4baf494389267fa8e60.webp"
-    title="Kristopher Wagner's Development Site"
-    url="https://kwagner.dev"
-  />
+  <>
+    <html lang="en-US" />
+    <Seo
+      description="A page dedicated to my personal coding projects"
+      imageUrl="https://kwagner.dev/static/starlight_lounge-cf67d74b7be4b4baf494389267fa8e60.webp"
+      title="Kristopher Wagner's Development Site"
+      url="https://kwagner.dev"
+    />
+  </>
 );

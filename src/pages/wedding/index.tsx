@@ -76,10 +76,13 @@ export default function WeddingPage() {
 }
 
 export const Head = () => (
-  <Seo
-    description="All of the details for our Disney Fairy Tale Wedding"
-    imageUrl="https://kwagner.dev/static/starlight_lounge-cf67d74b7be4b4baf494389267fa8e60.webp"
-    title="Swanson/Wagner Wedding"
-    url="https://kwagner.dev/wedding"
-  />
+  <>
+    <html lang="en-US" />
+    <Seo
+      description="All of the details for our Disney Fairy Tale Wedding"
+      imageUrl="https://kwagner.dev/static/starlight_lounge-cf67d74b7be4b4baf494389267fa8e60.webp"
+      title="Swanson/Wagner Wedding"
+      url="https://kwagner.dev/wedding"
+    />
+  </>
 );
