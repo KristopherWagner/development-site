@@ -1,3 +1,4 @@
+import { Link } from 'gatsby';
 import clsx from 'clsx';
 import React, { useState } from 'react';
 
@@ -30,54 +31,54 @@ export default function Navigation() {
       </div>
       <div className={clsx(styles.overlay, expanded && styles.expanded)}>
         <nav className={styles.content}>
-          <a
+          <Link
             className={styles.link}
             aria-label="Go to event details"
-            href="#details"
+            to="#details"
             onClick={closeOverlay}
           >
             Event
-          </a>
-          <a
+          </Link>
+          <Link
             className={styles.link}
             aria-label="Go to travel details"
-            href="#travel"
+            to="#travel"
             onClick={closeOverlay}
           >
             Travel/Accommodations
-          </a>
-          <a
+          </Link>
+          <Link
             className={styles.link}
             aria-label="Go to COVID guidance"
-            href="#covid"
+            to="#covid"
             onClick={closeOverlay}
           >
             COVID-19
-          </a>
-          <a
+          </Link>
+          <Link
             className={styles.link}
             aria-label="Go to the about us section"
-            href="#about"
+            to="#about"
             onClick={closeOverlay}
           >
             About Us
-          </a>
-          <a
+          </Link>
+          <Link
             className={styles.link}
             aria-label="Go to the schedule of events"
-            href="#schedule"
+            to="#schedule"
             onClick={closeOverlay}
           >
             Schedule
-          </a>
-          <a
+          </Link>
+          <Link
             className={styles.link}
             aria-label="Go to the frequently asked questions"
-            href="#faq"
+            to="#faq"
             onClick={closeOverlay}
           >
             FAQ
-          </a>
+          </Link>
         </nav>
       </div>
     </>
