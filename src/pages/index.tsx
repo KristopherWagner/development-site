@@ -9,8 +9,14 @@ export default function IndexPage() {
       <h1>Welcome!</h1>
       <p>This is my work-in-progress development website</p>
       <p>
-        If you're looking for an archive of our wedding website, you can find it{' '}
-        <Link to="/wedding">here</Link>
+        Check out the{' '}
+        <Link
+          aria-label="Navigate to the archived wedding website"
+          to="/wedding"
+        >
+          archive of our wedding website
+        </Link>
+        .
       </p>
     </>
   );
