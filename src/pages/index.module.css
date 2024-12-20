@@ -1,0 +1,12 @@
+body.body {
+  margin: 0px auto;
+  max-width: clamp(320px, 90%, 1200px);
+
+  h1 {
+    font-family: 'Montserrat', serif;
+  }
+
+  p {
+    font-family: 'Roboto', sans-serif;
+  }
+}

@@ -1,5 +1,6 @@
 import { Link } from 'gatsby';
 import React from 'react';
+import * as styles from './index.module.css';
 
 import Seo from '../components/SEO';
 
@@ -25,6 +26,7 @@ export default function IndexPage() {
 export const Head = () => (
   <>
     <html lang="en-US" />
+    <body className={styles.body} />
     <Seo
       description="A page dedicated to my personal coding projects"
       imageUrl="https://kwagner.dev/static/starlight_lounge-cf67d74b7be4b4baf494389267fa8e60.webp"
