@@ -1,6 +1,6 @@
 import React from 'react';
 
-import HorizontalRule from '../HorizontalRule';
+import HorizontalRule from '../wedding/HorizontalRule';
 import ScheduleItem from './ScheduleItem';
 
 export default function Schedule() {
