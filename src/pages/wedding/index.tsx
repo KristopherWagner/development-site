@@ -8,16 +8,17 @@ import '../../font-awesome/css/duotone.min.css';
 import '../../font-awesome/css/solid.min.css';
 import './wedding.css';
 
-import About from '../../components/About';
-import Covid from '../../components/Covid';
-import EventDetails from '../../components/EventDetails';
-import Faq from '../../components/FAQ';
-import Navigation from '../../components/Navigation';
-import Parallax from '../../components/Parallax';
-import Schedule from '../../components/Schedule';
-import Section from '../../components/Section';
 import Seo from '../../components/SEO';
-import Travel from '../../components/Travel';
+
+import About from '../../components/wedding/About';
+import Covid from '../../components/wedding/Covid';
+import EventDetails from '../../components/wedding/EventDetails';
+import Faq from '../../components/wedding/FAQ';
+import Navigation from '../../components/wedding/Navigation';
+import Parallax from '../../components/wedding/Parallax';
+import Schedule from '../../components/wedding/Schedule';
+import Section from '../../components/wedding/Section';
+import Travel from '../../components/wedding/Travel';
 
 // Desktop
 import BridgeKissing from '../../images/bridge_kissing.webp';
