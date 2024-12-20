@@ -6,7 +6,7 @@ import '../../font-awesome/css/fontawesome.min.css';
 import '../../font-awesome/css/brands.min.css';
 import '../../font-awesome/css/duotone.min.css';
 import '../../font-awesome/css/solid.min.css';
-import './wedding.css';
+import * as styles from './wedding.module.css';
 
 import Seo from '../../components/SEO';
 
@@ -38,7 +38,7 @@ import WheelKissing from '../../images/wheel_kissing.webp';
 
 export default function WeddingPage() {
   return (
-    <>
+    <div className={styles.root}>
       <Navigation />
       <Parallax aspectRatio="5000/3293" url={WheelFarAway} />
       <Parallax aspectRatio="3327/5000" mobile url={WheelKissing} />
@@ -70,13 +70,14 @@ export default function WeddingPage() {
       <Section anchor="faq" variant="light">
         <Faq />
       </Section>
-    </>
+    </div>
   );
 }
 
 export const Head = () => (
   <>
-    <html lang="en-US" />
+    <html className={styles.html} lang="en-US" />
+    <body className={styles.body} />
     <Seo
       description="All of the details for our Disney Fairy Tale Wedding"
       imageUrl="https://kwagner.dev/static/starlight_lounge-cf67d74b7be4b4baf494389267fa8e60.webp"
