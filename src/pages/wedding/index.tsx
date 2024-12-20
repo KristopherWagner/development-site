@@ -8,17 +8,16 @@ import '../../font-awesome/css/duotone.min.css';
 import '../../font-awesome/css/solid.min.css';
 import './wedding.css';
 
-import {
-  About,
-  Covid,
-  EventDetails,
-  Faq,
-  Navigation,
-  Parallax,
-  Section,
-  Schedule,
-  Travel,
-} from '../../components';
+import About from '../../components/About';
+import Covid from '../../components/Covid';
+import EventDetails from '../../components/EventDetails';
+import Faq from '../../components/FAQ';
+import Navigation from '../../components/Navigation';
+import Parallax from '../../components/Parallax';
+import Schedule from '../../components/Schedule';
+import Section from '../../components/Section';
+import Seo from '../../components/SEO';
+import Travel from '../../components/Travel';
 
 // Desktop
 import BridgeKissing from '../../images/bridge_kissing.webp';
@@ -35,7 +34,6 @@ import HeadsTouching from '../../images/heads_touching.webp';
 import SantaBaby from '../../images/santa_baby.webp';
 import Twirling from '../../images/twirling.webp';
 import WheelKissing from '../../images/wheel_kissing.webp';
-import Seo from '../../components/SEO';
 
 export default function WeddingPage() {
   return (
