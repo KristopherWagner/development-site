@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Link from '../wedding/Link';
+import Link from '../Link';
 
 import * as styles from './Activities.module.css';
 
