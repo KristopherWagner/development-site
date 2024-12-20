@@ -1,21 +1,20 @@
-/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 
 import FlipCard from './FlipCard';
 import HorizontalRule from '../HorizontalRule';
 
-import Casper from '../../images/Casper.webp';
-import Ella from '../../images/Ella.webp';
-import Jeb from '../../images/Jeb.webp';
-import Jeremy from '../../images/Jeremy.webp';
-import Jesse from '../../images/Jesse.webp';
-import Jordan from '../../images/Jordan.webp';
-import Kelly from '../../images/Kelly.webp';
-import Kristopher from '../../images/Kristopher.webp';
-import Nick from '../../images/Nick.webp';
-import Sarah from '../../images/Sarah.webp';
-import Shannon from '../../images/Shannon.webp';
-import Will from '../../images/Will.webp';
+import Casper from '../../../images/Casper.webp';
+import Ella from '../../../images/Ella.webp';
+import Jeb from '../../../images/Jeb.webp';
+import Jeremy from '../../../images/Jeremy.webp';
+import Jesse from '../../../images/Jesse.webp';
+import Jordan from '../../../images/Jordan.webp';
+import Kelly from '../../../images/Kelly.webp';
+import Kristopher from '../../../images/Kristopher.webp';
+import Nick from '../../../images/Nick.webp';
+import Sarah from '../../../images/Sarah.webp';
+import Shannon from '../../../images/Shannon.webp';
+import Will from '../../../images/Will.webp';
 
 import * as styles from './About.module.css';
 

@@ -1,9 +1,10 @@
 import React from 'react';
 
+import HorizontalRule from '../HorizontalRule';
+import Link from '../Link';
+
 import Accommodations from './Accommodations';
 import Activities from './Activities';
-import HorizontalRule from '../wedding/HorizontalRule';
-import Link from '../wedding/Link';
 
 export default function Travel() {
   return (
