@@ -1,3 +1,5 @@
+import '@fontsource/montserrat';
+import '@fontsource/roboto';
 import { Link } from 'gatsby';
 import React from 'react';
 import * as styles from './index.module.css';
