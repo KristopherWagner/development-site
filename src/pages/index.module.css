@@ -1,12 +1,23 @@
+:root {
+  --primary-dark: #001e44;
+  --primary: #1e407c;
+  --secondary: #96bee6;
+}
+
 body.body {
-  margin: 0px auto;
-  max-width: clamp(320px, 90%, 1200px);
+  margin: 0px;
 
-  h1 {
-    font-family: 'Montserrat', serif;
-  }
+  article {
+    margin: 0px auto;
+    max-width: clamp(320px, 90%, 1200px);
 
-  p {
-    font-family: 'Roboto', sans-serif;
+    h1 {
+      color: #1e407c;
+      font-family: 'Montserrat', serif;
+    }
+
+    p {
+      font-family: 'Roboto', sans-serif;
+    }
   }
 }
