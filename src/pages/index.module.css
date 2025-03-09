@@ -2,6 +2,8 @@
   --primary-dark: #001e44;
   --primary: #1e407c;
   --secondary: #96bee6;
+
+  --application-width: clamp(320px, 90%, 1200px);
 }
 
 body.body {
@@ -9,7 +11,7 @@ body.body {
 
   article {
     margin: 0px auto;
-    max-width: clamp(320px, 90%, 1200px);
+    max-width: var(--application-width);
 
     h1 {
       color: #1e407c;

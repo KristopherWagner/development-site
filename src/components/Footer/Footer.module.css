@@ -1,0 +1,28 @@
+.footer {
+  bottom: 0;
+  background-color: var(--primary);
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0px -2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px -1px 3px -1px;
+  position: fixed;
+  width: 100vw;
+
+  div {
+    margin: auto;
+    padding: 1rem 0px;
+    max-width: var(--application-width);
+  }
+
+  a {
+    color: white;
+    display: inline-block;
+  }
+
+  a:hover {
+    color: var(--secondary);
+  }
+
+  a:not(:last-child) {
+    margin-inline-end: 1rem;
+  }
+}
