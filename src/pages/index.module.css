@@ -6,6 +6,12 @@
   --application-width: clamp(320px, 90%, 1200px);
 }
 
+@font-face {
+  font-family: 'HyperlegibleNext';
+  font-optical-sizing: auto;
+  src: url(/fonts/AtkinsonHyperlegibleNextVF-Variable.woff2) format('woff2');
+}
+
 body.body {
   margin: 0px;
 
@@ -15,11 +21,12 @@ body.body {
 
     h1 {
       color: #1e407c;
-      font-family: 'Montserrat', serif;
+      font-family: 'HyperlegibleNext', 'Montserrat', serif;
+      font-weight: 300;
     }
 
     p {
-      font-family: 'Roboto', sans-serif;
+      font-family: 'HyperlegibleNext', 'Roboto', sans-serif;
     }
   }
 }
