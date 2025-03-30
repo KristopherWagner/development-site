@@ -1,7 +1,29 @@
-# Development Site
+# Rsbuild project
 
-Kristopher Wagner's development website
+## Setup
 
-[Click here](https://kwagner.dev) to view it live
+Install the dependencies:
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/e3a15c71-5b2a-4054-a019-1e60cda1d59a/deploy-status)](https://app.netlify.com/sites/kwagner-dev/deploys)
+```bash
+pnpm install
+```
+
+## Get started
+
+Start the dev server:
+
+```bash
+pnpm dev
+```
+
+Build the app for production:
+
+```bash
+pnpm build
+```
+
+Preview the production build locally:
+
+```bash
+pnpm preview
+```

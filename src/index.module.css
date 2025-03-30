@@ -9,7 +9,8 @@
 @font-face {
   font-family: 'HyperlegibleNext';
   font-optical-sizing: auto;
-  src: url(/fonts/AtkinsonHyperlegibleNextVF-Variable.woff2) format('woff2');
+  src: url(../static/fonts/AtkinsonHyperlegibleNextVF-Variable.woff2)
+    format('woff2');
 }
 
 body.body {
