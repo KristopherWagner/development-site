@@ -1,13 +1,13 @@
 import clsx from 'clsx';
 import React from 'react';
 
-import * as styles from './Section.module.css';
+import styles from './Section.module.css';
 
 export default function Section(
   props: React.PropsWithChildren<{
     anchor: string;
     variant?: 'light' | 'primary' | 'secondary';
-  }>
+  }>,
 ) {
   const { anchor, children } = props;
 

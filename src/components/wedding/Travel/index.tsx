@@ -1,5 +1,3 @@
-import React from 'react';
-
 import HorizontalRule from '../HorizontalRule';
 import Link from '../Link';
 

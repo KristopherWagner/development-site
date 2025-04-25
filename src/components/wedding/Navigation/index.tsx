@@ -1,8 +1,8 @@
-import { Link } from 'gatsby';
+import { Link } from '@tanstack/react-router';
 import clsx from 'clsx';
-import React, { useState } from 'react';
+import { useState } from 'react';
 
-import * as styles from './Navigation.module.css';
+import styles from './Navigation.module.css';
 
 export default function Navigation() {
   const [expanded, setExpanded] = useState(false);
@@ -25,7 +25,7 @@ export default function Navigation() {
             styles.icon,
             expanded
               ? 'fa-solid fa-x fa-fw fa-xl'
-              : 'fa-solid fa-bars fa-fw fa-xl'
+              : 'fa-solid fa-bars fa-fw fa-xl',
           )}
         />
       </div>

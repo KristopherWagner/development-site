@@ -1,5 +1,3 @@
-import React from 'react';
-
 import FlipCard from './FlipCard';
 import HorizontalRule from '../HorizontalRule';
 
@@ -16,7 +14,7 @@ import Sarah from '../../../images/Sarah.webp';
 import Shannon from '../../../images/Shannon.webp';
 import Will from '../../../images/Will.webp';
 
-import * as styles from './About.module.css';
+import styles from './About.module.css';
 
 const SHARED_PROPS = {
   loading: 'lazy',

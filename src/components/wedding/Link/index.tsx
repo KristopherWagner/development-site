@@ -1,6 +1,4 @@
-import React from 'react';
-
-import * as styles from './Link.module.css';
+import styles from './Link.module.css';
 
 export default function Link(props: {
   ariaLabel?: string;

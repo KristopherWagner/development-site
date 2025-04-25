@@ -1,9 +1,8 @@
 import clsx from 'clsx';
-import React from 'react';
 
 import Link from '../Link';
 
-import * as styles from './EventDetails.module.css';
+import styles from './EventDetails.module.css';
 
 export default function Event() {
   return (
