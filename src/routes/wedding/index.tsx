@@ -21,20 +21,20 @@ import Section from '../../components/wedding/Section';
 import Travel from '../../components/wedding/Travel';
 
 // Desktop
-import BridgeKissing from '../../images/bridge_kissing.webp';
-import PlazaWalking from '../../images/plaza_walking.webp';
-import StarlightLounge from '../../images/starlight_lounge.webp';
-import WheelFarAway from '../../images/wheel_far_away.webp';
-import WheelStanding from '../../images/wheel_standing.webp';
-import WheelWalking from '../../images/wheel_walking.webp';
+import BridgeKissing from '../../../static/images/bridge_kissing.webp';
+import PlazaWalking from '../../../static/images/plaza_walking.webp';
+import StarlightLounge from '../../../static/images/starlight_lounge.webp';
+import WheelFarAway from '../../../static/images/wheel_far_away.webp';
+import WheelStanding from '../../../static/images/wheel_standing.webp';
+import WheelWalking from '../../../static/images/wheel_walking.webp';
 
 // Mobile
-import Archway from '../../images/archway.webp';
-import EskimoKisses from '../../images/eskimo_kisses.webp';
-import HeadsTouching from '../../images/heads_touching.webp';
-import SantaBaby from '../../images/santa_baby.webp';
-import Twirling from '../../images/twirling.webp';
-import WheelKissing from '../../images/wheel_kissing.webp';
+import Archway from '../../../static/images/archway.webp';
+import EskimoKisses from '../../../static/images/eskimo_kisses.webp';
+import HeadsTouching from '../../../static/images/heads_touching.webp';
+import SantaBaby from '../../../static/images/santa_baby.webp';
+import Twirling from '../../../static/images/twirling.webp';
+import WheelKissing from '../../../static/images/wheel_kissing.webp';
 
 export default function WeddingPage() {
   return (
