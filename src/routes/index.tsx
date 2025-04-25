@@ -7,9 +7,8 @@ import styles from './index.module.css';
 
 export default function IndexPage() {
   return (
-    <html>
+    <>
       <head>
-        <html lang="en-US" />
         <Seo
           description="A page dedicated to my personal coding projects"
           imageUrl="https://kwagner.dev/static/starlight_lounge-cf67d74b7be4b4baf494389267fa8e60.webp"
@@ -48,7 +47,7 @@ export default function IndexPage() {
         </article>
         <Footer />
       </body>
-    </html>
+    </>
   );
 }
 

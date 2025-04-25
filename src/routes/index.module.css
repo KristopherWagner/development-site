@@ -14,8 +14,6 @@
 }
 
 body.body {
-  margin: 0px;
-
   article {
     margin: 0px auto;
     max-width: var(--application-width);

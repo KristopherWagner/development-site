@@ -8,7 +8,7 @@ export default defineConfig({
     rspack: {
       plugins: [
         TanStackRouterRspack({
-          routeFileIgnorePattern: '(.module.css)|(.test.tsx)',
+          routeFileIgnorePattern: '(.css)|(.test.tsx)',
           target: 'react',
           autoCodeSplitting: true,
         }),
