@@ -1,7 +1,6 @@
 import clsx from 'clsx';
-import React from 'react';
 
-import * as styles from './HorizontalRule.module.css';
+import styles from './HorizontalRule.module.css';
 
 export default function HorizontalRule(props: {
   variant?:

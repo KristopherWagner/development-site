@@ -1,8 +1,6 @@
-import React from 'react';
-
 import useProgressiveImage from './useProgressiveImage';
 
-import { desktopParallax, mobileParallax } from './Parallax.module.css';
+import styles from './Parallax.module.css';
 
 export default function Parallax({
   aspectRatio,
@@ -16,7 +14,7 @@ export default function Parallax({
 }) {
   const imgSrc = useProgressiveImage(url);
 
-  const className = mobile ? mobileParallax : desktopParallax;
+  const className = mobile ? styles.mobileParallax : styles.desktopParallax;
 
   return (
     <div

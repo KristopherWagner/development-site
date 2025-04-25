@@ -1,12 +1,12 @@
-import React from 'react';
-
 import '@fontsource/montserrat';
 import '@fontsource/roboto';
-import '../../font-awesome/css/fontawesome.min.css';
-import '../../font-awesome/css/brands.min.css';
-import '../../font-awesome/css/duotone.min.css';
-import '../../font-awesome/css/solid.min.css';
-import * as styles from './wedding.module.css';
+import { createFileRoute } from '@tanstack/react-router';
+
+import '../../../static/font-awesome/css/fontawesome.min.css';
+import '../../../static/font-awesome/css/brands.min.css';
+import '../../../static/font-awesome/css/duotone.min.css';
+import '../../../static/font-awesome/css/solid.min.css';
+import styles from './wedding.module.css';
 
 import Seo from '../../components/SEO';
 
@@ -86,3 +86,7 @@ export const Head = () => (
     />
   </>
 );
+
+export const Route = createFileRoute('/wedding/')({
+  component: WeddingPage,
+});
