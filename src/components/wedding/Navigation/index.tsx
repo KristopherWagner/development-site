@@ -1,4 +1,3 @@
-import { Link } from '@tanstack/react-router';
 import clsx from 'clsx';
 import { useState } from 'react';
 
@@ -31,54 +30,54 @@ export default function Navigation() {
       </div>
       <div className={clsx(styles.overlay, expanded && styles.expanded)}>
         <nav className={styles.content}>
-          <Link
+          <a
             className={styles.link}
             aria-label="Go to event details"
-            to="#details"
+            href="#details"
             onClick={closeOverlay}
           >
             Event
-          </Link>
-          <Link
+          </a>
+          <a
             className={styles.link}
             aria-label="Go to travel details"
-            to="#travel"
+            href="#travel"
             onClick={closeOverlay}
           >
             Travel/Accommodations
-          </Link>
-          <Link
+          </a>
+          <a
             className={styles.link}
             aria-label="Go to COVID guidance"
-            to="#covid"
+            href="#covid"
             onClick={closeOverlay}
           >
             COVID-19
-          </Link>
-          <Link
+          </a>
+          <a
             className={styles.link}
             aria-label="Go to the about us section"
-            to="#about"
+            href="#about"
             onClick={closeOverlay}
           >
             About Us
-          </Link>
-          <Link
+          </a>
+          <a
             className={styles.link}
             aria-label="Go to the schedule of events"
-            to="#schedule"
+            href="#schedule"
             onClick={closeOverlay}
           >
             Schedule
-          </Link>
-          <Link
+          </a>
+          <a
             className={styles.link}
             aria-label="Go to the frequently asked questions"
-            to="#faq"
+            href="#faq"
             onClick={closeOverlay}
           >
             FAQ
-          </Link>
+          </a>
         </nav>
       </div>
     </>
