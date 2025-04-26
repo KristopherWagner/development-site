@@ -1,4 +1,4 @@
-import React from 'react';
+import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import WeddingPage from '.';
 
@@ -16,7 +16,7 @@ describe('wedding page tests', () => {
   ])('should render the heading %s', (heading) => {
     render(<WeddingPage />);
     expect(
-      screen.queryByRole('heading', { name: heading })
+      screen.queryByRole('heading', { name: heading }),
     ).toBeInTheDocument();
   });
 });

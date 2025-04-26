@@ -13,7 +13,7 @@ declare module '@tanstack/react-router' {
 }
 
 const root = ReactDOM.createRoot(
-  document.getElementsByTagName('body')[0] as HTMLElement,
+  document.getElementsByTagName('html')[0] as HTMLElement,
 );
 
 root.render(
