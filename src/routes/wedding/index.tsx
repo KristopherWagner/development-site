@@ -39,15 +39,13 @@ import WheelKissing from '../../../static/images/wheel_kissing.webp';
 export default function WeddingPage() {
   return (
     <>
-      <head>
-        <Seo
-          description="All of the details for our Disney Fairy Tale Wedding"
-          imageUrl="https://kwagner.dev/static/starlight_lounge-cf67d74b7be4b4baf494389267fa8e60.webp"
-          title="Swanson/Wagner Wedding"
-          url="https://kwagner.dev/wedding"
-        />
-      </head>
-      <body className={styles.body}>
+      <Seo
+        description="All of the details for our Disney Fairy Tale Wedding"
+        imageUrl="https://kwagner.dev/static/starlight_lounge-cf67d74b7be4b4baf494389267fa8e60.webp"
+        title="Swanson/Wagner Wedding"
+        url="https://kwagner.dev/wedding"
+      />
+      <div className={styles.root}>
         <Navigation />
         <Parallax aspectRatio="5000/3293" url={WheelFarAway} />
         <Parallax aspectRatio="3327/5000" mobile url={WheelKissing} />
@@ -79,7 +77,7 @@ export default function WeddingPage() {
         <Section anchor="faq" variant="light">
           <Faq />
         </Section>
-      </body>
+      </div>
     </>
   );
 }

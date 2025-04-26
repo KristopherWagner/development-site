@@ -8,14 +8,12 @@ import styles from './index.module.css';
 export default function IndexPage() {
   return (
     <>
-      <head>
-        <Seo
-          description="A page dedicated to my personal coding projects"
-          imageUrl="https://kwagner.dev/static/starlight_lounge-cf67d74b7be4b4baf494389267fa8e60.webp"
-          title="Kristopher Wagner's Development Site"
-          url="https://kwagner.dev"
-        />
-      </head>
+      <Seo
+        description="A page dedicated to my personal coding projects"
+        imageUrl="https://kwagner.dev/static/starlight_lounge-cf67d74b7be4b4baf494389267fa8e60.webp"
+        title="Kristopher Wagner's Development Site"
+        url="https://kwagner.dev"
+      />
       <body className={styles.body}>
         <article>
           <h1>Welcome!</h1>

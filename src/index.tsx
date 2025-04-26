@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 
 import { createRouter, RouterProvider } from '@tanstack/react-router';
 import { routeTree } from './routeTree.gen';
+import './index.css';
 
 const router = createRouter({ routeTree });
 
@@ -13,7 +14,7 @@ declare module '@tanstack/react-router' {
 }
 
 const root = ReactDOM.createRoot(
-  document.getElementsByTagName('html')[0] as HTMLElement,
+  document.getElementById('kwagner') as HTMLElement,
 );
 
 root.render(
