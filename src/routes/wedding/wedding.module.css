@@ -1,5 +1,4 @@
-html.html {
-  scroll-behavior: smooth;
+div.root {
   --primary: #286c2a;
   --secondary: #984062;
 
@@ -11,14 +10,8 @@ html.html {
 
   --background-light: #fcfdf6;
   --background-light-text: #1a1c19;
-}
-
-body.body {
   font-family: 'Roboto', sans-serif;
-  margin: 0px;
-}
 
-.root {
   i {
     color: #1b5e20;
   }

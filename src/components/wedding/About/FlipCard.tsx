@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React, { useState } from 'react';
 
-import * as styles from './FlipCard.module.css';
+import styles from './FlipCard.module.css';
 
 export default function FlipCard(props: {
   image: React.ReactNode;

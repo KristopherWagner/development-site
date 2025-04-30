@@ -1,8 +1,6 @@
-import React from 'react';
-
 import Link from '../Link';
 
-import * as styles from './Activities.module.css';
+import styles from './Activities.module.css';
 
 export default function Activities() {
   return (

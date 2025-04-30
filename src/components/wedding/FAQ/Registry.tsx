@@ -1,5 +1,3 @@
-import React from 'react';
-
 import Link from '../Link';
 import Question from './Question';
 
@@ -23,10 +21,7 @@ function EveryCat() {
 
 function Lubee() {
   return (
-    <Link
-      href="https://www.lubee.org/donate"
-      text="Lubee Bat Conservancy"
-    />
+    <Link href="https://www.lubee.org/donate" text="Lubee Bat Conservancy" />
   );
 }
 
@@ -51,27 +46,29 @@ function CarbonOffsets() {
 export default function Registry() {
   return (
     <>
-      <Question>
-        Do you have a registry?
-      </Question>
+      <Question>Do you have a registry?</Question>
       <p className="body1">
-        We have decided to not have a registry; we understand that attending our wedding is
-        expensive, and your presence is the best gift. However, if you wish to give, we will
-        gratefully accept a small contribution towards our honeymoon, next home, or joining
-        Disney&apos;s Vacation Club. Alternatively, we would be honored if you would consider
-        making a donation to one of our favorite charities in lieu of a traditional wedding gift.
-        {' '}
-        <BatCon />
+        We have decided to not have a registry; we understand that attending our
+        wedding is expensive, and your presence is the best gift. However, if
+        you wish to give, we will gratefully accept a small contribution towards
+        our honeymoon, next home, or joining Disney&apos;s Vacation Club.
+        Alternatively, we would be honored if you would consider making a
+        donation to one of our favorite charities in lieu of a traditional
+        wedding gift. <BatCon />
         {', '}
         <EveryCat />
         {', '}
         <MauiNui />
         {', and '}
         <Lubee />
-        {' are organizations that are close to our hearts and we believe in their missions.'}
+        {
+          ' are organizations that are close to our hearts and we believe in their missions.'
+        }
         {' You could also purchase '}
         <CarbonOffsets />
-        {' for your travel to help us with our goal of having a carbon neutral wedding.'}
+        {
+          ' for your travel to help us with our goal of having a carbon neutral wedding.'
+        }
       </p>
     </>
   );

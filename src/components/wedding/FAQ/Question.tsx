@@ -1,6 +1,4 @@
-import React from 'react';
-
-import * as styles from './Question.module.css';
+import styles from './Question.module.css';
 
 export default function Question({ children }: React.PropsWithChildren) {
   return (
