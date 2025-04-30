@@ -14,7 +14,7 @@ export default function IndexPage() {
         title="Kristopher Wagner's Development Site"
         url="https://kwagner.dev"
       />
-      <body className={styles.body}>
+      <div className={styles.body}>
         <article>
           <h1>Welcome!</h1>
           <p>This is my work-in-progress development website</p>
@@ -44,7 +44,7 @@ export default function IndexPage() {
           </p>
         </article>
         <Footer />
-      </body>
+      </div>
     </>
   );
 }

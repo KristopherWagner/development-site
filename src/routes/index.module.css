@@ -13,7 +13,7 @@
     format('woff2');
 }
 
-body.body {
+div.body {
   article {
     margin: 0px auto;
     max-width: var(--application-width);
