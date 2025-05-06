@@ -37,7 +37,7 @@ export default function IndexPage() {
           </p>
           <p>
             I also play Lorcana, you can{' '}
-            <a href="https://dreamborn.ink/users/BJXuxcM6ASb2YhhJZDT2y6dEImd2">
+            <a href="https://dreamborn.ink/creators/BJXuxcM6ASb2YhhJZDT2y6dEImd2">
               peak at my decks here
             </a>
             .
