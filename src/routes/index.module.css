@@ -27,5 +27,18 @@ div.body {
     p {
       font-family: 'HyperlegibleNext', 'Roboto', sans-serif;
     }
+
+    .icon {
+      color: var(--primary);
+      height: 17.5px;
+    }
+
+    .lorcana-logo {
+      vertical-align: top;
+    }
+
+    .lorcana-text {
+      font-style: italic;
+    }
   }
 }
