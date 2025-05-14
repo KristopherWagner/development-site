@@ -1,12 +1,11 @@
 import styles from './MakerIcon.module.css';
 
-export default function MakerIcon() {
+export default function MakerIcon({ height }: { height: string }) {
   return (
     <svg
       className={styles.root}
-      height="17.5px"
+      height={height}
       version="1.1"
-      id="Vrstva_1"
       xmlns="http://www.w3.org/2000/svg"
       x="0px"
       y="0px"
