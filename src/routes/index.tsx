@@ -1,20 +1,19 @@
 import { createFileRoute } from '@tanstack/react-router';
-
-import LorcanaLogo from '../../static/images/lorcana.webp';
+import clsx from 'clsx';
 
 import Footer from '../components/Footer';
+import MakerIcon from '../components/MakerIcon';
 import Seo from '../components/SEO';
+import { imageFolder } from '../constants';
 
 import styles from './index.module.css';
-import clsx from 'clsx';
-import MakerIcon from '../components/MakerIcon';
 
 export default function IndexPage() {
   return (
     <>
       <Seo
         description="A page dedicated to my personal coding projects"
-        imageUrl="https://kwagner.dev/static/starlight_lounge-cf67d74b7be4b4baf494389267fa8e60.webp"
+        imageUrl="https://development-site-static.s3.us-east-2.amazonaws.com/images/profile_image.webp"
         title="Kristopher Wagner's Development Site"
         url="https://kwagner.dev"
       />
@@ -55,7 +54,7 @@ export default function IndexPage() {
                 className={styles['lorcana-logo']}
                 height="100%"
                 loading="lazy"
-                src={LorcanaLogo}
+                src={imageFolder + 'lorcana.webp'}
               />{' '}
               Illumineer
             </h1>

@@ -1,19 +1,8 @@
-import FlipCard from './FlipCard';
+import { imageFolder } from '../../../constants';
+
 import HorizontalRule from '../HorizontalRule';
 
-import Casper from '../../../../static/images/Casper.webp';
-import Ella from '../../../../static/images/Ella.webp';
-import Jeb from '../../../../static/images/Jeb.webp';
-import Jeremy from '../../../../static/images/Jeremy.webp';
-import Jesse from '../../../../static/images/Jesse.webp';
-import Jordan from '../../../../static/images/Jordan.webp';
-import Kelly from '../../../../static/images/Kelly.webp';
-import Kristopher from '../../../../static/images/Kristopher.webp';
-import Nick from '../../../../static/images/Nick.webp';
-import Sarah from '../../../../static/images/Sarah.webp';
-import Shannon from '../../../../static/images/Shannon.webp';
-import Will from '../../../../static/images/Will.webp';
-
+import FlipCard from './FlipCard';
 import styles from './About.module.css';
 
 const SHARED_PROPS = {
@@ -30,12 +19,24 @@ export default function About() {
       <HorizontalRule variant="secondaryContainerText" />
       <div className={styles.brideAndGroom}>
         <FlipCard
-          image={<img alt="Shannon" src={Shannon} {...SHARED_PROPS} />}
+          image={
+            <img
+              alt="Shannon"
+              src={imageFolder + 'Shannon.webp'}
+              {...SHARED_PROPS}
+            />
+          }
           memory="Going on a nighttime safari with Kristopher for my birthday"
           name="Shannon Swanson"
         />
         <FlipCard
-          image={<img alt="Kristopher" src={Kristopher} {...SHARED_PROPS} />}
+          image={
+            <img
+              alt="Kristopher"
+              src={imageFolder + 'Kristopher.webp'}
+              {...SHARED_PROPS}
+            />
+          }
           memory="Experiencing the Star Wars Galactic Starcruiser with Shannon"
           name="Kristopher Wagner"
         />
@@ -48,52 +49,96 @@ export default function About() {
       <HorizontalRule variant="secondaryContainerText" />
       <div className={styles.cardContainer}>
         <FlipCard
-          image={<img alt="Ella" src={Ella} {...SHARED_PROPS} />}
+          image={
+            <img alt="Ella" src={imageFolder + 'Ella.webp'} {...SHARED_PROPS} />
+          }
           memory="Seeing Cinderella Castle from the ferry boat for the first time"
           name="Ella Melzer"
         />
         <FlipCard
-          image={<img alt="Jesse" src={Jesse} {...SHARED_PROPS} />}
+          image={
+            <img
+              alt="Jesse"
+              src={imageFolder + 'Jesse.webp'}
+              {...SHARED_PROPS}
+            />
+          }
           memory="Riding the Kilimanjaro Safari with my wife"
           name="Jesse Sharkawy"
         />
         <FlipCard
-          image={<img alt="Sarah" src={Sarah} {...SHARED_PROPS} />}
+          image={
+            <img
+              alt="Sarah"
+              src={imageFolder + 'Sarah.webp'}
+              {...SHARED_PROPS}
+            />
+          }
           memory="Watching Fourth of July Fireworks from Liberty Square"
           name="Sarah Melzer"
         />
         <FlipCard
-          image={<img alt="Nick" src={Nick} {...SHARED_PROPS} />}
+          image={
+            <img alt="Nick" src={imageFolder + 'Nick.webp'} {...SHARED_PROPS} />
+          }
           memory="Waking up every morning at the Animal Kingdom Lodge and seeing the animals walk outside my room"
           name="Nicholas Stuter"
         />
         <FlipCard
-          image={<img alt="Jordan" src={Jordan} {...SHARED_PROPS} />}
+          image={
+            <img
+              alt="Jordan"
+              src={imageFolder + 'Jordan.webp'}
+              {...SHARED_PROPS}
+            />
+          }
           memory="Spending an entire day meeting characters and collecting signatures for my grad cap"
           name="Jordan Barrett"
         />
         <FlipCard
-          image={<img alt="Will" src={Will} {...SHARED_PROPS} />}
+          image={
+            <img alt="Will" src={imageFolder + 'Will.webp'} {...SHARED_PROPS} />
+          }
           memory="Staying at Disney with Jordan for the first time"
           name="Will Swanson"
         />
         <FlipCard
-          image={<img alt="Kelly" src={Kelly} {...SHARED_PROPS} />}
+          image={
+            <img
+              alt="Kelly"
+              src={imageFolder + 'Kelly.webp'}
+              {...SHARED_PROPS}
+            />
+          }
           memory="Feeling like I'm flying on the Avatar Flight of Passage ride in Pandora"
           name="Kelly Swanson-Obando"
         />
         <FlipCard
-          image={<img alt="Jeb" src={Jeb} {...SHARED_PROPS} />}
+          image={
+            <img alt="Jeb" src={imageFolder + 'Jeb.webp'} {...SHARED_PROPS} />
+          }
           memory="Exploring the halloween party with my siblings and eating all the desserts"
           name="Jeb Wagner"
         />
         <FlipCard
-          image={<img alt="Casper" src={Casper} {...SHARED_PROPS} />}
+          image={
+            <img
+              alt="Casper"
+              src={imageFolder + 'Casper.webp'}
+              {...SHARED_PROPS}
+            />
+          }
           memory="Spending the night in Cinderella Castle and being a part of the parade during the year of a million dreams"
           name="Casper Wagner"
         />
         <FlipCard
-          image={<img alt="Jeremy" src={Jeremy} {...SHARED_PROPS} />}
+          image={
+            <img
+              alt="Jeremy"
+              src={imageFolder + 'Jeremy.webp'}
+              {...SHARED_PROPS}
+            />
+          }
           memory="Accidentally cutting to the front of the line for Donald Duck"
           name="Jeremy Charles"
         />
