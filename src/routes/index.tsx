@@ -18,7 +18,7 @@ export default function IndexPage() {
         url="https://kwagner.dev"
       />
       <div className={styles.body}>
-        <article>
+        <main>
           <h1>Welcome!</h1>
           <p>This is my work-in-progress development website</p>
           <p>
@@ -65,7 +65,7 @@ export default function IndexPage() {
             </a>
             .
           </p>
-        </article>
+        </main>
         <Footer />
       </div>
     </>
