@@ -13,7 +13,7 @@ export default function IndexPage() {
     <>
       <Seo
         description="A page dedicated to my personal coding projects"
-        imageUrl="https://development-site-static.s3.us-east-2.amazonaws.com/images/profile_image.webp"
+        imageUrl={imageFolder + 'profile_image.webp'}
         title="Kristopher Wagner's Development Site"
         url="https://kwagner.dev"
       />
