@@ -21,7 +21,6 @@ div.body {
     margin: 0px auto;
     max-width: var(--application-width);
     padding: 0.67rem 0px;
-    overflow: scroll;
 
     article:not(:first-of-type) {
       margin-block-start: 0.67rem;
