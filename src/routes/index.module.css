@@ -7,10 +7,9 @@
 }
 
 @font-face {
-  font-family: 'HyperlegibleNext';
-  font-optical-sizing: auto;
+  font-family: 'AtkinsonHyperlegibleNextVF';
   src: url(https://development-site-static.s3.us-east-2.amazonaws.com/fonts/AtkinsonHyperlegibleNextVF-Variable.woff2)
-    format('woff2');
+    format('woff2-variations');
 }
 
 div.body {
@@ -29,7 +28,7 @@ div.body {
     h1 {
       color: #1e407c;
       font-size: 2rem;
-      font-family: 'HyperlegibleNext', 'Montserrat', serif;
+      font-family: 'AtkinsonHyperlegibleNextVF', 'Montserrat', serif;
       font-weight: 300;
       height: 2rem;
       margin-block: 0px 0.67rem;
@@ -37,7 +36,7 @@ div.body {
 
     p {
       display: inline-block;
-      font-family: 'HyperlegibleNext', 'Roboto', sans-serif;
+      font-family: 'AtkinsonHyperlegibleNextVF', 'Roboto', sans-serif;
     }
 
     .icon {
