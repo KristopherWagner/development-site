@@ -1,6 +1,3 @@
-import '../../../static/font-awesome/css/fontawesome.min.css';
-import '../../../static/font-awesome/css/brands.min.css';
-
 import styles from './Footer.module.css';
 
 export default function Footer() {
