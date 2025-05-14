@@ -7,6 +7,7 @@ import Seo from '../components/SEO';
 
 import styles from './index.module.css';
 import clsx from 'clsx';
+import MakerIcon from '../components/MakerIcon';
 
 export default function IndexPage() {
   return (
@@ -33,8 +34,7 @@ export default function IndexPage() {
             .
           </p>
           <p>
-            <i className={clsx('fa-duotone fa-cubes', styles.icon)} /> I just
-            started using a 3D printer, you can{' '}
+            <MakerIcon /> I just started using a 3D printer, you can{' '}
             <a href="https://www.printables.com/@kwagner">
               follow my journey on Printables
             </a>
