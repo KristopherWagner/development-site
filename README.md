@@ -1,29 +1,17 @@
-# Rsbuild project
+# Overview
 
-## Setup
+Welcome to the GitHub repository for my personal development website.
 
-Install the dependencies:
+This project was originally built using Gatsby and hosted by Netlify but I moved it to AWS Amplify to get some practice for my recertification exam.
 
-```bash
-pnpm install
-```
+I stored static files in S3 and used CloudFront as a CDN.
 
-## Get started
+I also wanted to try rsbuild after doing some research on how quick it is and I was not disappointed.
 
-Start the dev server:
+# Changelog
 
-```bash
-pnpm dev
-```
+## v1.0.0
 
-Build the app for production:
+May 14th, 2025
 
-```bash
-pnpm build
-```
-
-Preview the production build locally:
-
-```bash
-pnpm preview
-```
+Initial "release"
