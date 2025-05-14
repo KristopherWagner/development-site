@@ -52,8 +52,9 @@ export default function IndexPage() {
               <img
                 alt="Lorcana logo"
                 className={styles['lorcana-logo']}
-                height="100%"
+                height="32px"
                 src={imageFolder + 'lorcana.webp'}
+                width="34.7667px"
               />{' '}
               Illumineer
             </h1>
