@@ -53,7 +53,6 @@ export default function IndexPage() {
                 alt="Lorcana logo"
                 className={styles['lorcana-logo']}
                 height="100%"
-                loading="lazy"
                 src={imageFolder + 'lorcana.webp'}
               />{' '}
               Illumineer
