@@ -18,6 +18,11 @@
     display: inline-block;
   }
 
+  div,
+  a {
+    height: 2rem;
+  }
+
   a:hover {
     color: var(--secondary);
   }
