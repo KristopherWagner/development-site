@@ -1,5 +1,4 @@
 import { createFileRoute } from '@tanstack/react-router';
-import clsx from 'clsx';
 
 import Footer from '../components/Footer';
 import MakerIcon from '../components/MakerIcon';
@@ -21,8 +20,7 @@ export default function IndexPage() {
         <main>
           <article>
             <h1>
-              <i className={clsx('fa-duotone fa-rings-wedding', styles.icon)} />{' '}
-              Husband
+              <i className="fa-duotone fa-rings-wedding" /> Husband
             </h1>
             <p>
               Check out the{' '}
@@ -31,6 +29,19 @@ export default function IndexPage() {
                 href="/wedding"
               >
                 archive of our wedding website
+              </a>
+              .
+            </p>
+          </article>
+          <article>
+            <h1>
+              <i className="fa-solid fa-person-running" /> Runner
+            </h1>
+            <p>
+              I maintain a running group with weekly blog posts, statistics, and
+              discussions,{' '}
+              <a href="https://www.strava.com/clubs/502620">
+                join us on Strava
               </a>
               .
             </p>
@@ -70,7 +81,7 @@ export default function IndexPage() {
           </article>
           <article>
             <h1>
-              <i className={clsx('fad fa-fish', styles.icon)} /> Fishkeeper
+              <i className="fad fa-fish" /> Fishkeeper
             </h1>
             <p>
               We have a 75-gallon aquarium that we'll hopefully be upgrading in
