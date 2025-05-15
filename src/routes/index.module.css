@@ -39,10 +39,6 @@ div.body {
       font-family: 'AtkinsonHyperlegibleNextVF', 'Roboto', sans-serif;
     }
 
-    .icon {
-      color: var(--primary);
-    }
-
     .lorcana-logo {
       vertical-align: top;
     }
