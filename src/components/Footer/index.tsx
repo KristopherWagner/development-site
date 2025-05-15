@@ -22,6 +22,12 @@ export default function Footer() {
         >
           <i className="fa-brands fa-playstation fa-2x" />
         </a>
+        <a
+          aria-label="Follow me on Strava"
+          href="https://www.strava.com/athletes/27088613"
+        >
+          <i className="fa-brands fa-strava fa-2x" />
+        </a>
       </div>
     </footer>
   );
