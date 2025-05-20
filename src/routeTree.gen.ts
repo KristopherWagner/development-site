@@ -13,6 +13,8 @@
 import { Route as rootRoute } from './routes/__root'
 import { Route as IndexImport } from './routes/index'
 import { Route as WeddingIndexImport } from './routes/wedding/index'
+import { Route as CookbookIndexImport } from './routes/cookbook/index'
+import { Route as CookbookRecipesWalnutPastaImport } from './routes/cookbook/recipes/walnut-pasta'
 
 // Create/Update Routes
 
@@ -28,6 +30,20 @@ const WeddingIndexRoute = WeddingIndexImport.update({
   getParentRoute: () => rootRoute,
 } as any)
 
+const CookbookIndexRoute = CookbookIndexImport.update({
+  id: '/cookbook/',
+  path: '/cookbook/',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const CookbookRecipesWalnutPastaRoute = CookbookRecipesWalnutPastaImport.update(
+  {
+    id: '/cookbook/recipes/walnut-pasta',
+    path: '/cookbook/recipes/walnut-pasta',
+    getParentRoute: () => rootRoute,
+  } as any,
+)
+
 // Populate the FileRoutesByPath interface
 
 declare module '@tanstack/react-router' {
@@ -39,11 +55,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexImport
       parentRoute: typeof rootRoute
     }
+    '/cookbook/': {
+      id: '/cookbook/'
+      path: '/cookbook'
+      fullPath: '/cookbook'
+      preLoaderRoute: typeof CookbookIndexImport
+      parentRoute: typeof rootRoute
+    }
     '/wedding/': {
       id: '/wedding/'
       path: '/wedding'
       fullPath: '/wedding'
       preLoaderRoute: typeof WeddingIndexImport
+      parentRoute: typeof rootRoute
+    }
+    '/cookbook/recipes/walnut-pasta': {
+      id: '/cookbook/recipes/walnut-pasta'
+      path: '/cookbook/recipes/walnut-pasta'
+      fullPath: '/cookbook/recipes/walnut-pasta'
+      preLoaderRoute: typeof CookbookRecipesWalnutPastaImport
       parentRoute: typeof rootRoute
     }
   }
@@ -53,37 +83,52 @@ declare module '@tanstack/react-router' {
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/cookbook': typeof CookbookIndexRoute
   '/wedding': typeof WeddingIndexRoute
+  '/cookbook/recipes/walnut-pasta': typeof CookbookRecipesWalnutPastaRoute
 }
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/cookbook': typeof CookbookIndexRoute
   '/wedding': typeof WeddingIndexRoute
+  '/cookbook/recipes/walnut-pasta': typeof CookbookRecipesWalnutPastaRoute
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexRoute
+  '/cookbook/': typeof CookbookIndexRoute
   '/wedding/': typeof WeddingIndexRoute
+  '/cookbook/recipes/walnut-pasta': typeof CookbookRecipesWalnutPastaRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/wedding'
+  fullPaths: '/' | '/cookbook' | '/wedding' | '/cookbook/recipes/walnut-pasta'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/wedding'
-  id: '__root__' | '/' | '/wedding/'
+  to: '/' | '/cookbook' | '/wedding' | '/cookbook/recipes/walnut-pasta'
+  id:
+    | '__root__'
+    | '/'
+    | '/cookbook/'
+    | '/wedding/'
+    | '/cookbook/recipes/walnut-pasta'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CookbookIndexRoute: typeof CookbookIndexRoute
   WeddingIndexRoute: typeof WeddingIndexRoute
+  CookbookRecipesWalnutPastaRoute: typeof CookbookRecipesWalnutPastaRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CookbookIndexRoute: CookbookIndexRoute,
   WeddingIndexRoute: WeddingIndexRoute,
+  CookbookRecipesWalnutPastaRoute: CookbookRecipesWalnutPastaRoute,
 }
 
 export const routeTree = rootRoute
@@ -97,14 +142,22 @@ export const routeTree = rootRoute
       "filePath": "__root.tsx",
       "children": [
         "/",
-        "/wedding/"
+        "/cookbook/",
+        "/wedding/",
+        "/cookbook/recipes/walnut-pasta"
       ]
     },
     "/": {
       "filePath": "index.tsx"
     },
+    "/cookbook/": {
+      "filePath": "cookbook/index.tsx"
+    },
     "/wedding/": {
       "filePath": "wedding/index.tsx"
+    },
+    "/cookbook/recipes/walnut-pasta": {
+      "filePath": "cookbook/recipes/walnut-pasta.tsx"
     }
   }
 }
