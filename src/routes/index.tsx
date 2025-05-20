@@ -92,6 +92,21 @@ export default function IndexPage() {
               .
             </p>
           </article>
+          <article>
+            <h1>
+              <i className="fa-duotone fa-rabbit-running" /> Vegetarian
+            </h1>
+            <p>
+              Cook some of our{' '}
+              <a
+                aria-label="Navigate to the Wagner family cookbook"
+                href="/cookbook"
+              >
+                favorite recipes
+              </a>
+              .
+            </p>
+          </article>
         </main>
         <Footer />
       </div>
