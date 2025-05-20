@@ -6,7 +6,9 @@ This project was originally built using Gatsby and hosted by Netlify but I moved
 
 I stored static files in S3 and used CloudFront as a CDN.
 
-I also wanted to try rsbuild after doing some research on how quick it is and I was not disappointed.
+I also wanted to try `rsbuild` after doing some research on how quick it is and I was not disappointed.
+Although I have a lot of experience with react-router, I thought I'd use `@tanstack/react-router`
+to learn something new.
 
 # Changelog
 
