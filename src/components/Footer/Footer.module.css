@@ -7,7 +7,8 @@
   position: fixed;
   width: 100vw;
 
-  div {
+  ul {
+    list-style: none;
     margin: auto;
     padding: 1rem 0px;
     max-width: var(--application-width);
@@ -15,19 +16,24 @@
 
   a {
     color: white;
-    display: inline-block;
   }
 
-  div,
+  ul,
+  li,
   a {
     height: 1rem;
+  }
+
+  li,
+  a {
+    display: inline-block;
   }
 
   a:hover {
     color: var(--secondary);
   }
 
-  a:not(:last-child) {
+  li:not(:last-child) {
     margin-inline-end: 1rem;
   }
 }
