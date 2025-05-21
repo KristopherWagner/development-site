@@ -7,13 +7,10 @@ html {
   }
 
   main {
+    height: calc(100vh - 4rem - 0.67rem - 0.67rem);
     margin: 0px auto;
     max-width: var(--application-width);
-    padding: 0.67rem 0px;
-  }
-
-  .with-scroll {
-    height: calc(100vh - 4rem);
     overflow: auto;
+    padding: 0.67rem 0px;
   }
 }

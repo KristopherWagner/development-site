@@ -12,39 +12,30 @@
     format('woff2-variations');
 }
 
-div.body {
-  height: calc(100vh - 4rem);
-  overflow: auto;
+.body {
+  article:not(:first-of-type) {
+    margin-block-start: 0.67rem;
+  }
 
-  main {
-    margin: 0px auto;
-    max-width: var(--application-width);
-    padding: 0.67rem 0px;
+  h1 {
+    color: #1e407c;
+    font-size: 2rem;
+    font-family: 'AtkinsonHyperlegibleNextVF', 'Montserrat', serif;
+    font-weight: 300;
+    height: 2rem;
+    margin-block: 0px 0.67rem;
+  }
 
-    article:not(:first-of-type) {
-      margin-block-start: 0.67rem;
-    }
+  p {
+    display: inline-block;
+    font-family: 'AtkinsonHyperlegibleNextVF', 'Roboto', sans-serif;
+  }
 
-    h1 {
-      color: #1e407c;
-      font-size: 2rem;
-      font-family: 'AtkinsonHyperlegibleNextVF', 'Montserrat', serif;
-      font-weight: 300;
-      height: 2rem;
-      margin-block: 0px 0.67rem;
-    }
+  .lorcana-logo {
+    vertical-align: top;
+  }
 
-    p {
-      display: inline-block;
-      font-family: 'AtkinsonHyperlegibleNextVF', 'Roboto', sans-serif;
-    }
-
-    .lorcana-logo {
-      vertical-align: top;
-    }
-
-    .lorcana-text {
-      font-style: italic;
-    }
+  .lorcana-text {
+    font-style: italic;
   }
 }
