@@ -5,4 +5,10 @@ html {
   body {
     margin: 0px;
   }
+
+  main {
+    margin: 0px auto;
+    max-width: var(--application-width);
+    padding: 0.67rem 0px;
+  }
 }

@@ -1,4 +1,4 @@
-import { createFileRoute } from '@tanstack/react-router';
+import { createFileRoute, Link } from '@tanstack/react-router';
 
 import Footer from '../components/Footer';
 import MakerIcon from '../components/MakerIcon';
@@ -17,19 +17,19 @@ export default function IndexPage() {
         url="https://kwagner.dev"
       />
       <div className={styles.body}>
-        <main>
+        <main className="main">
           <article>
             <h1>
               <i className="fa-duotone fa-rings-wedding" /> Husband
             </h1>
             <p>
               Check out the{' '}
-              <a
+              <Link
                 aria-label="Navigate to the archived wedding website"
-                href="/wedding"
+                to="/wedding"
               >
                 archive of our wedding website
-              </a>
+              </Link>
               .
             </p>
           </article>
@@ -98,12 +98,12 @@ export default function IndexPage() {
             </h1>
             <p>
               Cook some of our{' '}
-              <a
+              <Link
                 aria-label="Navigate to the Wagner family cookbook"
-                href="/cookbook"
+                to="/cookbook"
               >
                 favorite recipes
-              </a>
+              </Link>
               .
             </p>
           </article>
