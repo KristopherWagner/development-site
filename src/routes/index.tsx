@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from '@tanstack/react-router';
 
 import Footer from '../components/Footer';
+import SocialLinks from '../components/Footer/SocialLinks';
 import MakerIcon from '../components/MakerIcon';
 import Seo from '../components/SEO';
 import { imageFolder } from '../constants';
@@ -108,7 +109,9 @@ export default function IndexPage() {
             </p>
           </article>
         </main>
-        <Footer />
+        <Footer>
+          <SocialLinks />
+        </Footer>
       </div>
     </>
   );

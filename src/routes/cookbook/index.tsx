@@ -1,6 +1,11 @@
 import { createFileRoute, Link } from '@tanstack/react-router';
 
+import Footer from '../../components/Footer';
 import Seo from '../../components/SEO';
+
+import { Route as homeRoute } from '../index';
+
+import { Route as walnutPastaRoute } from './recipes/walnut-pasta';
 
 export default function Cookbook() {
   return (
@@ -19,10 +24,15 @@ export default function Cookbook() {
         </p>
         <ul>
           <li>
-            <Link to="/cookbook/recipes/walnut-pasta">Walnut Pasta</Link>
+            <Link to={walnutPastaRoute.to}>Walnut Pasta</Link>
           </li>
         </ul>
       </main>
+      <Footer>
+        <Link aria-label="Return home" preload="intent" to={homeRoute.to}>
+          <i className="fa-duotone fa-house fa-2x" />
+        </Link>
+      </Footer>
     </>
   );
 }
