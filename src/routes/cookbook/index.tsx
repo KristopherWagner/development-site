@@ -1,9 +1,8 @@
 import { createFileRoute, Link } from '@tanstack/react-router';
 
 import Footer from '../../components/Footer';
+import HomeLink from '../../components/Footer/HomeLink';
 import Seo from '../../components/SEO';
-
-import { Route as homeRoute } from '../index';
 
 import { Route as walnutPastaRoute } from './recipes/walnut-pasta';
 
@@ -29,9 +28,7 @@ export default function Cookbook() {
         </ul>
       </main>
       <Footer>
-        <Link aria-label="Return home" preload="intent" to={homeRoute.to}>
-          <i className="fa-duotone fa-house fa-2x" />
-        </Link>
+        <HomeLink />
       </Footer>
     </>
   );
