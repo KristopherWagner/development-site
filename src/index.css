@@ -11,4 +11,9 @@ html {
     max-width: var(--application-width);
     padding: 0.67rem 0px;
   }
+
+  .with-scroll {
+    height: calc(100vh - 4rem);
+    overflow: auto;
+  }
 }
