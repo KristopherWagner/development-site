@@ -7,7 +7,7 @@ html {
   }
 
   main {
-    height: calc(100vh - 4rem - 0.67rem - 0.67rem);
+    height: calc(100vh - 3rem - 0.67rem - 0.67rem);
     margin: 0px auto;
     max-width: var(--application-width);
     overflow: auto;
