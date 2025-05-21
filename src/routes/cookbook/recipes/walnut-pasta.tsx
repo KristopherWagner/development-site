@@ -1,13 +1,11 @@
-import { createFileRoute, Link } from '@tanstack/react-router';
+import { createFileRoute } from '@tanstack/react-router';
 
 import recipe from '../../../../static/recipes/walnutPasta.json';
 
-import Seo from '../../../components/SEO';
 import Footer from '../../../components/Footer';
-
-import { Route as homeRoute } from '../../index';
-
-import { Route as cookbookRoute } from '../index';
+import CookbookLink from '../../../components/Footer/CookbookLink';
+import HomeLink from '../../../components/Footer/HomeLink';
+import Seo from '../../../components/SEO';
 
 function WalnutPasta() {
   return (
@@ -49,16 +47,8 @@ function WalnutPasta() {
         <p>{recipe.source.citation}</p>
       </main>
       <Footer>
-        <Link aria-label="Return home" preload="intent" to={homeRoute.to}>
-          <i className="fa-duotone fa-house fa-2x fa-fw" />
-        </Link>
-        <Link
-          aria-label="Return to cookbook"
-          preload="intent"
-          to={cookbookRoute.to}
-        >
-          <i className="fa-duotone fa-book-open-cover fa-2x fa-fw" />
-        </Link>
+        <HomeLink />
+        <CookbookLink />
       </Footer>
     </>
   );
