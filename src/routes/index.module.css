@@ -17,18 +17,12 @@
     margin-block-start: 0.67rem;
   }
 
-  h1 {
-    color: #1e407c;
-    font-size: 2rem;
-    font-family: 'AtkinsonHyperlegibleNextVF', 'Montserrat', serif;
-    font-weight: 300;
+  h1 svg {
     height: 2rem;
-    margin-block: 0px 0.67rem;
   }
 
   p {
     display: inline-block;
-    font-family: 'AtkinsonHyperlegibleNextVF', 'Roboto', sans-serif;
   }
 
   .lorcana-logo {
