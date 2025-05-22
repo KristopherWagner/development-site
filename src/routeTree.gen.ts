@@ -15,6 +15,7 @@ import { Route as IndexImport } from './routes/index'
 import { Route as WeddingIndexImport } from './routes/wedding/index'
 import { Route as CookbookIndexImport } from './routes/cookbook/index'
 import { Route as CookbookRecipesWalnutPastaImport } from './routes/cookbook/recipes/walnut-pasta'
+import { Route as CookbookRecipesSmokyBlackBeanGrilledCheeseImport } from './routes/cookbook/recipes/smoky-black-bean-grilled-cheese'
 
 // Create/Update Routes
 
@@ -44,6 +45,13 @@ const CookbookRecipesWalnutPastaRoute = CookbookRecipesWalnutPastaImport.update(
   } as any,
 )
 
+const CookbookRecipesSmokyBlackBeanGrilledCheeseRoute =
+  CookbookRecipesSmokyBlackBeanGrilledCheeseImport.update({
+    id: '/cookbook/recipes/smoky-black-bean-grilled-cheese',
+    path: '/cookbook/recipes/smoky-black-bean-grilled-cheese',
+    getParentRoute: () => rootRoute,
+  } as any)
+
 // Populate the FileRoutesByPath interface
 
 declare module '@tanstack/react-router' {
@@ -69,6 +77,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WeddingIndexImport
       parentRoute: typeof rootRoute
     }
+    '/cookbook/recipes/smoky-black-bean-grilled-cheese': {
+      id: '/cookbook/recipes/smoky-black-bean-grilled-cheese'
+      path: '/cookbook/recipes/smoky-black-bean-grilled-cheese'
+      fullPath: '/cookbook/recipes/smoky-black-bean-grilled-cheese'
+      preLoaderRoute: typeof CookbookRecipesSmokyBlackBeanGrilledCheeseImport
+      parentRoute: typeof rootRoute
+    }
     '/cookbook/recipes/walnut-pasta': {
       id: '/cookbook/recipes/walnut-pasta'
       path: '/cookbook/recipes/walnut-pasta'
@@ -85,6 +100,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/cookbook': typeof CookbookIndexRoute
   '/wedding': typeof WeddingIndexRoute
+  '/cookbook/recipes/smoky-black-bean-grilled-cheese': typeof CookbookRecipesSmokyBlackBeanGrilledCheeseRoute
   '/cookbook/recipes/walnut-pasta': typeof CookbookRecipesWalnutPastaRoute
 }
 
@@ -92,6 +108,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/cookbook': typeof CookbookIndexRoute
   '/wedding': typeof WeddingIndexRoute
+  '/cookbook/recipes/smoky-black-bean-grilled-cheese': typeof CookbookRecipesSmokyBlackBeanGrilledCheeseRoute
   '/cookbook/recipes/walnut-pasta': typeof CookbookRecipesWalnutPastaRoute
 }
 
@@ -100,19 +117,31 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/cookbook/': typeof CookbookIndexRoute
   '/wedding/': typeof WeddingIndexRoute
+  '/cookbook/recipes/smoky-black-bean-grilled-cheese': typeof CookbookRecipesSmokyBlackBeanGrilledCheeseRoute
   '/cookbook/recipes/walnut-pasta': typeof CookbookRecipesWalnutPastaRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/cookbook' | '/wedding' | '/cookbook/recipes/walnut-pasta'
+  fullPaths:
+    | '/'
+    | '/cookbook'
+    | '/wedding'
+    | '/cookbook/recipes/smoky-black-bean-grilled-cheese'
+    | '/cookbook/recipes/walnut-pasta'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/cookbook' | '/wedding' | '/cookbook/recipes/walnut-pasta'
+  to:
+    | '/'
+    | '/cookbook'
+    | '/wedding'
+    | '/cookbook/recipes/smoky-black-bean-grilled-cheese'
+    | '/cookbook/recipes/walnut-pasta'
   id:
     | '__root__'
     | '/'
     | '/cookbook/'
     | '/wedding/'
+    | '/cookbook/recipes/smoky-black-bean-grilled-cheese'
     | '/cookbook/recipes/walnut-pasta'
   fileRoutesById: FileRoutesById
 }
@@ -121,6 +150,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CookbookIndexRoute: typeof CookbookIndexRoute
   WeddingIndexRoute: typeof WeddingIndexRoute
+  CookbookRecipesSmokyBlackBeanGrilledCheeseRoute: typeof CookbookRecipesSmokyBlackBeanGrilledCheeseRoute
   CookbookRecipesWalnutPastaRoute: typeof CookbookRecipesWalnutPastaRoute
 }
 
@@ -128,6 +158,8 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CookbookIndexRoute: CookbookIndexRoute,
   WeddingIndexRoute: WeddingIndexRoute,
+  CookbookRecipesSmokyBlackBeanGrilledCheeseRoute:
+    CookbookRecipesSmokyBlackBeanGrilledCheeseRoute,
   CookbookRecipesWalnutPastaRoute: CookbookRecipesWalnutPastaRoute,
 }
 
@@ -144,6 +176,7 @@ export const routeTree = rootRoute
         "/",
         "/cookbook/",
         "/wedding/",
+        "/cookbook/recipes/smoky-black-bean-grilled-cheese",
         "/cookbook/recipes/walnut-pasta"
       ]
     },
@@ -155,6 +188,9 @@ export const routeTree = rootRoute
     },
     "/wedding/": {
       "filePath": "wedding/index.tsx"
+    },
+    "/cookbook/recipes/smoky-black-bean-grilled-cheese": {
+      "filePath": "cookbook/recipes/smoky-black-bean-grilled-cheese.tsx"
     },
     "/cookbook/recipes/walnut-pasta": {
       "filePath": "cookbook/recipes/walnut-pasta.tsx"
