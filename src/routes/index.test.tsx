@@ -1,12 +1,14 @@
 import '@testing-library/jest-dom';
-import { render, screen } from '@testing-library/react';
+import { screen } from '@testing-library/react';
+
+import renderWithProvider from '../testUtils';
 import IndexPage from '.';
 
 describe('home page unit tests', () => {
-  it('renders links to my hobbies', () => {
-    render(<IndexPage />);
+  it('renders links to my hobbies', async () => {
+    renderWithProvider(<IndexPage />);
     expect(
-      screen.getByRole('link', {
+      await screen.findByRole('link', {
         name: 'Navigate to the archived wedding website',
       }),
     ).toBeInTheDocument();
