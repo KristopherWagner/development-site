@@ -107,5 +107,59 @@
       "href": "https://www.penguinrandomhouse.com/books/592244/the-runners-world-vegetarian-cookbook-by-heather-mayer-irvine-foreword-by-scott-jurek/",
       "title": "The Runner's World Vegetarian Cookbook"
     }
+  },
+  {
+    "url": "lemon-pepper-tofu",
+    "description": "A filling and easy vegan entrée",
+    "title": "Lemon Pepper Tofu",
+    "servings": "6 slices",
+    "time": "Overnight",
+    "ingredients": [
+      {
+        "quantity": 1,
+        "unit": "16-oz block",
+        "ingredient": "extra-firm tofu (do not use silken tofu)"
+      },
+      {
+        "quantity": "1/3",
+        "unit": "cup",
+        "ingredient": "olive oil"
+      },
+      {
+        "quantity": 2,
+        "unit": "tablespoons",
+        "ingredient": "vegan chicken-style bouillon powder"
+      },
+      {
+        "quantity": 1,
+        "ingredient": "lemon, zested"
+      },
+      {
+        "quantity": 1,
+        "unit": "teaspoon",
+        "ingredient": "ground black pepper"
+      },
+      {
+        "quantity": 1,
+        "unit": "teaspoon",
+        "ingredient": "lemon pepper seasoning"
+      }
+    ],
+    "instructions": [
+      "Freeze the tofu overnight",
+      "In the morning, move it to the fridge to thaw",
+      "Mix all ingredients but tofu in a large bowl",
+      "Cut tofu into 6 slices",
+      "Coat both sides of the tofu with the lemon pepper sauce you created",
+      "Bake for 20 minutes at 375° F",
+      "Flip the tofu",
+      "Bake for an additional 20 minutes"
+    ],
+    "tags": ["vegan", "vegetarian"],
+    "source": {
+      "citation": "Roche, B. (2021, January 5). Lemon Pepper Tofu Cutlets.",
+      "href": "https://www.plantpowercouple.com/recipes/lemon-pepper-tofu-cutlets/",
+      "title": "Original recipe"
+    }
   }
 ]
