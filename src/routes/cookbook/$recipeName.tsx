@@ -8,6 +8,8 @@ import HomeLink from '../../components/Footer/HomeLink';
 import { Route as cookbookRoute } from '.';
 import recipes from './recipes.json';
 
+import styles from './cookbook.module.css';
+
 export default function Recipe() {
   const { recipeName } = Route.useParams();
 
@@ -67,7 +69,9 @@ export default function Recipe() {
         <h2>Instructions</h2>
         <ol>
           {recipe.instructions.map((step) => (
-            <li key={step}>{step}</li>
+            <li className={styles.pretty} key={step}>
+              {step}
+            </li>
           ))}
         </ol>
         <h2>Source</h2>
