@@ -4,8 +4,7 @@ import Footer from '../../components/Footer';
 import HomeLink from '../../components/Footer/HomeLink';
 import Seo from '../../components/SEO';
 
-import { Route as walnutPastaRoute } from './recipes/walnut-pasta';
-import { Route as smokyBlackBeanGrilledCheese } from './recipes/smoky-black-bean-grilled-cheese';
+import recipes from './recipes.json';
 
 export default function Cookbook() {
   return (
@@ -23,14 +22,11 @@ export default function Cookbook() {
           add some fun features to the page over time as well.
         </p>
         <ul>
-          <li>
-            <Link to={walnutPastaRoute.to}>Walnut Pasta</Link>
-          </li>
-          <li>
-            <Link to={smokyBlackBeanGrilledCheese.to}>
-              Smoky Black Bean Grilled Cheese
-            </Link>
-          </li>
+          {recipes.map((recipe) => (
+            <li key={recipe.url}>
+              <Link to={recipe.url}>{recipe.title}</Link>
+            </li>
+          ))}
         </ul>
       </main>
       <Footer>
