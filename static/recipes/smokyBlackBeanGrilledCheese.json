@@ -1,0 +1,47 @@
+{
+  "title": "Smoky Black Bean Grilled Cheese",
+  "servings": "1",
+  "time": "15 minutes",
+  "ingredients": [
+    {
+      "quantity": 2,
+      "unit": "slices",
+      "ingredient": "whole grain bread"
+    },
+    {
+      "quantity": 2,
+      "unit": "tablespoons",
+      "ingredient": "black beans, mashed"
+    },
+    {
+      "quantity": 1,
+      "ingredient": "jarred roasted red bell pepper, sliced"
+    },
+    {
+      "quantity": "1/3",
+      "unit": "cup",
+      "ingredient": "grated smoked Cheddar cheese"
+    },
+    {
+      "quantity": "1/4",
+      "ingredient": "avocado, thinly sliced"
+    },
+    {
+      "quantity": 2,
+      "unit": "tablespoons",
+      "ingredient": "unsalted butter"
+    }
+  ],
+  "instructions": [
+    "Top 1 slice of the bread with the black beans, roasted pepper, cheese, and avocado.",
+    "Cover with the second bread slice.",
+    "In a skillet over medium-low heat, melt the butter.",
+    "Add the sandwich and cook, turning once, until both sides are crispy and the cheese has melted."
+  ],
+  "tags": ["fast", "vegetarian"],
+  "source": {
+    "citation": "Irvine, H. M. (2018). The Runner's World Vegetarian Cookbook. New York: Rodale Books.",
+    "href": "https://www.penguinrandomhouse.com/books/592244/the-runners-world-vegetarian-cookbook-by-heather-mayer-irvine-foreword-by-scott-jurek/",
+    "title": "The Runner's World Vegetarian Cookbook"
+  }
+}

@@ -5,6 +5,7 @@ import HomeLink from '../../components/Footer/HomeLink';
 import Seo from '../../components/SEO';
 
 import { Route as walnutPastaRoute } from './recipes/walnut-pasta';
+import { Route as smokyBlackBeanGrilledCheese } from './recipes/smoky-black-bean-grilled-cheese';
 
 export default function Cookbook() {
   return (
@@ -24,6 +25,11 @@ export default function Cookbook() {
         <ul>
           <li>
             <Link to={walnutPastaRoute.to}>Walnut Pasta</Link>
+          </li>
+          <li>
+            <Link to={smokyBlackBeanGrilledCheese.to}>
+              Smoky Black Bean Grilled Cheese
+            </Link>
           </li>
         </ul>
       </main>
