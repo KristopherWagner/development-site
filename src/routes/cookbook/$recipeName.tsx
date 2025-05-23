@@ -50,7 +50,7 @@ export default function Recipe() {
       />
       <main className="main">
         <h1>{recipe.title}</h1>
-        <p>Makes {recipe.servings} servings</p>
+        <p>Makes {recipe.servings}</p>
         <p>Total time: {recipe.time}</p>
         <p>Tags:</p>
         <ul>
