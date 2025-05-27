@@ -161,5 +161,82 @@
       "href": "https://www.plantpowercouple.com/recipes/lemon-pepper-tofu-cutlets/",
       "title": "Original recipe"
     }
+  },
+  {
+    "url": "tofu-parm",
+    "description": "A vegetarian take on classic chicken parm",
+    "title": "Tofu Parmesan",
+    "servings": "8 slices",
+    "time": "25 minutes",
+    "ingredients": [
+      {
+        "quantity": 1,
+        "unit": "block",
+        "ingredient": "extra firm tofu"
+      },
+      {
+        "quantity": 1,
+        "unit": "cup",
+        "ingredient": "vegan/vegetarian panko crumbs"
+      },
+      {
+        "quantity": 1,
+        "unit": "cup",
+        "ingredient": "flour"
+      },
+      {
+        "quantity": "1/2",
+        "unit": "cup",
+        "ingredient": "water"
+      },
+      {
+        "quantity": "1/4",
+        "unit": "cup",
+        "ingredient": "vegetable oil"
+      },
+      {
+        "quantity": 1.5,
+        "unit": "teaspoons",
+        "ingredient": "Italian seasoning"
+      },
+      {
+        "quantity": 1.5,
+        "unit": "teaspoons",
+        "ingredient": "garlic salt"
+      },
+      {
+        "quantity": "1/2",
+        "unit": "cup",
+        "ingredient": "mozzarella cheese"
+      },
+      {
+        "quantity": "1/4",
+        "unit": "cup",
+        "ingredient": "vegetarian parmesan"
+      },
+      {
+        "quantity": "1/2",
+        "unit": "cup",
+        "ingredient": "DelGrosso's marinara sauce"
+      }
+    ],
+    "instructions": [
+      "Slice tofu into eight equal pieces.",
+      "Press the slices of tofu.",
+      "In a small mixing bowl, mix panko crumbs with Italian seasoning and garlic salt.",
+      "In a separate small mixing bowl, mix together water and flour.",
+      "In a frying pan on medium-high heat, pour a thin layer of oil. Allow it to get hot.",
+      "For each slice of tofu: dip into the flour/water mixture, then coat heavily in panko.",
+      "Lightly fry each slice of tofu for a minute or on each side, until golden-brown and crispy.",
+      "Coat each slice with marinara sauce.",
+      "Sprinkle each slice with cheese.",
+      "Place in the oven on low broil until cheese is melted."
+    ],
+    "tags": ["fast", "vegetarian"],
+    "source": {
+      "citation": "Six Vegan Sisters. (2018). Crispy Tofu Parm Sandwich.",
+      "href": "https://www.sixvegansisters.com/2018/04/01/crispy-tofu-parm-sandwich/",
+      "title": "Original recipe"
+    }
   }
 ]
