@@ -10,10 +10,10 @@ html {
   main {
     font-family: 'AtkinsonHyperlegibleNextVF', 'Montserrat', serif;
     height: calc(100vh - 3rem - 0.67rem - 0.67rem);
-    margin: 0px auto;
+    margin: 0px;
     max-width: var(--application-width);
     overflow: auto;
-    padding: 0.67rem 0px;
+    padding: 0.67rem calc((100vw - var(--application-width)) / 2);
 
     h1,
     h2 {
