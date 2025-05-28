@@ -2,7 +2,9 @@
   text-wrap: pretty;
 }
 
-h1,
-h2 {
-  text-wrap: balance;
+.cookbook {
+  h1,
+  h2 {
+    text-wrap: balance;
+  }
 }
