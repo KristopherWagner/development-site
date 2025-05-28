@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from '@tanstack/react-router';
+import clsx from 'clsx';
 
 import Seo from '../../components/SEO';
 import Footer from '../../components/Footer';
@@ -48,7 +49,7 @@ export default function Recipe() {
         title={recipe.title}
         url={`https://kwagner.dev/cookbook/recipes/${recipeName}`}
       />
-      <main className="main">
+      <main className={clsx('main', styles.cookbook)}>
         <h1>{recipe.title}</h1>
         <p>Makes {recipe.servings}</p>
         <p>Total time: {recipe.time}</p>
