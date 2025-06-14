@@ -19,6 +19,17 @@ to learn something new.
 
 # Changelog
 
+## v1.2.0
+
+June 14th, 2025
+
+[🔗 Pull request](https://github.com/KristopherWagner/development-site/pull/37)
+
+- Cleaned up the `.gitignore`
+- Increased font size (see [this article](https://pmc.ncbi.nlm.nih.gov/articles/PMC8883023/))
+- Fixed a bug that made the headings take up two lines
+- Fixed a typo in the Tofu Parm recipe
+
 ## v1.1.0
 
 May 27th, 2025
