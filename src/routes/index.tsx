@@ -1,7 +1,9 @@
 import { createFileRoute, Link } from '@tanstack/react-router';
+import clsx from 'clsx';
 
 import Footer from '../components/Footer';
 import SocialLinks from '../components/Footer/SocialLinks';
+import Header from '../components/Header';
 import MakerIcon from '../components/MakerIcon';
 import Seo from '../components/SEO';
 import { imageFolder } from '../constants';
@@ -17,15 +19,14 @@ export default function IndexPage() {
         title="Kristopher Wagner's Development Site"
         url="https://kwagner.dev"
       />
-      <main className={styles.body}>
-        <article>
-          <h1>Kristopher Wagner</h1>
-          <p>
-            This is my simple development website. The goal of this site is to
-            share my hobbies and help people who share my interests learn from
-            my successes and failures.
-          </p>
-        </article>
+      <Header heading="Kristopher Wagner">
+        <p>
+          This is my simple development website. The goal of this site is to
+          share my hobbies and help people who share my interests learn from my
+          successes and failures.
+        </p>
+      </Header>
+      <main className={clsx('hyper-legible', styles.body)}>
         <article>
           <h2>
             <i className="fa-duotone fa-rings-wedding" /> Husband
