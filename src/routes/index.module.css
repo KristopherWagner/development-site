@@ -23,6 +23,8 @@
 
   p {
     display: inline-block;
+    text-wrap: balance;
+    text-wrap: pretty;
   }
 
   .lorcana-logo {
