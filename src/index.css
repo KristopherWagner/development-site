@@ -8,7 +8,7 @@ html {
 
   main {
     font-family: 'AtkinsonHyperlegibleNextVF', 'Montserrat', serif;
-    margin: 0.67rem auto 0.67rem 0.67rem;
+    margin: 0.67rem auto;
     min-height: calc(100vh - 3rem - 0.67rem - 0.67rem);
     overflow: auto;
     width: var(--application-width);
