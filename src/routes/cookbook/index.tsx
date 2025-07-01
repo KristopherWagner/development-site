@@ -2,6 +2,7 @@ import { createFileRoute, Link } from '@tanstack/react-router';
 import clsx from 'clsx';
 
 import Footer from '../../components/Footer';
+import Header from '../../components/Header';
 import HomeLink from '../../components/Footer/HomeLink';
 import Seo from '../../components/SEO';
 
@@ -17,12 +18,14 @@ export default function Cookbook() {
         title="Wagner Family Cookbook"
         url="https://kwagner.dev/cookbook"
       />
-      <main className={clsx('main', styles.cookbook)}>
-        <h1>Cookbook</h1>
+      <Header heading="Cookbook">
         <p>
           This page will slowly aggregate our favorite recipes. I'll (hopefully)
           add some fun features to the page over time as well.
         </p>
+      </Header>
+      <main className={clsx('main', 'hyper-legible', styles.cookbook)}>
+        <h2>Recipes</h2>
         <ul>
           {recipes.map((recipe) => (
             <li key={recipe.url}>
