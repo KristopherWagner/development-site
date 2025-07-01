@@ -86,19 +86,6 @@ export default function IndexPage() {
         </article>
         <article>
           <h2>
-            <i className="fad fa-fish" /> Fishkeeper
-          </h2>
-          <p>
-            We have a 75-gallon aquarium that we'll hopefully be upgrading in a
-            few years, until then you can{' '}
-            <a href="https://www.reef2reef.com/threads/mon-cala-2-0.1111326/">
-              watch our coral and fish grow on Reef2Reef
-            </a>
-            .
-          </p>
-        </article>
-        <article>
-          <h2>
             <i className="fa-duotone fa-rabbit-running" /> Vegetarian
           </h2>
           <p>
