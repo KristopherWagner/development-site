@@ -3,13 +3,18 @@ html {
   font-size: 17pt;
 
   body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
     margin: 0px;
+    min-height: 100vh;
+  }
+
+  .hyper-legible {
+    font-family: 'AtkinsonHyperlegibleNextVF', 'Montserrat', serif;
   }
 
   main {
-    font-family: 'AtkinsonHyperlegibleNextVF', 'Montserrat', serif;
     margin: 0.67rem auto;
-    min-height: calc(100vh - 3rem - 0.67rem - 0.67rem);
     overflow: auto;
     width: var(--application-width);
 

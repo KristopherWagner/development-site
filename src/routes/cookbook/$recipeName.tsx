@@ -4,6 +4,7 @@ import clsx from 'clsx';
 import Seo from '../../components/SEO';
 import Footer from '../../components/Footer';
 import CookbookLink from '../../components/Footer/CookbookLink';
+import Header from '../../components/Header';
 import HomeLink from '../../components/Footer/HomeLink';
 
 import { Route as cookbookRoute } from '.';
@@ -26,8 +27,10 @@ export default function Recipe() {
   if (recipe == null) {
     return (
       <>
-        <main className="main">
+        <Header heading="Not found">
           <p>Recipe not found, check your url and try again.</p>
+        </Header>
+        <main className={clsx('main', 'hyper-legible')}>
           <p>
             Or you can{' '}
             <Link preload="intent" to={cookbookRoute.to}>
@@ -49,16 +52,20 @@ export default function Recipe() {
         title={recipe.title}
         url={`https://kwagner.dev/cookbook/recipes/${recipeName}`}
       />
-      <main className={clsx('main', styles.cookbook)}>
-        <h1>{recipe.title}</h1>
-        <p>Makes {recipe.servings}</p>
-        <p>Total time: {recipe.time}</p>
-        <p>Tags:</p>
+      <Header heading={recipe.title}>
+        <h2>Overview</h2>
         <ul>
-          {recipe.tags.map((tag) => (
-            <li key={tag}>{tag}</li>
-          ))}
+          <li>Makes {recipe.servings}</li>
+          <li>Total time: {recipe.time}</li>
+          <li>Tags:</li>
+          <ul>
+            {recipe.tags.map((tag) => (
+              <li key={tag}>{tag}</li>
+            ))}
+          </ul>
         </ul>
+      </Header>
+      <main className={clsx('main', 'hyper-legible')}>
         <h2>Ingredients</h2>
         <ul>
           {recipe.ingredients.map((ingredient) => (
