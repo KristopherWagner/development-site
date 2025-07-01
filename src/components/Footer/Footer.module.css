@@ -1,5 +1,6 @@
 .footer {
-  background-color: var(--primary);
+  background-color: var(--primary-dark);
+  font-family: AtkinsonHyperlegibleNextVF, Montserrat, serif;
 
   ul {
     list-style: none;
@@ -10,6 +11,7 @@
 
   a {
     color: white;
+    text-decoration: none;
   }
 
   ul,
