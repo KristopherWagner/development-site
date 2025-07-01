@@ -19,9 +19,17 @@ export default function IndexPage() {
       />
       <main className={styles.body}>
         <article>
-          <h1>
+          <h1>Kristopher Wagner</h1>
+          <p>
+            This is my simple development website. The goal of this site is to
+            share my hobbies and help people who share my interests learn from
+            my successes and failures.
+          </p>
+        </article>
+        <article>
+          <h2>
             <i className="fa-duotone fa-rings-wedding" /> Husband
-          </h1>
+          </h2>
           <p>
             Check out the{' '}
             <Link
@@ -34,9 +42,9 @@ export default function IndexPage() {
           </p>
         </article>
         <article>
-          <h1>
+          <h2>
             <i className="fa-solid fa-person-running" /> Runner
-          </h1>
+          </h2>
           <p>
             I maintain a running group with weekly blog posts, statistics, and
             discussions,{' '}
@@ -44,9 +52,9 @@ export default function IndexPage() {
           </p>
         </article>
         <article>
-          <h1>
+          <h2>
             <MakerIcon height="100%" /> Maker
-          </h1>
+          </h2>
           <p>
             I just started using a 3D printer, you can{' '}
             <a href="https://www.printables.com/@kwagner">
@@ -56,7 +64,7 @@ export default function IndexPage() {
           </p>
         </article>
         <article>
-          <h1>
+          <h2>
             <img
               alt="Lorcana logo"
               className={styles['lorcana-logo']}
@@ -65,7 +73,7 @@ export default function IndexPage() {
               width="34.7667px"
             />{' '}
             Illumineer
-          </h1>
+          </h2>
           <p>
             I also play{' '}
             <span className={styles['lorcana-text']}>Disney Lorcana</span>, you
@@ -77,9 +85,9 @@ export default function IndexPage() {
           </p>
         </article>
         <article>
-          <h1>
+          <h2>
             <i className="fad fa-fish" /> Fishkeeper
-          </h1>
+          </h2>
           <p>
             We have a 75-gallon aquarium that we'll hopefully be upgrading in a
             few years, until then you can{' '}
@@ -90,9 +98,9 @@ export default function IndexPage() {
           </p>
         </article>
         <article>
-          <h1>
+          <h2>
             <i className="fa-duotone fa-rabbit-running" /> Vegetarian
-          </h1>
+          </h2>
           <p>
             Cook some of our{' '}
             <Link
