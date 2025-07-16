@@ -8,105 +8,45 @@
 // You should NOT make any changes in this file as it will be overwritten.
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
-// Import Routes
+import { Route as rootRouteImport } from './routes/__root'
+import { Route as IndexRouteImport } from './routes/index'
+import { Route as WeddingIndexRouteImport } from './routes/wedding/index'
+import { Route as CookbookIndexRouteImport } from './routes/cookbook/index'
+import { Route as ArticlesIndexRouteImport } from './routes/articles/index'
+import { Route as CookbookRecipeNameRouteImport } from './routes/cookbook/$recipeName'
+import { Route as ArticlesSustainabilityOfShippingRouteImport } from './routes/articles/sustainability-of-shipping'
 
-import { Route as rootRoute } from './routes/__root'
-import { Route as IndexImport } from './routes/index'
-import { Route as WeddingIndexImport } from './routes/wedding/index'
-import { Route as CookbookIndexImport } from './routes/cookbook/index'
-import { Route as ArticlesIndexImport } from './routes/articles/index'
-import { Route as CookbookRecipeNameImport } from './routes/cookbook/$recipeName'
-import { Route as ArticlesSustainabilityOfShippingImport } from './routes/articles/sustainability-of-shipping'
-
-// Create/Update Routes
-
-const IndexRoute = IndexImport.update({
+const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => rootRoute,
+  getParentRoute: () => rootRouteImport,
 } as any)
-
-const WeddingIndexRoute = WeddingIndexImport.update({
+const WeddingIndexRoute = WeddingIndexRouteImport.update({
   id: '/wedding/',
   path: '/wedding/',
-  getParentRoute: () => rootRoute,
+  getParentRoute: () => rootRouteImport,
 } as any)
-
-const CookbookIndexRoute = CookbookIndexImport.update({
+const CookbookIndexRoute = CookbookIndexRouteImport.update({
   id: '/cookbook/',
   path: '/cookbook/',
-  getParentRoute: () => rootRoute,
+  getParentRoute: () => rootRouteImport,
 } as any)
-
-const ArticlesIndexRoute = ArticlesIndexImport.update({
+const ArticlesIndexRoute = ArticlesIndexRouteImport.update({
   id: '/articles/',
   path: '/articles/',
-  getParentRoute: () => rootRoute,
+  getParentRoute: () => rootRouteImport,
 } as any)
-
-const CookbookRecipeNameRoute = CookbookRecipeNameImport.update({
+const CookbookRecipeNameRoute = CookbookRecipeNameRouteImport.update({
   id: '/cookbook/$recipeName',
   path: '/cookbook/$recipeName',
-  getParentRoute: () => rootRoute,
+  getParentRoute: () => rootRouteImport,
 } as any)
-
 const ArticlesSustainabilityOfShippingRoute =
-  ArticlesSustainabilityOfShippingImport.update({
+  ArticlesSustainabilityOfShippingRouteImport.update({
     id: '/articles/sustainability-of-shipping',
     path: '/articles/sustainability-of-shipping',
-    getParentRoute: () => rootRoute,
+    getParentRoute: () => rootRouteImport,
   } as any)
-
-// Populate the FileRoutesByPath interface
-
-declare module '@tanstack/react-router' {
-  interface FileRoutesByPath {
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexImport
-      parentRoute: typeof rootRoute
-    }
-    '/articles/sustainability-of-shipping': {
-      id: '/articles/sustainability-of-shipping'
-      path: '/articles/sustainability-of-shipping'
-      fullPath: '/articles/sustainability-of-shipping'
-      preLoaderRoute: typeof ArticlesSustainabilityOfShippingImport
-      parentRoute: typeof rootRoute
-    }
-    '/cookbook/$recipeName': {
-      id: '/cookbook/$recipeName'
-      path: '/cookbook/$recipeName'
-      fullPath: '/cookbook/$recipeName'
-      preLoaderRoute: typeof CookbookRecipeNameImport
-      parentRoute: typeof rootRoute
-    }
-    '/articles/': {
-      id: '/articles/'
-      path: '/articles'
-      fullPath: '/articles'
-      preLoaderRoute: typeof ArticlesIndexImport
-      parentRoute: typeof rootRoute
-    }
-    '/cookbook/': {
-      id: '/cookbook/'
-      path: '/cookbook'
-      fullPath: '/cookbook'
-      preLoaderRoute: typeof CookbookIndexImport
-      parentRoute: typeof rootRoute
-    }
-    '/wedding/': {
-      id: '/wedding/'
-      path: '/wedding'
-      fullPath: '/wedding'
-      preLoaderRoute: typeof WeddingIndexImport
-      parentRoute: typeof rootRoute
-    }
-  }
-}
-
-// Create and export the route tree
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -116,7 +56,6 @@ export interface FileRoutesByFullPath {
   '/cookbook': typeof CookbookIndexRoute
   '/wedding': typeof WeddingIndexRoute
 }
-
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/articles/sustainability-of-shipping': typeof ArticlesSustainabilityOfShippingRoute
@@ -125,9 +64,8 @@ export interface FileRoutesByTo {
   '/cookbook': typeof CookbookIndexRoute
   '/wedding': typeof WeddingIndexRoute
 }
-
 export interface FileRoutesById {
-  __root__: typeof rootRoute
+  __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/articles/sustainability-of-shipping': typeof ArticlesSustainabilityOfShippingRoute
   '/cookbook/$recipeName': typeof CookbookRecipeNameRoute
@@ -135,7 +73,6 @@ export interface FileRoutesById {
   '/cookbook/': typeof CookbookIndexRoute
   '/wedding/': typeof WeddingIndexRoute
 }
-
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
@@ -163,7 +100,6 @@ export interface FileRouteTypes {
     | '/wedding/'
   fileRoutesById: FileRoutesById
 }
-
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ArticlesSustainabilityOfShippingRoute: typeof ArticlesSustainabilityOfShippingRoute
@@ -171,6 +107,53 @@ export interface RootRouteChildren {
   ArticlesIndexRoute: typeof ArticlesIndexRoute
   CookbookIndexRoute: typeof CookbookIndexRoute
   WeddingIndexRoute: typeof WeddingIndexRoute
+}
+
+declare module '@tanstack/react-router' {
+  interface FileRoutesByPath {
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/wedding/': {
+      id: '/wedding/'
+      path: '/wedding'
+      fullPath: '/wedding'
+      preLoaderRoute: typeof WeddingIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cookbook/': {
+      id: '/cookbook/'
+      path: '/cookbook'
+      fullPath: '/cookbook'
+      preLoaderRoute: typeof CookbookIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/articles/': {
+      id: '/articles/'
+      path: '/articles'
+      fullPath: '/articles'
+      preLoaderRoute: typeof ArticlesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cookbook/$recipeName': {
+      id: '/cookbook/$recipeName'
+      path: '/cookbook/$recipeName'
+      fullPath: '/cookbook/$recipeName'
+      preLoaderRoute: typeof CookbookRecipeNameRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/articles/sustainability-of-shipping': {
+      id: '/articles/sustainability-of-shipping'
+      path: '/articles/sustainability-of-shipping'
+      fullPath: '/articles/sustainability-of-shipping'
+      preLoaderRoute: typeof ArticlesSustainabilityOfShippingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+  }
 }
 
 const rootRouteChildren: RootRouteChildren = {
@@ -181,43 +164,6 @@ const rootRouteChildren: RootRouteChildren = {
   CookbookIndexRoute: CookbookIndexRoute,
   WeddingIndexRoute: WeddingIndexRoute,
 }
-
-export const routeTree = rootRoute
+export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-/* ROUTE_MANIFEST_START
-{
-  "routes": {
-    "__root__": {
-      "filePath": "__root.tsx",
-      "children": [
-        "/",
-        "/articles/sustainability-of-shipping",
-        "/cookbook/$recipeName",
-        "/articles/",
-        "/cookbook/",
-        "/wedding/"
-      ]
-    },
-    "/": {
-      "filePath": "index.tsx"
-    },
-    "/articles/sustainability-of-shipping": {
-      "filePath": "articles/sustainability-of-shipping.tsx"
-    },
-    "/cookbook/$recipeName": {
-      "filePath": "cookbook/$recipeName.tsx"
-    },
-    "/articles/": {
-      "filePath": "articles/index.tsx"
-    },
-    "/cookbook/": {
-      "filePath": "cookbook/index.tsx"
-    },
-    "/wedding/": {
-      "filePath": "wedding/index.tsx"
-    }
-  }
-}
-ROUTE_MANIFEST_END */
