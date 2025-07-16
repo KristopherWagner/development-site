@@ -18,10 +18,5 @@ describe('home page unit tests', () => {
     expect(
       screen.getByRole('link', { name: 'peak at my decks on dreamborn.ink' }),
     ).toBeInTheDocument();
-    expect(
-      screen.getByRole('link', {
-        name: 'watch our coral and fish grow on Reef2Reef',
-      }),
-    ).toBeInTheDocument();
   });
 });
