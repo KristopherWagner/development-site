@@ -6,7 +6,7 @@ import Header from '../../components/Header';
 import HomeLink from '../../components/Footer/HomeLink';
 import Seo from '../../components/SEO';
 
-import { Route as SoS } from './sustainability-of-shipping';
+import { Route as SustainabilityOfShipping } from './sustainability-of-shipping';
 
 export default function Articles() {
   return (
@@ -46,7 +46,9 @@ export default function Articles() {
       <main className={clsx('main', 'hyper-legible')}>
         <ul>
           <li>
-            <Link to={SoS.to}>Explained: Sustainability of Shipping</Link>
+            <Link to={SustainabilityOfShipping.to}>
+              Explained: Sustainability of Shipping
+            </Link>
           </li>
         </ul>
       </main>

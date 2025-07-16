@@ -1,11 +1,8 @@
 import '@testing-library/jest-dom';
-import { act, render, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
 import WeddingPage from '.';
-
-jest.mock('@fontsource/montserrat', () => jest.fn());
-jest.mock('@fontsource/roboto', () => jest.fn());
 
 describe('wedding page tests', () => {
   it.each([
