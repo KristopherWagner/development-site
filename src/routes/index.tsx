@@ -8,6 +8,10 @@ import MakerIcon from '../components/MakerIcon';
 import Seo from '../components/SEO';
 import { imageFolder } from '../constants';
 
+import { Route as Articles } from './articles';
+import { Route as Cookbook } from './cookbook';
+import { Route as Wedding } from './wedding';
+
 import styles from './index.module.css';
 
 export default function IndexPage() {
@@ -35,7 +39,7 @@ export default function IndexPage() {
             Check out the{' '}
             <Link
               aria-label="Navigate to the archived wedding website"
-              to="/wedding"
+              to={Wedding.to}
             >
               archive of our wedding website
             </Link>
@@ -93,11 +97,21 @@ export default function IndexPage() {
             Cook some of our{' '}
             <Link
               aria-label="Navigate to the Wagner family cookbook"
-              to="/cookbook"
+              to={Cookbook.to}
             >
               favorite recipes
             </Link>
             .
+          </p>
+        </article>
+        <article>
+          <h2>
+            <i className="fa-duotone fa-comments" /> Maven
+          </h2>
+          <p>
+            I like to learn and once I find something interesting (or something
+            I like), I make sure everyone knows about it. Read some of my{' '}
+            <Link to={Articles.to}>favorite articles</Link>.
           </p>
         </article>
       </main>
