@@ -54,6 +54,7 @@ export default function Recipe() {
       />
       <Header heading={recipe.title}>
         <h2>Overview</h2>
+        <p>{recipe.description}</p>
         <ul>
           <li>Makes {recipe.servings}</li>
           <li>Total time: {recipe.time}</li>
