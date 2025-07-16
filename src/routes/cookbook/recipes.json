@@ -238,5 +238,141 @@
       "href": "https://www.sixvegansisters.com/2018/04/01/crispy-tofu-parm-sandwich/",
       "title": "Original recipe"
     }
+  },
+  {
+    "url": "chicken-and-biscuits",
+    "description": "A vegan take on a southern classic",
+    "title": "\"Chicken\" and Biscuits",
+    "servings": "4 servings",
+    "time": "1 hour",
+    "ingredients": [
+      {
+        "quantity": 1,
+        "unit": "teaspoon",
+        "ingredient": "vegetable oil"
+      },
+      {
+        "quantity": 1,
+        "ingredient": "small onion"
+      },
+      {
+        "quantity": 2,
+        "ingredient": "medium carrots, chopped"
+      },
+      {
+        "quantity": 2,
+        "unit": "ribs",
+        "ingredient": "celery, chopped"
+      },
+      {
+        "quantity": 1,
+        "unit": "clove",
+        "ingredient": "garlic, minced"
+      },
+      {
+        "quantity": "1/2",
+        "unit": "teaspoon",
+        "ingredient": "salt"
+      },
+      {
+        "quantity": "1/4",
+        "unit": "teaspoon",
+        "ingredient": "pepper"
+      },
+      {
+        "quantity": "1/4",
+        "unit": "cup",
+        "ingredient": "flour"
+      },
+      {
+        "quantity": 1.5,
+        "unit": "cups",
+        "ingredient": "vegan soy curls, rehydrated in broth, drained & pressed dry with paper towels"
+      },
+      {
+        "quantity": 4,
+        "unit": "cups",
+        "ingredient": "vegetable stock"
+      },
+      {
+        "quantity": 2,
+        "unit": "tablespoons",
+        "ingredient": "Vegan Bouillon Base"
+      },
+      {
+        "quantity": 2,
+        "unit": "teaspoons",
+        "ingredient": "sugar"
+      },
+      {
+        "quantity": "1/2",
+        "unit": "cup",
+        "ingredient": "oatmilk"
+      },
+      {
+        "quantity": "1/4",
+        "unit": "cup",
+        "ingredient": "Parsley, chopped"
+      },
+      {
+        "quantity": 2,
+        "ingredient": "bay leaves, optional"
+      },
+      {
+        "quantity": 1,
+        "unit": "teaspoon",
+        "ingredient": "thyme, optional"
+      },
+      {
+        "quantity": "1 1/3",
+        "unit": "cup",
+        "ingredient": "flour, for dumplings"
+      },
+      {
+        "quantity": 2,
+        "unit": "teaspoon",
+        "ingredient": "baking powder, for dumplings"
+      },
+      {
+        "quantity": "3/4",
+        "unit": "teaspoon",
+        "ingredient": "salt, for dumplings"
+      },
+      {
+        "quantity": "2/3",
+        "unit": "cup",
+        "ingredient": "oatmilk, for dumplings"
+      },
+      {
+        "quantity": 1,
+        "unit": "tablespoon",
+        "ingredient": "vegan melted margarine, for dumplings"
+      }
+    ],
+    "instructions": [
+      "In 2 cups of very hot broth, add the soy curls and allow to sit for at least 10 minutes.",
+      "Drain, reserving the broth, and press the curls with paper towels to remove some of the excess moisture.",
+      "Add oil, onion, carrots and celery to a large saute pan, cook until vegetables are tender.",
+      "Add garlic; cook and stir 1 minute longer.",
+      "Add the drained soy curls to the vegetables and cook until golden and browned.",
+      "Stir in 1/4 cup flour to the mixture until blended.",
+      "Gradually add stock with bouillon (including the reserved 2 cups used to soak the soy curls), stirring constantly.",
+      "Stir in sugar and add bay leaves.",
+      "Cook, covered, until mixture reaches a simmer.",
+      "Meanwhile for the drop biscuits, whisk together flour, baking powder and salt.",
+      "Add oatmilk and melted vegan margarine, mixing just until blended (do not over mix). Set aside.",
+      "Gently stir in oatmilk, parsley and thyme.",
+      "Season with additional salt and pepper to taste.",
+      "Discard bay leaves.",
+      "Drop large scoops of dumpling/biscuit batter on top of simmering soup.",
+      "Reduce heat to low; cook, covered (do not lift cover for 15-18 minutes).",
+      "To check for doneness, insert a toothpick in center of dumplings. It should come out clean when fully cooked."
+    ],
+    "tags": ["vegan", "vegetarian"],
+    "source": {
+      "citation": "The Veg Life!. (2019). Vegan Chicken and Biscuits",
+      "href": "https://theveglife.com/vegan-chicken-biscuits/",
+      "title": "Original recipe"
+    }
   }
 ]
