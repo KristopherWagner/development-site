@@ -1,24 +1,25 @@
 import '@testing-library/jest-dom';
-import { screen } from '@testing-library/react';
-
-import renderWithProvider from '../../testUtils';
+import { render, screen } from '@testing-library/react';
 
 import CookbookLink from './CookbookLink';
 import Footer from '.';
 import HomeLink from './HomeLink';
 import SocialLinks from './SocialLinks';
+import ArticlesLink from './ArticlesLink';
 
 describe('Footer component tests', () => {
-  it('renders accesible social media links', async () => {
-    renderWithProvider(
+  it('renders accesible social media links', () => {
+    render(
       <Footer>
         <SocialLinks />
         <HomeLink />
         <CookbookLink />
+        <ArticlesLink />
       </Footer>,
     );
+
     expect(
-      await screen.findByRole('link', { name: 'Reach out to me on Discord' }),
+      screen.getByRole('link', { name: 'Reach out to me on Discord' }),
     ).toBeInTheDocument();
     expect(
       screen.getByRole('link', { name: 'Watch some of my videos' }),
@@ -33,6 +34,9 @@ describe('Footer component tests', () => {
     ).toBeInTheDocument();
     expect(
       screen.getByRole('link', { name: 'Return to cookbook' }),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('link', { name: 'Return to the list of articles' }),
     ).toBeInTheDocument();
   });
 });

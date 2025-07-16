@@ -1,35 +1,33 @@
 import '@testing-library/jest-dom';
-import { screen } from '@testing-library/react';
-
-import renderWithProvider from '../../testUtils';
+import { render, screen } from '@testing-library/react';
 
 import Cookbook from '.';
 import Recipe, { Route } from './$recipeName';
 
 describe('cookbook page unit tests', () => {
-  it('renders a list of recipes', async () => {
-    renderWithProvider(<Cookbook />);
+  it('renders a list of recipes', () => {
+    render(<Cookbook />);
     expect(
-      await screen.findByRole('link', { name: 'Walnut Pasta' }),
+      screen.getByRole('link', { name: 'Walnut Pasta' }),
     ).toBeInTheDocument();
   });
 });
 
 describe('recipe page unit tests', () => {
-  it('renders a not found page', async () => {
-    renderWithProvider(<Recipe />);
+  it('renders a not found page', () => {
+    render(<Recipe />);
     expect(
-      await screen.findByRole('link', { name: 'return to the cookbook' }),
+      screen.getByRole('link', { name: 'return to the cookbook' }),
     ).toBeInTheDocument();
   });
 
-  it('renders a recipe', async () => {
-    Route.useParams = jest
-      .fn()
-      .mockImplementation(() => ({ recipeName: 'walnut-pasta' }));
-    renderWithProvider(<Recipe />);
+  it('renders a recipe', () => {
+    (Route.useParams as any).mockImplementation(() => ({
+      recipeName: 'walnut-pasta',
+    }));
+    render(<Recipe />);
     expect(
-      await screen.findByRole('heading', { level: 1, name: 'Walnut Pasta' }),
+      screen.getByRole('heading', { level: 1, name: 'Walnut Pasta' }),
     ).toBeInTheDocument();
   });
 });
