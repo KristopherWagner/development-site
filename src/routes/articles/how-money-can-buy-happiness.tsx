@@ -15,10 +15,10 @@ export default function RouteComponent() {
         title="How Money Can Buy Happiness—Wait, What?"
         url="https://www.ynab.com/blog/how-money-can-buy-happiness-wait-what"
       />
-      <Header heading="Explained: The Sustainability Of Shipping">
+      <Header heading="How Money Can Buy Happiness">
         <p>
-          I think a commont misconception is that you should always "save"
-          money. I think that's the wrong way to look at money. Money is a
+          I think a common misconception is that you should always "save" money.
+          I think that's the wrong way to look at money. Money is a
           representation of how much of your life you're converting to a
           currency you can spend to improve the rest of your life.{' '}
           <em>Saving money is the same as wasting your life</em>. If you don't
