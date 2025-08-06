@@ -15,6 +15,7 @@ import { Route as CookbookIndexRouteImport } from './routes/cookbook/index'
 import { Route as ArticlesIndexRouteImport } from './routes/articles/index'
 import { Route as CookbookRecipeNameRouteImport } from './routes/cookbook/$recipeName'
 import { Route as ArticlesSustainabilityOfShippingRouteImport } from './routes/articles/sustainability-of-shipping'
+import { Route as ArticlesHowMoneyCanBuyHappinessRouteImport } from './routes/articles/how-money-can-buy-happiness'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -47,9 +48,16 @@ const ArticlesSustainabilityOfShippingRoute =
     path: '/articles/sustainability-of-shipping',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ArticlesHowMoneyCanBuyHappinessRoute =
+  ArticlesHowMoneyCanBuyHappinessRouteImport.update({
+    id: '/articles/how-money-can-buy-happiness',
+    path: '/articles/how-money-can-buy-happiness',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/articles/how-money-can-buy-happiness': typeof ArticlesHowMoneyCanBuyHappinessRoute
   '/articles/sustainability-of-shipping': typeof ArticlesSustainabilityOfShippingRoute
   '/cookbook/$recipeName': typeof CookbookRecipeNameRoute
   '/articles': typeof ArticlesIndexRoute
@@ -58,6 +66,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/articles/how-money-can-buy-happiness': typeof ArticlesHowMoneyCanBuyHappinessRoute
   '/articles/sustainability-of-shipping': typeof ArticlesSustainabilityOfShippingRoute
   '/cookbook/$recipeName': typeof CookbookRecipeNameRoute
   '/articles': typeof ArticlesIndexRoute
@@ -67,6 +76,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/articles/how-money-can-buy-happiness': typeof ArticlesHowMoneyCanBuyHappinessRoute
   '/articles/sustainability-of-shipping': typeof ArticlesSustainabilityOfShippingRoute
   '/cookbook/$recipeName': typeof CookbookRecipeNameRoute
   '/articles/': typeof ArticlesIndexRoute
@@ -77,6 +87,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/articles/how-money-can-buy-happiness'
     | '/articles/sustainability-of-shipping'
     | '/cookbook/$recipeName'
     | '/articles'
@@ -85,6 +96,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/articles/how-money-can-buy-happiness'
     | '/articles/sustainability-of-shipping'
     | '/cookbook/$recipeName'
     | '/articles'
@@ -93,6 +105,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/articles/how-money-can-buy-happiness'
     | '/articles/sustainability-of-shipping'
     | '/cookbook/$recipeName'
     | '/articles/'
@@ -102,6 +115,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ArticlesHowMoneyCanBuyHappinessRoute: typeof ArticlesHowMoneyCanBuyHappinessRoute
   ArticlesSustainabilityOfShippingRoute: typeof ArticlesSustainabilityOfShippingRoute
   CookbookRecipeNameRoute: typeof CookbookRecipeNameRoute
   ArticlesIndexRoute: typeof ArticlesIndexRoute
@@ -153,11 +167,19 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ArticlesSustainabilityOfShippingRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/articles/how-money-can-buy-happiness': {
+      id: '/articles/how-money-can-buy-happiness'
+      path: '/articles/how-money-can-buy-happiness'
+      fullPath: '/articles/how-money-can-buy-happiness'
+      preLoaderRoute: typeof ArticlesHowMoneyCanBuyHappinessRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ArticlesHowMoneyCanBuyHappinessRoute: ArticlesHowMoneyCanBuyHappinessRoute,
   ArticlesSustainabilityOfShippingRoute: ArticlesSustainabilityOfShippingRoute,
   CookbookRecipeNameRoute: CookbookRecipeNameRoute,
   ArticlesIndexRoute: ArticlesIndexRoute,

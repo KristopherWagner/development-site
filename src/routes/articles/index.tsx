@@ -6,6 +6,7 @@ import Header from '../../components/Header';
 import HomeLink from '../../components/Footer/HomeLink';
 import Seo from '../../components/SEO';
 
+import { Route as HowMoneyCanBuyHappiness } from './how-money-can-buy-happiness';
 import { Route as SustainabilityOfShipping } from './sustainability-of-shipping';
 
 export default function Articles() {
@@ -48,6 +49,13 @@ export default function Articles() {
           <li>
             <Link to={SustainabilityOfShipping.to}>
               Explained: Sustainability of Shipping
+            </Link>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <Link to={HowMoneyCanBuyHappiness.to}>
+              How Money Can Buy Happiness
             </Link>
           </li>
         </ul>
