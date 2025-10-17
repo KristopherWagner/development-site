@@ -8,6 +8,8 @@ import Seo from '../../components/SEO';
 
 import recipes from './recipes.json';
 import styles from './cookbook.module.css';
+import Grid from '../../components/Grid';
+import Card from '../../components/Grid/Card';
 
 export default function Cookbook() {
   return (
@@ -25,14 +27,16 @@ export default function Cookbook() {
         </p>
       </Header>
       <main className={clsx('main', 'hyper-legible', styles.cookbook)}>
-        <h2>Recipes</h2>
-        <ul>
-          {recipes.map((recipe) => (
-            <li key={recipe.url}>
-              <Link to={recipe.url}>{recipe.title}</Link>
-            </li>
-          ))}
-        </ul>
+        <Grid>
+          <h2 className="cols-full">Recipes</h2>
+          <ul>
+            {recipes.map((recipe) => (
+              <Link className="cols-md" key={recipe.url} to={recipe.url}>
+                <Card as="li">{recipe.title}</Card>
+              </Link>
+            ))}
+          </ul>
+        </Grid>
       </main>
       <Footer>
         <HomeLink />
