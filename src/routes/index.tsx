@@ -64,27 +64,10 @@ export default function IndexPage() {
             I just started using a 3D printer, you can{' '}
             <a href="https://www.printables.com/@kwagner">
               follow my journey on Printables
-            </a>
-            .
-          </p>
-        </article>
-        <article>
-          <h2>
-            <img
-              alt="Lorcana logo"
-              className={styles['lorcana-logo']}
-              height="32px"
-              src={imageFolder + 'lorcana.webp'}
-              width="34.7667px"
-            />{' '}
-            Illumineer
-          </h2>
-          <p>
-            I also play{' '}
-            <span className={styles['lorcana-text']}>Disney Lorcana</span>, you
-            can you can{' '}
-            <a href="https://dreamborn.ink/creators/BJXuxcM6ASb2YhhJZDT2y6dEImd2">
-              peak at my decks on dreamborn.ink
+            </a>{' '}
+            or{' '}
+            <a href="https://makerworld.com/en/@kwagner">
+              checkout my MakerWorld profile
             </a>
             .
           </p>

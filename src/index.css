@@ -14,6 +14,7 @@ html {
   }
 
   main {
+    color: var(--text);
     margin: 0.67rem auto;
     overflow: auto;
     width: var(--application-width);
@@ -39,6 +40,14 @@ html {
       font-size: 1.17rem;
       font-weight: 500;
       margin-block: 1rem;
+    }
+
+    a {
+      color: var(--secondary);
+
+      &:hover {
+        color: var(--primary);
+      }
     }
   }
 }
