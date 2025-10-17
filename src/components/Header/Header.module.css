@@ -3,7 +3,7 @@
 
   .heading {
     background-color: var(--primary-dark);
-    color: white;
+    color: var(--text);
     padding: 0.67rem 0;
 
     h1 {
@@ -11,10 +11,13 @@
       font-weight: 300;
       margin: 0px auto;
       max-width: var(--application-width);
+
+      color: light-dark(var(--background), var(--text));
     }
   }
 
   .content {
+    color: var(--text);
     margin: 0px auto;
     max-width: var(--application-width);
 
