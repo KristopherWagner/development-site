@@ -1,0 +1,14 @@
+.card {
+  h3,
+  p {
+    margin-block: 0px;
+  }
+
+  .list {
+    list-style: none;
+  }
+}
+
+:global(.main) p.instructions {
+  display: inline;
+}
