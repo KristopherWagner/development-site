@@ -31,7 +31,11 @@ export default function Cookbook() {
           <h2 className="cols-full">Recipes</h2>
           <ul>
             {recipes.map((recipe) => (
-              <Link className="cols-md" key={recipe.url} to={recipe.url}>
+              <Link
+                className={clsx(styles.link, 'cols-md')}
+                key={recipe.url}
+                to={recipe.url}
+              >
                 <Card as="li">{recipe.title}</Card>
               </Link>
             ))}
