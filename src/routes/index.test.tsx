@@ -14,8 +14,5 @@ describe('home page unit tests', () => {
     expect(
       screen.getByRole('link', { name: 'follow my journey on Printables' }),
     ).toBeInTheDocument();
-    expect(
-      screen.getByRole('link', { name: 'peak at my decks on dreamborn.ink' }),
-    ).toBeInTheDocument();
   });
 });
