@@ -17,18 +17,13 @@ export default function NotFound() {
   return (
     <>
       <Seo
-        description="404: Page nout found"
+        description="404: Page not found"
         imageUrl=""
         title="404 Not Found"
         url=""
       />
-      <Header
-        heading={
-          <span>
-            <i className="fa-duotone fa-crow" /> 404
-          </span>
-        }
-      >
+      <Header heading="Page not found">
+        <div className={styles.crow}>🐦‍⬛</div>
         <h2>Well, this is awkward</h2>
         <p>
           Looks like this page flew the coop. Our murder of crows searched
@@ -37,36 +32,26 @@ export default function NotFound() {
         </p>
       </Header>
       <main className={clsx('main', 'hyper-legible')}>
-        <Grid>
-          <Card className={clsx(styles.card, 'cols-full')}>
-            <p>
-              "Once upon a midnight dreary, while I pondered, weak and weary,
-              over this page that exists... nevermore."
-            </p>
-            <p>- Edgar Allan No-Page</p>
+        <p className={clsx(styles.instructions, 'cols-full')}>
+          You can{' '}
+          <Link aria-label="Return home" preload="intent" to={Route.to}>
+            fly back home
+          </Link>{' '}
+          or use your browser's back button to retrace your flight path.
+        </p>
+        <h3 className="cols-full">Crow facts while you're here:</h3>
+        <Grid as="ul" className={styles.list}>
+          <Card as="li" className="cols-md">
+            Crows can remember human faces for years and hold grudges
           </Card>
-          <p className={clsx(styles.instructions, 'cols-full')}>
-            You can{' '}
-            <Link aria-label="Return home" preload="intent" to={Route.to}>
-              fly back home
-            </Link>{' '}
-            or use your browser's back button to retrace your flight path.
-          </p>
-          <Card className={clsx(styles.card, 'cols-full')}>
-            <h3>
-              <i className="fa-duotone fa-crow" /> Crow facts while you're here:
-            </h3>
-            <ul className={styles.list}>
-              <li>Crows can remember human faces for years and hold grudges</li>
-              <li>They're one of the few animals that create and use tools </li>
-              <li>
-                Crows have been observed playing pranks on each other for fun
-              </li>
-              <li>
-                A group of crows is called a "murder" (fitting for this dead
-                page)
-              </li>
-            </ul>
+          <Card as="li" className="cols-md">
+            They're one of the few animals that create and use tools{' '}
+          </Card>
+          <Card as="li" className="cols-md">
+            Crows have been observed playing pranks on each other for fun
+          </Card>
+          <Card as="li" className="cols-md">
+            A group of crows is called a "murder" (fitting for this dead page)
           </Card>
         </Grid>
       </main>

@@ -3,10 +3,14 @@ import clsx from 'clsx';
 import styles from './Grid.module.css';
 
 export default function Grid({
+  as = 'div',
   className,
   children,
-}: React.PropsWithChildren<{ className?: string }>) {
+}: React.PropsWithChildren<{ as?: 'div' | 'ul'; className?: string }>) {
+  const Component = as;
   return (
-    <div className={clsx(className, styles['grid-container'])}>{children}</div>
+    <Component className={clsx(className, styles['grid-container'])}>
+      {children}
+    </Component>
   );
 }

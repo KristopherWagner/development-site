@@ -1,14 +1,24 @@
-.card {
-  h3,
-  p {
-    margin-block: 0px;
-  }
-
-  .list {
-    list-style: none;
-  }
+:global(.main) p.instructions {
+  display: inline-block;
 }
 
-:global(.main) p.instructions {
-  display: inline;
+.list {
+  padding: 0px;
+  list-style: none;
+}
+
+.crow {
+  animation: glow 2s ease-in-out infinite;
+  font-size: 7rem;
+  margin-bottom: 1rem;
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    text-shadow: 0 0 30px rgba(106, 90, 142, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 50px rgba(106, 90, 142, 0.8);
+  }
 }
