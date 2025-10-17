@@ -19,4 +19,10 @@
       text-decoration: none;
     }
   }
+
+  .link {
+    &:hover {
+      filter: brightness(150%);
+    }
+  }
 }

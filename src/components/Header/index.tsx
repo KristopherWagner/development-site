@@ -4,7 +4,7 @@ import styles from './Header.module.css';
 export default function Header({
   heading,
   children,
-}: React.PropsWithChildren<{ heading: string }>) {
+}: React.PropsWithChildren<{ heading: React.ReactNode }>) {
   return (
     <header className={clsx('hyper-legible', styles.header)}>
       <div className={styles.heading}>
