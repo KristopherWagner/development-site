@@ -11,6 +11,7 @@ export default function MakerIcon({ height }: { height: string }) {
       y="0px"
       viewBox="0 0 259.1 300"
     >
+      <title>Legendary badge from Printables</title>
       <polyline
         className={styles.st0}
         points="231.6,128.7 232.6,131.5 230.9,127.2 "
