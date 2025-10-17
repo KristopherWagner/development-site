@@ -2,14 +2,14 @@ import { createFileRoute, Link } from '@tanstack/react-router';
 import clsx from 'clsx';
 
 import Footer from '../../components/Footer';
-import Header from '../../components/Header';
 import HomeLink from '../../components/Footer/HomeLink';
+import Header from '../../components/Header';
+import Grid from '../../components/Grid';
+import Card from '../../components/Grid/Card';
 import Seo from '../../components/SEO';
 
 import recipes from './recipes.json';
 import styles from './cookbook.module.css';
-import Grid from '../../components/Grid';
-import Card from '../../components/Grid/Card';
 
 export default function Cookbook() {
   return (
