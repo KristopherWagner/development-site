@@ -1,7 +1,7 @@
 .card {
   align-items: center;
   background-color: var(--secondary);
-  border-radius: 0.5rem;
+  border-radius: 4px;
   color: var(--background);
   display: grid;
   padding: 1rem;
