@@ -26,14 +26,14 @@ i.icon {
   height: 50px;
   width: 50px;
 
-  color: var(--primary-container-tex);
+  color: var(--primary-container-text);
   display: table-cell;
   text-align: center;
   vertical-align: middle;
 }
 
 a.link {
-  color: var(--primary-container-tex);
+  color: var(--primary-container-text);
   display: block;
   font-size: 36px;
   margin-top: 18px;

@@ -30,6 +30,12 @@ div.flipped {
 
   div.back {
     box-shadow: 0 3px 6px black;
+
+    @media only screen and (min-width: 1080px) {
+      h4.heading {
+        font-size: 1.5rem;
+      }
+    }
   }
 }
 
@@ -48,7 +54,7 @@ div.front {
 div.back {
   background-color: var(--primary-container);
   box-shadow: none;
-  color: var(--primary-container-tex);
+  color: var(--primary-container-text);
   padding: 16px 8px;
   transition: box-shadow 1.6s;
   transform: rotateY(180deg);
