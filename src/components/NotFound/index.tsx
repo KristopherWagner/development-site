@@ -16,7 +16,6 @@ export default function NotFound() {
         description="404: Page not found"
         imageUrl=""
         title="404 Not Found"
-        url=""
       />
       <Header heading="Page not found">
         <div className={styles.crow}>🐦‍⬛</div>
