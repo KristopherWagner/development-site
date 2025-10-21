@@ -1,4 +1,5 @@
 import clsx from 'clsx';
+import { Link } from '@tanstack/react-router';
 
 import Grid from '../Grid';
 import Card from '../Grid/Card';
@@ -6,14 +7,9 @@ import Header from '../Header';
 import Seo from '../SEO';
 
 import styles from './NotFound.module.css';
-import { Link, useRouter } from '@tanstack/react-router';
 import { Route } from '../../routes';
 
 export default function NotFound() {
-  const { history } = useRouter();
-
-  console.log(history);
-
   return (
     <>
       <Seo
