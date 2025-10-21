@@ -10,7 +10,7 @@ section.light {
 
 section.primary {
   background-color: var(--primary-container);
-  color: var(--primary-container-tex);
+  color: var(--primary-container-text);
 }
 
 section.secondary {

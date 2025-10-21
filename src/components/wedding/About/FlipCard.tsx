@@ -22,7 +22,7 @@ export default function FlipCard(props: {
       >
         <div className={styles.front}>{props.image}</div>
         <div className={styles.front + ' ' + styles.back}>
-          <h4 className="montserrat">{props.name}</h4>
+          <h4 className={clsx(styles.heading, 'montserrat')}>{props.name}</h4>
           <p className="body1">{props.memory}</p>
         </div>
       </div>
