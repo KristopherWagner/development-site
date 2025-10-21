@@ -7,7 +7,7 @@ export default function Seo({
   description: string;
   imageUrl: string;
   title: string;
-  url: string;
+  url?: string;
 }) {
   return (
     <>
