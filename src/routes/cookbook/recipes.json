@@ -568,5 +568,62 @@
       "href": "https://zestfulkitchen.com/vegan-tofu-fried-rice-recipe/",
       "title": "Original recipe"
     }
+  },
+  {
+    "url": "japanese-curry",
+    "description": "A delicious vegetarian version of a Japanese staple",
+    "title": "Japanese Curry",
+    "servings": "3-4 servings",
+    "time": "Approximately an hour",
+    "ingredients": [
+      {
+        "quantity": 2,
+        "unit": "pounds",
+        "ingredient": "honey gold potatoes, peeled and diced"
+      },
+      {
+        "quantity": 1,
+        "unit": "cup",
+        "ingredient": "carrots, chopped"
+      },
+      {
+        "quantity": "1/2",
+        "ingredient": "sweet onion, diced"
+      },
+      {
+        "quantity": "2.5",
+        "unit": "cups",
+        "ingredient": "water"
+      },
+      {
+        "quantity": "1",
+        "unit": "bag",
+        "ingredient": "Impossible steak pieces"
+      },
+      {
+        "quantity": "1",
+        "unit": "box",
+        "ingredient": "Golden Curry Japanese curry mix"
+      },
+      {
+        "ingredient": "Olive oil"
+      }
+    ],
+    "instructions": [
+      "Cook the impossible steak according to package and set aside in a bowl",
+      "Add olive oil to coat a Dutch oven or large skillet",
+      "Sauté the potatoes, onions, and carrots in the oil for 5 min or until just browned",
+      "Add water and cover.",
+      "Cook on medium to medium-low for 15-20 min until potatoes are tender",
+      "Add cooked impossible steak into the pot",
+      "Mix in the curry blocks thoroughly and let sit for 5 min to thicken",
+      "Serve over rice or noodles"
+    ],
+    "tags": ["vegan", "vegetarian"],
+    "source": {
+      "citation": "Golden Curry Mix Box. (1923).",
+      "href": "https://www.sbfoods-worldwide.com/products/search/index.html",
+      "title": "Original recipe"
+    }
   }
 ]
