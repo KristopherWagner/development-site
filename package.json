@@ -6,11 +6,12 @@
     "/wedding"
   ],
   "scripts": {
+    "build": "npm run build --workspaces",
     "dev": "concurrently \"npm run dev -w home\" \"npm run dev -w wedding\"",
     "dev:home": "npm run dev -w home",
     "dev:wedding": "npm run dev -w wedding",
-    "build": "npm run build --workspaces",
-    "install:all": "npm install"
+    "install:all": "npm install",
+    "test": "npm run test --workspaces"
   },
   "devDependencies": {
     "concurrently": "^8.2.0"
