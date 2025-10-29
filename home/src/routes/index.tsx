@@ -6,7 +6,7 @@ import SocialLinks from '../components/Footer/SocialLinks';
 import Header from '../components/Header';
 import MakerIcon from '../components/MakerIcon';
 import Seo from '../components/SEO';
-import { imageFolder } from '../constants';
+import { imageFolder } from '../../../wedding/src/constants';
 
 import { Route as Articles } from './articles';
 import { Route as Cookbook } from './cookbook';

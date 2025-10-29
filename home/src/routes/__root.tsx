@@ -1,5 +1,3 @@
-import '@fontsource/montserrat';
-import '@fontsource/roboto';
 import { createRootRoute, Outlet } from '@tanstack/react-router';
 
 import NotFound from '../components/NotFound';
