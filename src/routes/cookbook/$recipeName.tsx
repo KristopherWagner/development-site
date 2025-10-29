@@ -8,7 +8,7 @@ import Header from '../../components/Header';
 import HomeLink from '../../components/Footer/HomeLink';
 
 import { Route as cookbookRoute } from '.';
-import recipes from './recipes.json';
+import recipes from './recipes.json' with { type: 'json' };
 
 import styles from './cookbook.module.css';
 
