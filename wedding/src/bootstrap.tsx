@@ -1,11 +1,13 @@
-import React from "react";
+import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import WeddingPage from "./wedding";
 
-const container = document.getElementById("root");
+import "./index.css";
+
+const container = document.getElementById("root") as HTMLElement;
 const root = createRoot(container);
 root.render(
-  <React.StrictMode>
+  <StrictMode>
     <WeddingPage />
-  </React.StrictMode>
+  </StrictMode>
 );
