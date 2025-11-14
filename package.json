@@ -14,7 +14,7 @@
     "test": "npm run test --workspaces"
   },
   "devDependencies": {
-    "concurrently": "^8.2.0"
+    "concurrently": "^9.2.1"
   },
   "optionalDependencies": {
     "@rspack/binding-linux-x64-gnu": "^1.6.3"
