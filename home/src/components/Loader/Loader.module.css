@@ -1,0 +1,10 @@
+.heading {
+  font-family: AtkinsonHyperlegibleNextVF, serif;
+  font-size: 64px;
+  font-weight: 300;
+
+  i {
+    --fa-primary-color: var(--primary);
+    --fa-secondary-opacity: 1;
+  }
+}

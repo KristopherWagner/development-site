@@ -13,6 +13,7 @@ import { Route as Cookbook } from './cookbook';
 import { Route as Wedding } from './wedding';
 
 import styles from './index.module.css';
+import Loader from '../components/Loader';
 
 export default function IndexPage() {
   return (
