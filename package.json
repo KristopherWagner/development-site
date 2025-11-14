@@ -17,6 +17,6 @@
     "concurrently": "^8.2.0"
   },
   "optionalDependencies": {
-    "@rollup/rollup-linux-x64-gnu": "4.9.5"
+    "@rspack/binding-linux-x64-gnu": "^1.6.3"
   }
 }
