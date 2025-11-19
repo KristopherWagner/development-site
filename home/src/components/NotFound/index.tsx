@@ -1,10 +1,10 @@
 import clsx from 'clsx';
 import { Link } from '@tanstack/react-router';
 
+import Card from '@kwagner-dev/card';
+import Grid from '@kwagner-dev/grid';
 import Seo from '@kwagner-dev/seo';
 
-import Grid from '../Grid';
-import Card from '../Grid/Card';
 import Header from '../Header';
 
 import styles from './NotFound.module.css';

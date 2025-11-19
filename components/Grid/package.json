@@ -1,0 +1,14 @@
+{
+  "name": "@kwagner-dev/grid",
+  "version": "1.0.0",
+  "description": "display grid with automatic columns",
+  "author": "Kristopher Wagner",
+  "type": "module",
+  "main": "index.tsx",
+  "dependencies": {
+    "react": "^19.2.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}
