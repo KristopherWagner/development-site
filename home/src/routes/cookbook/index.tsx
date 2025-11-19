@@ -1,12 +1,13 @@
 import { createFileRoute, Link } from '@tanstack/react-router';
 import clsx from 'clsx';
 
+import Seo from '@kwagner-dev/seo';
+
 import Footer from '../../components/Footer';
 import HomeLink from '../../components/Footer/HomeLink';
 import Header from '../../components/Header';
 import Grid from '../../components/Grid';
 import Card from '../../components/Grid/Card';
-import Seo from '../../components/SEO';
 
 import recipes from './recipes.json';
 import styles from './cookbook.module.css';

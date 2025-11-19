@@ -1,17 +1,18 @@
 {
-  "name": "kwagner-monorepo",
+  "name": "kwagner-dev",
   "private": true,
   "workspaces": [
     "/home",
-    "/wedding"
+    "/wedding",
+    "/components/SEO"
   ],
   "scripts": {
-    "build": "npm run build --workspaces",
+    "build": "npm run build --workspaces --if-present",
     "dev": "concurrently \"npm run dev -w home\" \"npm run dev -w wedding\"",
     "dev:home": "npm run dev -w home",
     "dev:wedding": "npm run dev -w wedding",
     "install:all": "npm install",
-    "test": "npm run test --workspaces"
+    "test": "npm run test --workspaces --if-present"
   },
   "devDependencies": {
     "concurrently": "^9.2.1"

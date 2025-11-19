@@ -1,7 +1,8 @@
 import { createFileRoute, Link } from '@tanstack/react-router';
 import clsx from 'clsx';
 
-import Seo from '../../components/SEO';
+import Seo from '@kwagner-dev/seo';
+
 import Footer from '../../components/Footer';
 import CookbookLink from '../../components/Footer/CookbookLink';
 import Header from '../../components/Header';

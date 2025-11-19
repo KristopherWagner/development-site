@@ -1,5 +1,5 @@
 {
-  "name": "kwagner-development-site",
+  "name": "@kwagner-dev/home",
   "version": "2.0.0",
   "private": true,
   "description": "Development website for Kristopher Wagner",
@@ -12,6 +12,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@kwagner-dev/seo": "^1.0.0",
     "@tanstack/react-router": "^1.136.2",
     "clsx": "^2.1.1",
     "react": "^19.2.0",

@@ -1,11 +1,12 @@
 import { createFileRoute, Link } from '@tanstack/react-router';
 import clsx from 'clsx';
 
+import Seo from '@kwagner-dev/seo';
+
 import Footer from '../components/Footer';
 import SocialLinks from '../components/Footer/SocialLinks';
 import Header from '../components/Header';
 import MakerIcon from '../components/MakerIcon';
-import Seo from '../components/SEO';
 import { imageFolder } from '../../../wedding/src/constants';
 
 import { Route as Articles } from './articles';
@@ -13,7 +14,6 @@ import { Route as Cookbook } from './cookbook';
 import { Route as Wedding } from './wedding';
 
 import styles from './index.module.css';
-import Loader from '../components/Loader';
 
 export default function IndexPage() {
   return (

@@ -1,0 +1,15 @@
+{
+  "name": "@kwagner-dev/seo",
+  "version": "1.0.0",
+  "description": "search engine optimization component",
+  "license": "ISC",
+  "author": "Kristopher Wagner",
+  "type": "module",
+  "main": "index.tsx",
+  "dependencies": {
+    "react": "^19.2.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}
