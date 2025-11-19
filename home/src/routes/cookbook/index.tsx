@@ -8,7 +8,7 @@ import Grid from '@kwagner-dev/grid';
 import Header from '@kwagner-dev/header';
 import Seo from '@kwagner-dev/seo';
 
-import recipes from './recipes.json';
+import recipes from './recipes.json' with { type: 'json' };
 import styles from './cookbook.module.css';
 
 export default function Cookbook() {
