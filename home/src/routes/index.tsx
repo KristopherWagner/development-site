@@ -1,9 +1,9 @@
 import { createFileRoute, Link } from '@tanstack/react-router';
 import clsx from 'clsx';
 
+import Footer from '@kwagner-dev/footer';
 import Seo from '@kwagner-dev/seo';
 
-import Footer from '../components/Footer';
 import SocialLinks from '../components/Footer/SocialLinks';
 import Header from '../components/Header';
 import MakerIcon from '../components/MakerIcon';

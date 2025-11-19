@@ -1,11 +1,13 @@
 {
-  "name": "@kwagner-dev/seo",
+  "name": "@kwagner-dev/footer",
   "version": "1.0.0",
-  "description": "search engine optimization component",
+  "description": "styled footer",
   "author": "Kristopher Wagner",
   "type": "module",
   "main": "index.tsx",
   "dependencies": {
+    "@tanstack/react-router": "^1.136.15",
+    "clsx": "^2.1.1",
     "react": "^19.2.0"
   },
   "devDependencies": {

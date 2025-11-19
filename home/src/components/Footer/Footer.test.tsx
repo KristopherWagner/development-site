@@ -1,9 +1,10 @@
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 
+import Footer from '@kwagner-dev/footer';
+import HomeLink from '@kwagner-dev/footer/HomeLink';
+
 import CookbookLink from './CookbookLink';
-import Footer from '.';
-import HomeLink from './HomeLink';
 import SocialLinks from './SocialLinks';
 import ArticlesLink from './ArticlesLink';
 

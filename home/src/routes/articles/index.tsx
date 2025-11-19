@@ -1,11 +1,11 @@
 import { createFileRoute, Link } from '@tanstack/react-router';
 import clsx from 'clsx';
 
+import Footer from '@kwagner-dev/footer';
+import HomeLink from '@kwagner-dev/footer/HomeLink';
 import Seo from '@kwagner-dev/seo';
 
-import Footer from '../../components/Footer';
 import Header from '../../components/Header';
-import HomeLink from '../../components/Footer/HomeLink';
 
 import { Route as HowMoneyCanBuyHappiness } from './how-money-can-buy-happiness';
 import { Route as SustainabilityOfShipping } from './sustainability-of-shipping';

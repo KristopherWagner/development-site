@@ -4,7 +4,7 @@
   "workspaces": [
     "/home",
     "/wedding",
-    "/components/SEO"
+    "/components/*"
   ],
   "scripts": {
     "build": "npm run build --workspaces --if-present",
