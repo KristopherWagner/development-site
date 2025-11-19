@@ -3,10 +3,10 @@ import clsx from 'clsx';
 
 import Footer from '@kwagner-dev/footer';
 import HomeLink from '@kwagner-dev/footer/HomeLink';
+import Header from '@kwagner-dev/header';
 import Seo from '@kwagner-dev/seo';
 
 import CookbookLink from '../../components/Footer/CookbookLink';
-import Header from '../../components/Header';
 
 import { Route as cookbookRoute } from '.';
 import recipes from './recipes.json' with { type: 'json' };

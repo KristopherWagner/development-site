@@ -3,12 +3,12 @@ import { Link } from '@tanstack/react-router';
 
 import Card from '@kwagner-dev/card';
 import Grid from '@kwagner-dev/grid';
+import Header from '@kwagner-dev/header';
 import Seo from '@kwagner-dev/seo';
 
-import Header from '../Header';
+import { Route } from '../../routes';
 
 import styles from './NotFound.module.css';
-import { Route } from '../../routes';
 
 export default function NotFound() {
   return (

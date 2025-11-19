@@ -1,9 +1,8 @@
 import { createFileRoute } from '@tanstack/react-router';
 import clsx from 'clsx';
 
+import Header from '@kwagner-dev/header';
 import Seo from '@kwagner-dev/seo';
-
-import Header from '../../components/Header';
 
 import styles from './articles.module.css';
 

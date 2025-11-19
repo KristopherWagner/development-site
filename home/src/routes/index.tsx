@@ -2,10 +2,10 @@ import { createFileRoute, Link } from '@tanstack/react-router';
 import clsx from 'clsx';
 
 import Footer from '@kwagner-dev/footer';
+import Header from '@kwagner-dev/header';
 import Seo from '@kwagner-dev/seo';
 
 import SocialLinks from '../components/Footer/SocialLinks';
-import Header from '../components/Header';
 import MakerIcon from '../components/MakerIcon';
 import { imageFolder } from '../../../wedding/src/constants';
 

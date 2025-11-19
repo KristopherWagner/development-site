@@ -3,9 +3,8 @@ import clsx from 'clsx';
 
 import Footer from '@kwagner-dev/footer';
 import HomeLink from '@kwagner-dev/footer/HomeLink';
+import Header from '@kwagner-dev/header';
 import Seo from '@kwagner-dev/seo';
-
-import Header from '../../components/Header';
 
 import { Route as HowMoneyCanBuyHappiness } from './how-money-can-buy-happiness';
 import { Route as SustainabilityOfShipping } from './sustainability-of-shipping';

@@ -15,6 +15,7 @@
     "@kwagner-dev/card": "^1.0.0",
     "@kwagner-dev/footer": "^1.0.0",
     "@kwagner-dev/grid": "^1.0.0",
+    "@kwagner-dev/header": "^1.0.0",
     "@kwagner-dev/seo": "^1.0.0",
     "@tanstack/react-router": "^1.136.2",
     "clsx": "^2.1.1",

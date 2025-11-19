@@ -5,9 +5,8 @@ import Card from '@kwagner-dev/card';
 import Footer from '@kwagner-dev/footer';
 import HomeLink from '@kwagner-dev/footer/HomeLink';
 import Grid from '@kwagner-dev/grid';
+import Header from '@kwagner-dev/header';
 import Seo from '@kwagner-dev/seo';
-
-import Header from '../../components/Header';
 
 import recipes from './recipes.json';
 import styles from './cookbook.module.css';

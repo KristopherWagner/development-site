@@ -3,10 +3,10 @@ import clsx from 'clsx';
 
 import Footer from '@kwagner-dev/footer';
 import HomeLink from '@kwagner-dev/footer/HomeLink';
+import Header from '@kwagner-dev/header';
 import Seo from '@kwagner-dev/seo';
 
 import ArticlesLink from '../../components/Footer/ArticlesLink';
-import Header from '../../components/Header';
 
 import styles from './articles.module.css';
 
