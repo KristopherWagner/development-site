@@ -1,5 +1,6 @@
 import { defineConfig } from '@rsbuild/core';
 import { pluginReact } from '@rsbuild/plugin-react';
+import { pluginTypedCSSModules } from '@rsbuild/plugin-typed-css-modules';
 import { TanStackRouterRspack } from '@tanstack/router-plugin/rspack';
 import { mfConfig } from './module-federation.config';
 
@@ -11,6 +12,7 @@ export default defineConfig({
     pluginReact({
       splitChunks: { react: false, router: false },
     }),
+    pluginTypedCSSModules(),
   ],
   server: {
     port: 3000,

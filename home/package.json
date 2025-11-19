@@ -25,6 +25,7 @@
   "devDependencies": {
     "@rsbuild/core": "^1.5.17",
     "@rsbuild/plugin-react": "^1.4.2",
+    "@rsbuild/plugin-typed-css-modules": "^1.2.0",
     "@swc/core": "^1.15.2",
     "@swc/jest": "^0.2.38",
     "@tanstack/router-plugin": "^1.136.2",
