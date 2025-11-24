@@ -8,7 +8,7 @@ import Grid from '../../components/Grid';
 import Card from '../../components/Grid/Card';
 import Seo from '../../components/SEO';
 
-import recipes from './recipes.json';
+import recipes from './recipes.json' with { type: 'json' };
 import styles from './cookbook.module.css';
 
 export default function Cookbook() {
