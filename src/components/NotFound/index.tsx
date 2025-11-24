@@ -1,13 +1,14 @@
 import clsx from 'clsx';
 import { Link } from '@tanstack/react-router';
 
+import { Route } from '../../routes';
+
 import Grid from '../Grid';
 import Card from '../Grid/Card';
 import Header from '../Header';
 import Seo from '../SEO';
 
 import styles from './NotFound.module.css';
-import { Route } from '../../routes';
 
 export default function NotFound() {
   return (
