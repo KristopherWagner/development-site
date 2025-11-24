@@ -1,14 +1,14 @@
 import { createFileRoute, Link } from '@tanstack/react-router';
 import clsx from 'clsx';
 
-import Seo from '../../components/SEO';
 import Footer from '../../components/Footer';
 import CookbookLink from '../../components/Footer/CookbookLink';
-import Header from '../../components/Header';
 import HomeLink from '../../components/Footer/HomeLink';
+import Header from '../../components/Header';
+import Seo from '../../components/SEO';
 
 import { Route as cookbookRoute } from '.';
-import recipes from './recipes.json';
+import recipes from './recipes.json' with { type: 'json' };
 
 import styles from './cookbook.module.css';
 
