@@ -2,42 +2,27 @@ import { createFileRoute, Link } from '@tanstack/react-router';
 import clsx from 'clsx';
 
 import Footer from '../../components/Footer';
-import Header from '../../components/Header';
 import HomeLink from '../../components/Footer/HomeLink';
+import Grid from '../../components/Grid';
+import Card from '../../components/Grid/Card';
+import Header from '../../components/Header';
 import Seo from '../../components/SEO';
 
-import { Route as HowMoneyCanBuyHappiness } from './how-money-can-buy-happiness';
-import { Route as SustainabilityOfShipping } from './sustainability-of-shipping';
+import articles from './articles.json' with { type: 'json' };
 
 export default function Articles() {
   return (
     <>
       <Seo
-        description="A repository of our favorite recipes"
+        description="A repository of my favorite articles"
         imageUrl=""
-        title="Wagner Family Cookbook"
+        title="Kristopher's favorite articles"
         url={'https://kwagner.dev' + Route.to}
       />
       <Header heading="Articles">
         <p>
           Below you'll find a list of my favorite articles (or in some cases
-          products) with a short explanation of why I'm sharing it.
-        </p>
-        <p>
-          You may wonder why I have copied the article text when a link to the
-          original articles should suffice. The reason is that my website is
-          designed to be easy to read and free from distractions.
-        </p>
-        <p>
-          Read about{' '}
-          <a href="https://www.brailleinstitute.org/freefont/">
-            the hyperlegible font
-          </a>{' '}
-          and why I chose{' '}
-          <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8883023/">
-            such a large font size
-          </a>
-          .
+          products).
         </p>
         <p>
           I am not an affiliate and I make no money from you reading any of
@@ -45,20 +30,20 @@ export default function Articles() {
         </p>
       </Header>
       <main className={clsx('main', 'hyper-legible')}>
-        <ul>
-          <li>
-            <Link to={SustainabilityOfShipping.to}>
-              Explained: Sustainability of Shipping
-            </Link>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <Link to={HowMoneyCanBuyHappiness.to}>
-              How Money Can Buy Happiness
-            </Link>
-          </li>
-        </ul>
+        <Grid>
+          <ul className="contents">
+            {articles.map((article) => (
+              <Link
+                aria-label={'Visit the external article ' + article.title}
+                className={clsx('no-decoration', 'with-hover', 'cols-md')}
+                key={article.href}
+                to={article.href}
+              >
+                <Card as="li">{article.title}</Card>
+              </Link>
+            ))}
+          </ul>
+        </Grid>
       </main>
       <Footer>
         <HomeLink />

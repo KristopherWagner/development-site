@@ -14,8 +14,6 @@ import { Route as WeddingIndexRouteImport } from './routes/wedding/index'
 import { Route as CookbookIndexRouteImport } from './routes/cookbook/index'
 import { Route as ArticlesIndexRouteImport } from './routes/articles/index'
 import { Route as CookbookRecipeNameRouteImport } from './routes/cookbook/$recipeName'
-import { Route as ArticlesSustainabilityOfShippingRouteImport } from './routes/articles/sustainability-of-shipping'
-import { Route as ArticlesHowMoneyCanBuyHappinessRouteImport } from './routes/articles/how-money-can-buy-happiness'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -42,23 +40,9 @@ const CookbookRecipeNameRoute = CookbookRecipeNameRouteImport.update({
   path: '/cookbook/$recipeName',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ArticlesSustainabilityOfShippingRoute =
-  ArticlesSustainabilityOfShippingRouteImport.update({
-    id: '/articles/sustainability-of-shipping',
-    path: '/articles/sustainability-of-shipping',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const ArticlesHowMoneyCanBuyHappinessRoute =
-  ArticlesHowMoneyCanBuyHappinessRouteImport.update({
-    id: '/articles/how-money-can-buy-happiness',
-    path: '/articles/how-money-can-buy-happiness',
-    getParentRoute: () => rootRouteImport,
-  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/articles/how-money-can-buy-happiness': typeof ArticlesHowMoneyCanBuyHappinessRoute
-  '/articles/sustainability-of-shipping': typeof ArticlesSustainabilityOfShippingRoute
   '/cookbook/$recipeName': typeof CookbookRecipeNameRoute
   '/articles': typeof ArticlesIndexRoute
   '/cookbook': typeof CookbookIndexRoute
@@ -66,8 +50,6 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/articles/how-money-can-buy-happiness': typeof ArticlesHowMoneyCanBuyHappinessRoute
-  '/articles/sustainability-of-shipping': typeof ArticlesSustainabilityOfShippingRoute
   '/cookbook/$recipeName': typeof CookbookRecipeNameRoute
   '/articles': typeof ArticlesIndexRoute
   '/cookbook': typeof CookbookIndexRoute
@@ -76,8 +58,6 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/articles/how-money-can-buy-happiness': typeof ArticlesHowMoneyCanBuyHappinessRoute
-  '/articles/sustainability-of-shipping': typeof ArticlesSustainabilityOfShippingRoute
   '/cookbook/$recipeName': typeof CookbookRecipeNameRoute
   '/articles/': typeof ArticlesIndexRoute
   '/cookbook/': typeof CookbookIndexRoute
@@ -87,26 +67,15 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
-    | '/articles/how-money-can-buy-happiness'
-    | '/articles/sustainability-of-shipping'
     | '/cookbook/$recipeName'
     | '/articles'
     | '/cookbook'
     | '/wedding'
   fileRoutesByTo: FileRoutesByTo
-  to:
-    | '/'
-    | '/articles/how-money-can-buy-happiness'
-    | '/articles/sustainability-of-shipping'
-    | '/cookbook/$recipeName'
-    | '/articles'
-    | '/cookbook'
-    | '/wedding'
+  to: '/' | '/cookbook/$recipeName' | '/articles' | '/cookbook' | '/wedding'
   id:
     | '__root__'
     | '/'
-    | '/articles/how-money-can-buy-happiness'
-    | '/articles/sustainability-of-shipping'
     | '/cookbook/$recipeName'
     | '/articles/'
     | '/cookbook/'
@@ -115,8 +84,6 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  ArticlesHowMoneyCanBuyHappinessRoute: typeof ArticlesHowMoneyCanBuyHappinessRoute
-  ArticlesSustainabilityOfShippingRoute: typeof ArticlesSustainabilityOfShippingRoute
   CookbookRecipeNameRoute: typeof CookbookRecipeNameRoute
   ArticlesIndexRoute: typeof ArticlesIndexRoute
   CookbookIndexRoute: typeof CookbookIndexRoute
@@ -160,27 +127,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CookbookRecipeNameRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/articles/sustainability-of-shipping': {
-      id: '/articles/sustainability-of-shipping'
-      path: '/articles/sustainability-of-shipping'
-      fullPath: '/articles/sustainability-of-shipping'
-      preLoaderRoute: typeof ArticlesSustainabilityOfShippingRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/articles/how-money-can-buy-happiness': {
-      id: '/articles/how-money-can-buy-happiness'
-      path: '/articles/how-money-can-buy-happiness'
-      fullPath: '/articles/how-money-can-buy-happiness'
-      preLoaderRoute: typeof ArticlesHowMoneyCanBuyHappinessRouteImport
-      parentRoute: typeof rootRouteImport
-    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  ArticlesHowMoneyCanBuyHappinessRoute: ArticlesHowMoneyCanBuyHappinessRoute,
-  ArticlesSustainabilityOfShippingRoute: ArticlesSustainabilityOfShippingRoute,
   CookbookRecipeNameRoute: CookbookRecipeNameRoute,
   ArticlesIndexRoute: ArticlesIndexRoute,
   CookbookIndexRoute: CookbookIndexRoute,
