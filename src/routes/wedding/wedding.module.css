@@ -10,7 +10,9 @@ div.root {
 
   --background-light: #fcfdf6;
   --background-light-text: #1a1c19;
+
   font-family: 'Roboto', sans-serif;
+  font-size: 16px;
 
   i {
     color: #1b5e20;
@@ -141,50 +143,50 @@ div.root {
 
   @media only screen and (min-width: 1080px) {
     h1 {
-      font-size: 6rem;
+      font-size: 6em;
     }
 
     h2 {
-      font-size: 3.75rem;
+      font-size: 3.75em;
     }
 
     h3 {
-      font-size: 3rem;
+      font-size: 3em;
       margin: 0px;
     }
 
     h4 {
-      font-size: 2.125rem;
+      font-size: 2.125em;
       margin: 4px 0px;
     }
 
     h5 {
-      font-size: 1.5rem;
-      margin: calc(2 * 1.3 * 1rem) auto calc(1.3 * 1rem);
+      font-size: 1.5em;
+      margin: calc(2 * 1.3 * 1em) auto calc(1.3 * 1em);
     }
 
     h6 {
-      font-size: 1.25rem;
+      font-size: 1.25em;
     }
 
     :global .subtitle1,
     :global .body1 {
-      font-size: 1rem;
-      margin: calc(1.3 * 1rem) auto calc(1.3 * 2 * 1rem);
+      font-size: 1em;
+      margin: calc(1.3 * 1em) auto calc(1.3 * 2 * 1em);
     }
 
     :global .subtitle2,
     :global .body2,
     :global .button {
-      font-size: 0.875rem;
+      font-size: 0.875em;
     }
 
     :global .button {
-      font-size: 0.75rem;
+      font-size: 0.75em;
     }
 
     :global .overline {
-      font-size: 0.635rem;
+      font-size: 0.635em;
     }
   }
 }
