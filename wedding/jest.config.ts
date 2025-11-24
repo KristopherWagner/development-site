@@ -5,7 +5,11 @@ const config: Config = {
   collectCoverage: true,
   coverageDirectory: "coverage",
   collectCoverageFrom: ["<rootDir>/src/**/*.(js|ts|tsx)"],
-  coveragePathIgnorePatterns: ["\\.d\\.ts"],
+  coveragePathIgnorePatterns: [
+    "\\.d\\.ts",
+    "src/index.js",
+    "src/bootstrap.tsx",
+  ],
   coverageProvider: "v8",
   moduleFileExtensions: ["js", "ts", "tsx"],
   testEnvironment: "jsdom",

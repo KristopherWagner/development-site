@@ -6,7 +6,6 @@ import HomeLink from '@kwagner-dev/footer/HomeLink';
 
 import CookbookLink from './CookbookLink';
 import SocialLinks from './SocialLinks';
-import ArticlesLink from './ArticlesLink';
 
 describe('Footer component tests', () => {
   it('renders accesible social media links', () => {
@@ -15,7 +14,6 @@ describe('Footer component tests', () => {
         <SocialLinks />
         <HomeLink />
         <CookbookLink />
-        <ArticlesLink />
       </Footer>,
     );
 
@@ -35,9 +33,6 @@ describe('Footer component tests', () => {
     ).toBeInTheDocument();
     expect(
       screen.getByRole('link', { name: 'Return to cookbook' }),
-    ).toBeInTheDocument();
-    expect(
-      screen.getByRole('link', { name: 'Return to the list of articles' }),
     ).toBeInTheDocument();
   });
 });
