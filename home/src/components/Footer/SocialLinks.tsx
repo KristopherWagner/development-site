@@ -37,6 +37,15 @@ export default function SocialLinks() {
           <i className="fa-brands fa-strava fa-fw" />
         </a>
       </li>
+      <li>
+        <a
+          aria-label="https://pixelfed.social/kwagner_dev"
+          href="https://pixelfed.social/kwagner_dev"
+          title="pixelfed"
+        >
+          <i className="fa-solid fa-image fa-fw" />
+        </a>
+      </li>
     </>
   );
 }
