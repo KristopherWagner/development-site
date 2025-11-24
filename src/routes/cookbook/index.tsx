@@ -29,10 +29,10 @@ export default function Cookbook() {
       <main className={clsx('main', 'hyper-legible', styles.cookbook)}>
         <Grid>
           <h2 className="cols-full">Recipes</h2>
-          <ul>
+          <ul className="contents">
             {recipes.map((recipe) => (
               <Link
-                className={clsx(styles.link, 'cols-md')}
+                className={clsx('no-decoration', 'with-hover', 'cols-md')}
                 key={recipe.url}
                 to={recipe.url}
               >
