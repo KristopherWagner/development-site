@@ -39,11 +39,20 @@ export default function SocialLinks() {
       </li>
       <li>
         <a
-          aria-label="https://pixelfed.social/kwagner_dev"
+          aria-label="Look at some of my recent photos"
           href="https://pixelfed.social/kwagner_dev"
           title="pixelfed"
         >
           <i className="fa-solid fa-image fa-fw" />
+        </a>
+      </li>
+      <li>
+        <a
+          aria-label="Read some books with me"
+          href="https://bookwyrm.social/user/kwagner"
+          title="BookWyrm"
+        >
+          <i className="fa-solid fa-book-bookmark" />
         </a>
       </li>
     </>
