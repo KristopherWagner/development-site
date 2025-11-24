@@ -9,7 +9,6 @@ import SocialLinks from '../components/Footer/SocialLinks';
 import MakerIcon from '../components/MakerIcon';
 import { imageFolder } from '../../../wedding/src/constants';
 
-import { Route as Articles } from './articles';
 import { Route as Cookbook } from './cookbook';
 import { Route as Wedding } from './wedding';
 
@@ -86,16 +85,6 @@ export default function IndexPage() {
               favorite recipes
             </Link>
             .
-          </p>
-        </article>
-        <article>
-          <h2>
-            <i className="fa-duotone fa-comments" /> Maven
-          </h2>
-          <p>
-            I like to learn and once I find something interesting (or something
-            I like), I make sure everyone knows about it. Read some of my{' '}
-            <Link to={Articles.to}>favorite articles</Link>.
           </p>
         </article>
       </main>
