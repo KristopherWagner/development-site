@@ -1,4 +1,5 @@
 import Bluesky from './Bluesky';
+import HowLongToBeat from './HowLongToBeat';
 import Pixelfed from './Pixelfed';
 
 export default function SocialLinks() {
@@ -65,6 +66,15 @@ export default function SocialLinks() {
           title="BookWyrm"
         >
           <i className="fa-solid fa-book-bookmark" />
+        </a>
+      </li>
+      <li>
+        <a
+          aria-label="Track your games with me"
+          href="https://howlongtobeat.com/user/ultra_arcite"
+          title="HowLongToBeat"
+        >
+          <HowLongToBeat />
         </a>
       </li>
     </>
