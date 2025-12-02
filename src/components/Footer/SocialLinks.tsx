@@ -1,3 +1,6 @@
+import Bluesky from './Bluesky';
+import Pixelfed from './Pixelfed';
+
 export default function SocialLinks() {
   return (
     <>
@@ -43,9 +46,18 @@ export default function SocialLinks() {
           href="https://pixelfed.social/kwagner_dev"
           title="pixelfed"
         >
-          <i className="fa-solid fa-image fa-fw" />
+          <Pixelfed />
         </a>
       </li>
+      <li>
+        <a
+          aria-label="Check if I said something witty"
+          href="https://bsky.app/profile/kwagner.dev"
+          title="Bluesky"
+        >
+          <Bluesky />
+        </a>
+      </li>{' '}
       <li>
         <a
           aria-label="Read some books with me"

@@ -28,6 +28,10 @@
     color: var(--secondary);
   }
 
+  li {
+    vertical-align: top;
+  }
+
   li:not(:last-child) {
     margin-inline-end: 1rem;
   }
