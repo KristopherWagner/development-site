@@ -11,7 +11,8 @@ export default function SocialLinks() {
           href="https://discordapp.com/users/ultra_arcite"
           title="Discord"
         >
-          <i className="fa-brands fa-discord fa-fw" /> <span>Discord</span>
+          <i className="fa-brands fa-discord fa-fw" />
+          <span>Discord</span>
         </a>
       </li>
       <li>
@@ -20,7 +21,8 @@ export default function SocialLinks() {
           href="https://www.youtube.com/@ultraArcite"
           title="YouTube"
         >
-          <i className="fa-brands fa-youtube fa-fw" /> <span>YouTube</span>
+          <i className="fa-brands fa-youtube fa-fw" />
+          <span>YouTube</span>
         </a>
       </li>
       <li>
@@ -29,7 +31,7 @@ export default function SocialLinks() {
           href="https://profile.playstation.com/ultraArcite"
           title="PlayStation"
         >
-          <i className="fa-brands fa-playstation fa-fw" />{' '}
+          <i className="fa-brands fa-playstation fa-fw" />
           <span>Playstation Network</span>
         </a>
       </li>
@@ -39,7 +41,8 @@ export default function SocialLinks() {
           href="https://www.strava.com/athletes/27088613"
           title="Strava"
         >
-          <i className="fa-brands fa-strava fa-fw" /> <span>Strava</span>
+          <i className="fa-brands fa-strava fa-fw" />
+          <span>Strava</span>
         </a>
       </li>
       <li>
@@ -48,7 +51,8 @@ export default function SocialLinks() {
           href="https://pixelfed.social/kwagner_dev"
           title="pixelfed"
         >
-          <Pixelfed /> <span>pixelfed</span>
+          <Pixelfed />
+          <span>pixelfed</span>
         </a>
       </li>
       <li>
@@ -57,7 +61,8 @@ export default function SocialLinks() {
           href="https://bsky.app/profile/kwagner.dev"
           title="Bluesky"
         >
-          <Bluesky /> <span>Bluesky</span>
+          <Bluesky />
+          <span>Bluesky</span>
         </a>
       </li>{' '}
       <li>
@@ -66,7 +71,7 @@ export default function SocialLinks() {
           href="https://bookwyrm.social/user/kwagner"
           title="BookWyrm"
         >
-          <i className="fa-solid fa-book-bookmark fa-fw" />{' '}
+          <i className="fa-solid fa-book-bookmark fa-fw" />
           <span>BookWyrm</span>
         </a>
       </li>
@@ -76,7 +81,8 @@ export default function SocialLinks() {
           href="https://howlongtobeat.com/user/ultra_arcite"
           title="HowLongToBeat"
         >
-          <HowLongToBeat /> <span>HowLongToBeat</span>
+          <HowLongToBeat />
+          <span>HowLongToBeat</span>
         </a>
       </li>
     </>
