@@ -11,24 +11,32 @@
   a {
     color: white;
     text-decoration: none;
-  }
 
-  li,
-  a {
-    display: inline-block;
-    height: 1rem;
+    @media screen and (min-width: 769px) {
+      display: grid;
+      font-size: 0.75rem;
+      grid-template-columns: max-content max-content;
+      grid-gap: 0.5rem;
+    }
 
     span {
       display: none;
-    }
-
-    @media screen and (min-width: 769px) {
-      display: block;
-      font-size: 0.75rem;
-
-      span {
+      @media screen and (min-width: 769px) {
         display: inline;
       }
+    }
+  }
+
+  a,
+  li {
+    height: 1rem;
+    line-height: 1;
+  }
+
+  li {
+    display: inline-block;
+    @media screen and (min-width: 769px) {
+      display: block;
     }
   }
 
@@ -38,6 +46,7 @@
 
   li {
     vertical-align: top;
+    width: max-content;
   }
 
   li:not(:last-child) {
