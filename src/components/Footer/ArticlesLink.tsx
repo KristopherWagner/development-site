@@ -10,7 +10,8 @@ export default function ArticlesLink() {
         preload="intent"
         to={Route.to}
       >
-        <i className="fa-duotone fa-comments fa-fw" /> <span>Articles</span>
+        <i className="fa-duotone fa-comments fa-fw" />
+        <span>Articles</span>
       </Link>
     </li>
   );
