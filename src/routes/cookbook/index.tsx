@@ -30,7 +30,13 @@ export default function Cookbook() {
         <Grid>
           <h2 className="cols-full">Recipes</h2>
           <ul className="contents">
-            {recipes.map((recipe) => (
+            {[
+              ...recipes,
+              {
+                title: 'Impossible Cheesesteaks',
+                url: 'impossible-cheesesteaks',
+              },
+            ].map((recipe) => (
               <Link
                 className={clsx('no-decoration', 'with-hover', 'cols-md')}
                 key={recipe.url}
