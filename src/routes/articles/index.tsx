@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from '@tanstack/react-router';
+import { createFileRoute } from '@tanstack/react-router';
 import clsx from 'clsx';
 
 import Footer from '../../components/Footer';
@@ -33,14 +33,15 @@ export default function Articles() {
         <Grid>
           <ul className="contents">
             {articles.map((article) => (
-              <Link
+              <a
                 aria-label={'Visit the external article ' + article.title}
                 className={clsx('no-decoration', 'with-hover', 'cols-md')}
+                href={article.href}
                 key={article.href}
-                to={article.href}
+                referrerPolicy="origin-when-cross-origin"
               >
                 <Card as="li">{article.title}</Card>
-              </Link>
+              </a>
             ))}
           </ul>
         </Grid>
