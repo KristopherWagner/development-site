@@ -4,8 +4,8 @@
   ul {
     list-style: none;
     margin: auto;
-    padding: 1rem 0px;
     max-width: var(--application-width);
+    padding: 1rem 0px;
   }
 
   a {
@@ -13,15 +13,23 @@
     text-decoration: none;
   }
 
-  ul,
-  li,
-  a {
-    height: 1rem;
-  }
-
   li,
   a {
     display: inline-block;
+    height: 1rem;
+
+    span {
+      display: none;
+    }
+
+    @media screen and (min-width: 769px) {
+      display: block;
+      font-size: 0.75rem;
+
+      span {
+        display: inline;
+      }
+    }
   }
 
   a:hover {
@@ -34,5 +42,9 @@
 
   li:not(:last-child) {
     margin-inline-end: 1rem;
+
+    @media screen and (min-width: 769px) {
+      margin-inline-end: unset;
+    }
   }
 }
