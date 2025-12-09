@@ -1,14 +1,14 @@
 import { createFileRoute } from '@tanstack/react-router';
-import clsx from 'clsx';
 
 import Footer from '../../components/Footer';
 import HomeLink from '../../components/Footer/HomeLink';
 import Grid from '../../components/Grid';
-import Card from '../../components/Grid/Card';
+import { CardLink } from '../../components/Grid/Card';
 import Header from '../../components/Header';
 import Seo from '../../components/SEO';
 
 import articles from './articles.json' with { type: 'json' };
+import styles from './articles.module.css';
 
 export default function Articles() {
   return (
@@ -29,21 +29,22 @@ export default function Articles() {
           these articles.
         </p>
       </Header>
-      <main className={clsx('main', 'hyper-legible')}>
-        <Grid>
-          <ul className="contents">
-            {articles.map((article) => (
-              <a
-                aria-label={'Visit the external article ' + article.title}
-                className={clsx('no-decoration', 'with-hover', 'cols-md')}
-                href={article.href}
-                key={article.href}
-                referrerPolicy="origin-when-cross-origin"
-              >
-                <Card as="li">{article.title}</Card>
-              </a>
-            ))}
-          </ul>
+      <main>
+        <Grid className={styles.grid}>
+          {articles.map((article) => (
+            <CardLink
+              className="cols-md"
+              to={article.href}
+              key={article.href}
+              isExternal
+              linkProps={{
+                'aria-label': 'Visit the external article ' + article.title,
+                referrerPolicy: 'origin-when-cross-origin',
+              }}
+            >
+              {article.title}
+            </CardLink>
+          ))}
         </Grid>
       </main>
       <Footer>

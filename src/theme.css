@@ -1,0 +1,92 @@
+:root {
+  --application-width: clamp(320px, 90%, 1200px);
+}
+
+@font-face {
+  font-family: 'AtkinsonHyperlegibleNextVF';
+  src: url(https://d9lrerudojc7e.cloudfront.net/fonts/AtkinsonHyperlegibleNextVF-Variable.woff2)
+    format('woff2-variations');
+}
+
+* {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
+
+html {
+  color-scheme: light dark;
+
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+
+  font-family: 'AtkinsonHyperlegibleNextVF', serif;
+  font-size: 17pt;
+
+  scroll-behavior: smooth;
+
+  a {
+    border-bottom: 2px solid transparent;
+    color: var(--accent-green);
+    text-decoration: none;
+    transition: all 0.2s ease;
+
+    &:hover {
+      border-bottom-color: var(--accent-forest);
+      color: var(--accent-forest);
+    }
+
+    &:focus {
+      outline: 2px solid var(--accent-green);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--accent-forest);
+  }
+
+  main {
+    margin: 0.67rem auto;
+    overflow: auto;
+    width: var(--application-width);
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 300;
+      margin-block: 0px 0.67rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 400;
+      margin-block: 0.83rem;
+    }
+
+    h3 {
+      font-size: 1.17rem;
+      font-weight: 500;
+      margin-block: 1rem;
+    }
+  }
+
+  body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    margin: 0px;
+    min-height: 100vh;
+  }
+}

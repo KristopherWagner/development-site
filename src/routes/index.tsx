@@ -1,5 +1,4 @@
 import { createFileRoute, Link } from '@tanstack/react-router';
-import clsx from 'clsx';
 
 import Footer from '../components/Footer';
 import SocialLinks from '../components/Footer/SocialLinks';
@@ -30,7 +29,7 @@ export default function IndexPage() {
           successes and failures.
         </p>
       </Header>
-      <main className={clsx('hyper-legible', styles.body)}>
+      <main className={styles.body}>
         <article>
           <h2>
             <i className="fa-duotone fa-rings-wedding" /> Husband

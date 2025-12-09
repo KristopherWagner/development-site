@@ -11,6 +11,7 @@ import { Route as cookbookRoute } from '.';
 import recipes from './recipes.json' with { type: 'json' };
 
 import styles from './cookbook.module.css';
+import Tag from '../../components/Tag';
 
 export default function Recipe() {
   const { recipeName } = Route.useParams();
@@ -58,10 +59,11 @@ export default function Recipe() {
         <ul>
           <li>Makes {recipe.servings}</li>
           <li>Total time: {recipe.time}</li>
-          <li>Tags:</li>
-          <ul>
+          <ul className={styles['no-padding']}>
             {recipe.tags.map((tag) => (
-              <li key={tag}>{tag}</li>
+              <Tag as="li" key={tag}>
+                {tag}
+              </Tag>
             ))}
           </ul>
         </ul>
@@ -85,6 +87,7 @@ export default function Recipe() {
         </ol>
         <h2>Source</h2>
         <p>
+          Modified from{' '}
           <a
             aria-label={'Visit the external source for ' + recipe.title}
             href={recipe.source.href}

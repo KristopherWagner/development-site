@@ -1,11 +1,10 @@
-import { createFileRoute, Link } from '@tanstack/react-router';
-import clsx from 'clsx';
+import { createFileRoute } from '@tanstack/react-router';
 
 import Footer from '../../components/Footer';
 import HomeLink from '../../components/Footer/HomeLink';
 import Header from '../../components/Header';
 import Grid from '../../components/Grid';
-import Card from '../../components/Grid/Card';
+import { CardLink } from '../../components/Grid/Card';
 import Seo from '../../components/SEO';
 
 import recipes from './recipes.json' with { type: 'json' };
@@ -18,7 +17,7 @@ export default function Cookbook() {
         description="A repository of our favorite recipes"
         imageUrl=""
         title="Wagner Family Cookbook"
-        url="https://kwagner.dev/cookbook"
+        url={'https://kwagner.dev' + Route.to}
       />
       <Header heading="Cookbook">
         <p>
@@ -26,20 +25,14 @@ export default function Cookbook() {
           add some fun features to the page over time as well.
         </p>
       </Header>
-      <main className={clsx('main', 'hyper-legible', styles.cookbook)}>
+      <main className={styles.root}>
         <Grid>
           <h2 className="cols-full">Recipes</h2>
-          <ul className="contents">
-            {[...recipes].map((recipe) => (
-              <Link
-                className={clsx('no-decoration', 'with-hover', 'cols-md')}
-                key={recipe.url}
-                to={recipe.url}
-              >
-                <Card as="li">{recipe.title}</Card>
-              </Link>
-            ))}
-          </ul>
+          {[...recipes].map((recipe) => (
+            <CardLink className="cols-md" key={recipe.url} to={recipe.url}>
+              {recipe.title}
+            </CardLink>
+          ))}
         </Grid>
       </main>
       <Footer>
