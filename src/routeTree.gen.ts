@@ -13,7 +13,6 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as WeddingIndexRouteImport } from './routes/wedding/index'
 import { Route as CookbookIndexRouteImport } from './routes/cookbook/index'
 import { Route as ArticlesIndexRouteImport } from './routes/articles/index'
-import { Route as CookbookImpossibleCheesesteaksRouteImport } from './routes/cookbook/impossible-cheesesteaks'
 import { Route as CookbookRecipeNameRouteImport } from './routes/cookbook/$recipeName'
 
 const IndexRoute = IndexRouteImport.update({
@@ -36,12 +35,6 @@ const ArticlesIndexRoute = ArticlesIndexRouteImport.update({
   path: '/articles/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const CookbookImpossibleCheesesteaksRoute =
-  CookbookImpossibleCheesesteaksRouteImport.update({
-    id: '/cookbook/impossible-cheesesteaks',
-    path: '/cookbook/impossible-cheesesteaks',
-    getParentRoute: () => rootRouteImport,
-  } as any)
 const CookbookRecipeNameRoute = CookbookRecipeNameRouteImport.update({
   id: '/cookbook/$recipeName',
   path: '/cookbook/$recipeName',
@@ -51,7 +44,6 @@ const CookbookRecipeNameRoute = CookbookRecipeNameRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/cookbook/$recipeName': typeof CookbookRecipeNameRoute
-  '/cookbook/impossible-cheesesteaks': typeof CookbookImpossibleCheesesteaksRoute
   '/articles': typeof ArticlesIndexRoute
   '/cookbook': typeof CookbookIndexRoute
   '/wedding': typeof WeddingIndexRoute
@@ -59,7 +51,6 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/cookbook/$recipeName': typeof CookbookRecipeNameRoute
-  '/cookbook/impossible-cheesesteaks': typeof CookbookImpossibleCheesesteaksRoute
   '/articles': typeof ArticlesIndexRoute
   '/cookbook': typeof CookbookIndexRoute
   '/wedding': typeof WeddingIndexRoute
@@ -68,7 +59,6 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/cookbook/$recipeName': typeof CookbookRecipeNameRoute
-  '/cookbook/impossible-cheesesteaks': typeof CookbookImpossibleCheesesteaksRoute
   '/articles/': typeof ArticlesIndexRoute
   '/cookbook/': typeof CookbookIndexRoute
   '/wedding/': typeof WeddingIndexRoute
@@ -78,23 +68,15 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/cookbook/$recipeName'
-    | '/cookbook/impossible-cheesesteaks'
     | '/articles'
     | '/cookbook'
     | '/wedding'
   fileRoutesByTo: FileRoutesByTo
-  to:
-    | '/'
-    | '/cookbook/$recipeName'
-    | '/cookbook/impossible-cheesesteaks'
-    | '/articles'
-    | '/cookbook'
-    | '/wedding'
+  to: '/' | '/cookbook/$recipeName' | '/articles' | '/cookbook' | '/wedding'
   id:
     | '__root__'
     | '/'
     | '/cookbook/$recipeName'
-    | '/cookbook/impossible-cheesesteaks'
     | '/articles/'
     | '/cookbook/'
     | '/wedding/'
@@ -103,7 +85,6 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CookbookRecipeNameRoute: typeof CookbookRecipeNameRoute
-  CookbookImpossibleCheesesteaksRoute: typeof CookbookImpossibleCheesesteaksRoute
   ArticlesIndexRoute: typeof ArticlesIndexRoute
   CookbookIndexRoute: typeof CookbookIndexRoute
   WeddingIndexRoute: typeof WeddingIndexRoute
@@ -139,13 +120,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ArticlesIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/cookbook/impossible-cheesesteaks': {
-      id: '/cookbook/impossible-cheesesteaks'
-      path: '/cookbook/impossible-cheesesteaks'
-      fullPath: '/cookbook/impossible-cheesesteaks'
-      preLoaderRoute: typeof CookbookImpossibleCheesesteaksRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/cookbook/$recipeName': {
       id: '/cookbook/$recipeName'
       path: '/cookbook/$recipeName'
@@ -159,7 +133,6 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CookbookRecipeNameRoute: CookbookRecipeNameRoute,
-  CookbookImpossibleCheesesteaksRoute: CookbookImpossibleCheesesteaksRoute,
   ArticlesIndexRoute: ArticlesIndexRoute,
   CookbookIndexRoute: CookbookIndexRoute,
   WeddingIndexRoute: WeddingIndexRoute,
