@@ -1,5 +1,6 @@
-.footer {
-  background-color: var(--primary-dark);
+.root {
+  background: var(--bg-card);
+  border-top: 1px solid var(--border-color);
 
   ul {
     list-style: none;
@@ -9,9 +10,6 @@
   }
 
   a {
-    color: white;
-    text-decoration: none;
-
     @media screen and (min-width: 769px) {
       display: grid;
       font-size: 0.75rem;
@@ -33,15 +31,25 @@
     line-height: 1;
   }
 
+  a {
+    border-bottom: none;
+    &:hover {
+      border-bottom: none;
+    }
+
+    &:focus {
+      outline: none;
+      outline-offset: none;
+      border-radius: none;
+      text-decoration: underline;
+    }
+  }
+
   li {
     display: inline-block;
     @media screen and (min-width: 769px) {
       display: block;
     }
-  }
-
-  a:hover {
-    color: var(--secondary);
   }
 
   li {

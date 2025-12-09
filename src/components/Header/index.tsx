@@ -1,4 +1,3 @@
-import clsx from 'clsx';
 import styles from './Header.module.css';
 
 export default function Header({
@@ -6,7 +5,7 @@ export default function Header({
   children,
 }: React.PropsWithChildren<{ heading: React.ReactNode }>) {
   return (
-    <header className={clsx('hyper-legible', styles.header)}>
+    <header className={styles.root}>
       <div className={styles.heading}>
         <h1>{heading}</h1>
       </div>
