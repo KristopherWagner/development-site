@@ -4,6 +4,7 @@
   border: 1px solid var(--border-color);
   border-radius: 12px;
   box-shadow: 0 2px 8px var(--shadow-color);
+  color: var(--text-secondary);
   display: grid;
   overflow: hidden;
   padding: 1rem;
