@@ -625,5 +625,66 @@
       "href": "https://www.sbfoods-worldwide.com/products/search/index.html",
       "title": "Original recipe"
     }
+  },
+  {
+    "url": "impossible-cheesesteaks",
+    "description": "An impossibly delicious vegan version of a cheesesteak",
+    "title": "Impossible Cheesesteaks",
+    "servings": "3 sandwiches",
+    "time": "1 hour",
+    "ingredients": [
+      {
+        "quantity": "2",
+        "ingredient": "large yellow onions, thinly sliced"
+      },
+      {
+        "quantity": "12",
+        "unit": "ounces",
+        "ingredient": "cola"
+      },
+      {
+        "quantity": "1",
+        "ingredient": "large green bell pepper, diced"
+      },
+      {
+        "quantity": "3-6",
+        "unit": "slices",
+        "ingredient": "provolone cheese"
+      },
+      {
+        "quantity": "1",
+        "unit": "tablespoon",
+        "ingredient": "vegetable oil"
+      },
+      {
+        "quantity": "12",
+        "unit": "ounces",
+        "ingredient": "Impossible burger"
+      },
+      {
+        "quantity": "3",
+        "ingredient": "6-inch hoagie rolls"
+      },
+      {
+        "ingredient": "salt and black pepper, to taste"
+      }
+    ],
+    "instructions": [
+      "Combine the onions, peppers, and cola in a large saucepan over medium-high heat",
+      "Reduce the heat to medium-low and maintain a steady simmer",
+      "Stir occassionally until the cola is completely reduced and evaporated",
+      "Warm the oil in a large non-sticj skillet over high heat",
+      "Crumble the Impossible Burger into the pan and season with salt and pepper",
+      "Stir to break up the meat and cook until the pieces start to form a brown crust",
+      "Mix in the onion and peppers",
+      "Shape into 3 hoagie-sized piles and melt the cheese on top",
+      "Transfer to the hoagie rolls"
+    ],
+    "tags": ["vegetarian"],
+    "source": {
+      "citation": "Impossible Foods. (2020). Impossible: The Cookbook. San Francisco: Chronicle Books LLC",
+      "href": "https://impossiblefoods.com/blog/impossible-the-cookbook-is-here",
+      "title": "Original recipe"
+    }
   }
 ]
