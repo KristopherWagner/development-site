@@ -1,9 +1,24 @@
 .card {
   align-items: center;
-  background-color: var(--secondary);
-  border-radius: 4px;
-  color: var(--background);
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px var(--shadow-color);
   display: grid;
+  overflow: hidden;
   padding: 1rem;
   text-align: center;
+  transition: all 0.3s ease;
+
+  &:focus-within {
+    border-radius: 12px;
+    outline: 2px solid var(--accent-green);
+    outline-offset: -2px;
+  }
+
+  &:hover {
+    border-bottom: 1px solid var(--border-color);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px var(--shadow-color);
+  }
 }

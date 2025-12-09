@@ -50,14 +50,6 @@
     grid-template-columns: repeat(12, 1fr);
   }
 
-  :global(a.no-decoration) {
-    text-decoration: none;
-  }
-
-  :global(a.with-hover:hover) {
-    filter: brightness(150%);
-  }
-
   :global(ul.contents) {
     display: contents;
   }
