@@ -628,17 +628,17 @@
   },
   {
     "url": "impossible-cheesesteaks",
-    "description": "An impossibly delicious vegan version of a cheesesteak",
+    "description": "An impossibly delicious vegetarian cheesesteak",
     "title": "Impossible Cheesesteaks",
     "servings": "3 sandwiches",
     "time": "1 hour",
     "ingredients": [
       {
-        "quantity": "2",
+        "quantity": "1/2",
         "ingredient": "large yellow onions, thinly sliced"
       },
       {
-        "quantity": "12",
+        "quantity": "18",
         "unit": "ounces",
         "ingredient": "cola"
       },
@@ -654,7 +654,7 @@
       {
         "quantity": "1",
         "unit": "tablespoon",
-        "ingredient": "vegetable oil"
+        "ingredient": "olive oil"
       },
       {
         "quantity": "12",
@@ -670,15 +670,15 @@
       }
     ],
     "instructions": [
-      "Combine the onions, peppers, and cola in a large saucepan over medium-high heat",
-      "Reduce the heat to medium-low and maintain a steady simmer",
-      "Stir occassionally until the cola is completely reduced and evaporated",
-      "Warm the oil in a large non-sticj skillet over high heat",
-      "Crumble the Impossible Burger into the pan and season with salt and pepper",
-      "Stir to break up the meat and cook until the pieces start to form a brown crust",
-      "Mix in the onion and peppers",
-      "Shape into 3 hoagie-sized piles and melt the cheese on top",
-      "Transfer to the hoagie rolls"
+      "Preheat the oven to 350° F.",
+      "Heat oil over medium heat.",
+      "Cook onion and pepper until softened.",
+      "Add cola 6 ounces at a time, adding more as it reduces until all cola has been added and reduced",
+      "Add impossible and break into large chunks (approx. 1/2 inches).",
+      "Brown impossible, adding salt and pepper to taste.",
+      "Shape into 3 hoagie-sized portions on a baking dish and top with provolone cheese (1-2 slices per portion)",
+      "Bake in oven for 5 minutes until cheese has melted",
+      "Transfer to hoagie rolls."
     ],
     "tags": ["vegetarian"],
     "source": {
