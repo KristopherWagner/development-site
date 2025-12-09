@@ -39,14 +39,15 @@ html {
     transition: all 0.2s ease;
 
     &:hover {
-      border-bottom-color: var(--accent-forest);
-      color: var(--accent-forest);
+      border-bottom-color: var(--accent-wood);
+      color: var(--accent-wood);
     }
 
     &:focus {
-      outline: 2px solid var(--accent-green);
-      outline-offset: 3px;
+      color: var(--accent-wood);
       border-radius: 2px;
+      outline: 2px solid var(--accent-wood);
+      outline-offset: 3px;
     }
   }
 
@@ -56,7 +57,7 @@ html {
   h4,
   h5,
   h6 {
-    color: var(--accent-forest);
+    color: var(--accent-green);
   }
 
   main {
