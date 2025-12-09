@@ -686,5 +686,93 @@
       "href": "https://impossiblefoods.com/blog/impossible-the-cookbook-is-here",
       "title": "Original recipe"
     }
+  },
+  {
+    "url": "impossible-chili",
+    "description": "An impossibly delicious vegan chili",
+    "title": "Impossible Chili",
+    "servings": "4 servings",
+    "time": "45 minutes",
+    "ingredients": [
+      {
+        "quantity": "1",
+        "unit": "tablespoon",
+        "ingredient": "olive oil"
+      },
+      {
+        "quantity": "1/2",
+        "ingredient": "yellow onion, finely chopped"
+      },
+      {
+        "quantity": "12",
+        "unit": "ounces",
+        "ingredient": "Impossible Burger"
+      },
+      {
+        "quantity": "1",
+        "unit": "tablespoons",
+        "ingredient": "chili powder"
+      },
+      {
+        "quantity": "1.5",
+        "unit": "teaspoon",
+        "ingredient": "ground cumin"
+      },
+      {
+        "quantity": "2",
+        "unit": "teaspoon",
+        "ingredient": "paprika"
+      },
+      {
+        "quantity": "1/4",
+        "unit": "teaspoon",
+        "ingredient": "cayenne"
+      },
+      {
+        "quantity": "1",
+        "unit": "teaspoon",
+        "ingredient": "ground coriander"
+      },
+      {
+        "quantity": "1",
+        "unit": "14-ounce can",
+        "ingredient": "tomato sauce"
+      },
+      {
+        "quantity": "1",
+        "unit": "cups",
+        "ingredient": "vegetable stock"
+      },
+      {
+        "quantity": "1",
+        "unit": "15-ounce can",
+        "ingredient": "kidney beans, drained and rinsed"
+      },
+      {
+        "quantity": "1",
+        "unit": "15-ounce can",
+        "ingredient": "black beans, dreained and rinsed"
+      },
+      {
+        "ingredient": "salt and black pepper, to taste"
+      }
+    ],
+    "instructions": [
+      "Warm the oil in a Dutch over over medium heat.",
+      "Add in the onion and cook until softened, stirring occasionally.",
+      "Crumble the Impossible Burger into the pot and cook, stirring to break it up, until browned.",
+      "Stir in the beans and cook until warmed.",
+      "Mix in the spices and cook until aromatic.",
+      "Mix in the tomato sauce and vegetable stock.",
+      "Bring to a boil, then reduce heat to medium-low and cover to simmer.",
+      "Stir occasionally over the next 30 minutes (or until the mixture has thickened).",
+      "Season with additional salt and pepper to taste."
+    ],
+    "tags": ["vegan", "vegetarian"],
+    "source": {
+      "citation": "Impossible Foods. (2020). Impossible: The Cookbook. San Francisco: Chronicle Books LLC",
+      "href": "https://impossiblefoods.com/blog/impossible-the-cookbook-is-here",
+      "title": "Original recipe"
+    }
   }
 ]
