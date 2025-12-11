@@ -68,11 +68,11 @@ export default function SocialLinks() {
       <li>
         <a
           aria-label="Read some books with me"
-          href="https://bookwyrm.social/user/kwagner"
+          href="https://app.thestorygraph.com/profile/kwagner_dev"
           title="BookWyrm"
         >
-          <i className="fa-solid fa-book-bookmark fa-fw" />
-          <span>BookWyrm</span>
+          <i className="fa-solid fa-books fa-fw" />
+          <span>The StoryGraph</span>
         </a>
       </li>
       <li>
