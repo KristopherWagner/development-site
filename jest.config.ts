@@ -13,10 +13,10 @@ const config: Config = {
   ],
   coverageProvider: 'v8',
   moduleFileExtensions: ['js', 'ts', 'tsx'],
+  setupFiles: ['./setupTests.tsx'],
   testEnvironment: 'jsdom',
   testMatch: ['**/?(*.)+(spec|test).[tj]s?(x)'],
   testPathIgnorePatterns: ['/node_modules/'],
-
   transform: {
     '^.+\\.(t|j)sx?$': [
       '@swc/jest',
