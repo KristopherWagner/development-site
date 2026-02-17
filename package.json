@@ -23,7 +23,7 @@
     "@rsbuild/core": "^1.5.17",
     "@rsbuild/plugin-react": "^1.4.1",
     "@rsbuild/plugin-typed-css-modules": "^1.2.0",
-    "@swc/core": "^1.13.5",
+    "@swc/core": "^1.15.11",
     "@swc/jest": "^0.2.38",
     "@tanstack/router-plugin": "^1.133.4",
     "@testing-library/jest-dom": "^6.9.1",
