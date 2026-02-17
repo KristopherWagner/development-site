@@ -31,6 +31,9 @@ export default function Seo({
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={imageUrl} />
 
+      {/* Mastodon */}
+      <meta name="fediverse:creator" content="@kwagner_dev@mastodon.social" />
+
       <meta name="color-scheme" content="light dark" />
     </>
   );

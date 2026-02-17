@@ -44,9 +44,9 @@ const CookbookRecipeNameRoute = CookbookRecipeNameRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/cookbook/$recipeName': typeof CookbookRecipeNameRoute
-  '/articles': typeof ArticlesIndexRoute
-  '/cookbook': typeof CookbookIndexRoute
-  '/wedding': typeof WeddingIndexRoute
+  '/articles/': typeof ArticlesIndexRoute
+  '/cookbook/': typeof CookbookIndexRoute
+  '/wedding/': typeof WeddingIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -68,9 +68,9 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/cookbook/$recipeName'
-    | '/articles'
-    | '/cookbook'
-    | '/wedding'
+    | '/articles/'
+    | '/cookbook/'
+    | '/wedding/'
   fileRoutesByTo: FileRoutesByTo
   to: '/' | '/cookbook/$recipeName' | '/articles' | '/cookbook' | '/wedding'
   id:
@@ -102,21 +102,21 @@ declare module '@tanstack/react-router' {
     '/wedding/': {
       id: '/wedding/'
       path: '/wedding'
-      fullPath: '/wedding'
+      fullPath: '/wedding/'
       preLoaderRoute: typeof WeddingIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/cookbook/': {
       id: '/cookbook/'
       path: '/cookbook'
-      fullPath: '/cookbook'
+      fullPath: '/cookbook/'
       preLoaderRoute: typeof CookbookIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/articles/': {
       id: '/articles/'
       path: '/articles'
-      fullPath: '/articles'
+      fullPath: '/articles/'
       preLoaderRoute: typeof ArticlesIndexRouteImport
       parentRoute: typeof rootRouteImport
     }

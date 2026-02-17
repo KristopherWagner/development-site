@@ -1,5 +1,6 @@
 import Bluesky from './Bluesky';
 import HowLongToBeat from './HowLongToBeat';
+import Mastodon from './Mastodon';
 import Pixelfed from './Pixelfed';
 
 export default function SocialLinks() {
@@ -83,6 +84,17 @@ export default function SocialLinks() {
         >
           <HowLongToBeat />
           <span>HowLongToBeat</span>
+        </a>
+      </li>
+      <li>
+        <a
+          aria-label="Read some of my favorite articles"
+          href="https://mastodon.social/@kwagner_dev"
+          rel="me"
+          title="Mastodon"
+        >
+          <Mastodon />
+          <span>Mastodon</span>
         </a>
       </li>
     </>
