@@ -2,12 +2,13 @@ import { defineConfig } from '@rsbuild/core';
 import { pluginReact } from '@rsbuild/plugin-react';
 import { pluginTypedCSSModules } from '@rsbuild/plugin-typed-css-modules';
 import { TanStackRouterRspack } from '@tanstack/router-plugin/rspack';
+import { pluginMdx } from '@rsbuild/plugin-mdx';
 
 export default defineConfig({
   html: {
     template: './static/index.html',
   },
-  plugins: [pluginReact(), pluginTypedCSSModules()],
+  plugins: [pluginReact(), pluginTypedCSSModules(), pluginMdx()],
   tools: {
     rspack: {
       plugins: [
