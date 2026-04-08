@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as WeddingIndexRouteImport } from './routes/wedding/index'
 import { Route as CookbookIndexRouteImport } from './routes/cookbook/index'
+import { Route as BlogIndexRouteImport } from './routes/blog/index'
 import { Route as ArticlesIndexRouteImport } from './routes/articles/index'
 import { Route as CookbookRecipeNameRouteImport } from './routes/cookbook/$recipeName'
 
@@ -30,6 +31,11 @@ const CookbookIndexRoute = CookbookIndexRouteImport.update({
   path: '/cookbook/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ArticlesIndexRoute = ArticlesIndexRouteImport.update({
   id: '/articles/',
   path: '/articles/',
@@ -45,6 +51,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/cookbook/$recipeName': typeof CookbookRecipeNameRoute
   '/articles/': typeof ArticlesIndexRoute
+  '/blog/': typeof BlogIndexRoute
   '/cookbook/': typeof CookbookIndexRoute
   '/wedding/': typeof WeddingIndexRoute
 }
@@ -52,6 +59,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/cookbook/$recipeName': typeof CookbookRecipeNameRoute
   '/articles': typeof ArticlesIndexRoute
+  '/blog': typeof BlogIndexRoute
   '/cookbook': typeof CookbookIndexRoute
   '/wedding': typeof WeddingIndexRoute
 }
@@ -60,6 +68,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/cookbook/$recipeName': typeof CookbookRecipeNameRoute
   '/articles/': typeof ArticlesIndexRoute
+  '/blog/': typeof BlogIndexRoute
   '/cookbook/': typeof CookbookIndexRoute
   '/wedding/': typeof WeddingIndexRoute
 }
@@ -69,15 +78,23 @@ export interface FileRouteTypes {
     | '/'
     | '/cookbook/$recipeName'
     | '/articles/'
+    | '/blog/'
     | '/cookbook/'
     | '/wedding/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/cookbook/$recipeName' | '/articles' | '/cookbook' | '/wedding'
+  to:
+    | '/'
+    | '/cookbook/$recipeName'
+    | '/articles'
+    | '/blog'
+    | '/cookbook'
+    | '/wedding'
   id:
     | '__root__'
     | '/'
     | '/cookbook/$recipeName'
     | '/articles/'
+    | '/blog/'
     | '/cookbook/'
     | '/wedding/'
   fileRoutesById: FileRoutesById
@@ -86,6 +103,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CookbookRecipeNameRoute: typeof CookbookRecipeNameRoute
   ArticlesIndexRoute: typeof ArticlesIndexRoute
+  BlogIndexRoute: typeof BlogIndexRoute
   CookbookIndexRoute: typeof CookbookIndexRoute
   WeddingIndexRoute: typeof WeddingIndexRoute
 }
@@ -113,6 +131,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CookbookIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog/': {
+      id: '/blog/'
+      path: '/blog'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/articles/': {
       id: '/articles/'
       path: '/articles'
@@ -134,6 +159,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CookbookRecipeNameRoute: CookbookRecipeNameRoute,
   ArticlesIndexRoute: ArticlesIndexRoute,
+  BlogIndexRoute: BlogIndexRoute,
   CookbookIndexRoute: CookbookIndexRoute,
   WeddingIndexRoute: WeddingIndexRoute,
 }
