@@ -1,0 +1,15 @@
+.block {
+  background: var(--bg-card);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+.block:hover {
+  box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+.block-testimonial {
+  border-left: 4px solid var(--accent-green);
+}
