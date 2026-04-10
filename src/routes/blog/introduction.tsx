@@ -6,6 +6,7 @@ import HomeLink from '../../components/Footer/HomeLink';
 import Header from '../../components/Header';
 
 import { Route as Cookbook } from '../cookbook';
+import QuoteCard from '../../components/QuoteCard';
 
 function Introduction() {
   return (
@@ -36,7 +37,9 @@ function Introduction() {
           worst case, I'll write at least one thing that embarrasses my son. 😎
         </p>
         <h2>why does he run?</h2>
-        <blockquote>It's not for the banana at the finish line.</blockquote>
+        <QuoteCard>
+          <i>It's not for the banana at the finish line.</i>
+        </QuoteCard>
         🏃‍♂️ If you read an article about running, know that I have been running
         since 2005 when I saw Jerome Bettis sitting on the sideline with an
         oxygen mask on his face. I asked my dad what was wrong, and he told me
@@ -54,7 +57,9 @@ function Introduction() {
           I'd buy it again, full stop 🎯.
         </p>
         <h2>can he cook?</h2>
-        <blockquote>Barely</blockquote>
+        <QuoteCard>
+          <i>Barely</i>
+        </QuoteCard>
         🙃 I'm not a chef, though I do make a mean breakfast, so if you cook any
         of our
         <Link
