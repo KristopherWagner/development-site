@@ -6,12 +6,12 @@ import CookbookLink from '../../components/Footer/CookbookLink';
 import HomeLink from '../../components/Footer/HomeLink';
 import Header from '../../components/Header';
 import Seo from '../../components/SEO';
+import Tag from '../../components/Tag';
 
 import { Route as cookbookRoute } from '.';
 import recipes from './recipes.json' with { type: 'json' };
 
 import styles from './cookbook.module.css';
-import Tag from '../../components/Tag';
 
 export default function Recipe() {
   const { recipeName } = Route.useParams();
