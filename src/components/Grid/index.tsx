@@ -6,7 +6,10 @@ export default function Grid({
   as = 'div',
   className,
   children,
-}: React.PropsWithChildren<{ as?: 'div' | 'ul'; className?: string }>) {
+}: React.PropsWithChildren<{
+  as?: 'div' | 'ul' | 'main';
+  className?: string;
+}>) {
   const Component = as;
   return (
     <Component className={clsx(className, styles['grid-container'])}>
