@@ -3,19 +3,20 @@ import clsx from 'clsx';
 
 import Footer from '../../components/Footer';
 import HomeLink from '../../components/Footer/HomeLink';
-
-import { Route as Cookbook } from '../cookbook';
 import Card from '../../components/Grid/Card';
 import Grid from '../../components/Grid';
 import QuoteCard from '../../components/Grid/QuoteCard';
+import Header from '../../components/Header';
+
+import { Route as Cookbook } from '../cookbook';
 
 function Introduction() {
   return (
     <>
+      <Header heading="introduction" />
       <main className={clsx('main', 'hyper-legible')}>
         <Grid as="article">
           <Card as="section" className="cols-full">
-            <h1>introduction</h1>
             <p>
               ❄️ In 2016 after shoveling my car and my girlfriend's car out of
               31" of snow, I noticed that the car parked outside of my apartment
