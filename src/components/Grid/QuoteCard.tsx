@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import styles from './QuoteCard.module.css';
+import styles from './Card.module.css';
 
 export default function QuoteCard({
   as = 'blockquote',
@@ -11,9 +11,7 @@ export default function QuoteCard({
 }>) {
   const Component = as;
   return (
-    <Component
-      className={clsx(styles.block, styles['block-testimonial'], className)}
-    >
+    <Component className={clsx(styles.card, styles['card-quote'], className)}>
       {children}
     </Component>
   );
