@@ -8,31 +8,27 @@
     min-width: 0px;
   }
 
-  div {
-    height: max-content;
-  }
-
   :global(.cols-sm) {
     grid-column: span 1;
   }
 
   :global(.cols-md) {
     grid-column: 1 / -1;
-    @media screen and (min-width: 481px) {
+    @media screen and (min-width: 769px) {
       grid-column: span 3;
     }
   }
 
   :global(.cols-lg) {
     grid-column: 1 / -1;
-    @media screen and (min-width: 769px) {
+    @media screen and (min-width: 1025px) {
       grid-column: span 6;
     }
   }
 
   :global(.cols-xl) {
     grid-column: 1 / -1;
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: 1201px) {
       grid-column: span 9;
     }
   }

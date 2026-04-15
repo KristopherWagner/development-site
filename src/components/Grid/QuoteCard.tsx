@@ -5,7 +5,10 @@ export default function QuoteCard({
   as = 'blockquote',
   className,
   children,
-}: React.PropsWithChildren<{ as?: 'blockquote' | 'div'; className?: string }>) {
+}: React.PropsWithChildren<{
+  as?: 'blockquote' | 'div' | 'section';
+  className?: string;
+}>) {
   const Component = as;
   return (
     <Component
