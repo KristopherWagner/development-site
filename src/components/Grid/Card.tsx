@@ -8,7 +8,7 @@ export default function Card({
   className,
   children,
 }: React.PropsWithChildren<{
-  as?: 'div' | 'li' | 'article';
+  as?: 'div' | 'li' | 'article' | 'section';
   className?: string;
 }>) {
   const Component = as;

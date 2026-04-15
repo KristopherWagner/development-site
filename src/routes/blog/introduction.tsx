@@ -7,14 +7,14 @@ import HomeLink from '../../components/Footer/HomeLink';
 import { Route as Cookbook } from '../cookbook';
 import Card from '../../components/Grid/Card';
 import Grid from '../../components/Grid';
-import QuoteCard from '../../components/QuoteCard';
+import QuoteCard from '../../components/Grid/QuoteCard';
 
 function Introduction() {
   return (
     <>
       <main className={clsx('main', 'hyper-legible')}>
-        <Grid>
-          <Card className="cols-full">
+        <Grid as="article">
+          <Card as="section" className="cols-full">
             <h1>introduction</h1>
             <p>
               ❄️ In 2016 after shoveling my car and my girlfriend's car out of
@@ -25,7 +25,7 @@ function Introduction() {
               and haven't touched a snow shovel since. 😏
             </p>
           </Card>
-          <Card className="cols-lg">
+          <Card as="section" className="cols-full">
             <h2>who is he?</h2>
             <p>
               🔎 I'm Kristopher Wagner. If you skipped the home page, the short
@@ -43,7 +43,7 @@ function Introduction() {
               at least one thing that embarrasses my son. 😎
             </p>
           </Card>
-          <Card className="cols-lg">
+          <Card as="section" className="cols-full">
             <h2>why does he run?</h2>
             <p>
               <i>It's not for the banana at the finish line.</i>
@@ -57,7 +57,7 @@ function Introduction() {
               😌.
             </p>
           </Card>
-          <Card className="cols-lg">
+          <Card as="section" className="cols-full">
             <h2>can I trust him?</h2>
             <p>
               💸 If you read an article about finance or a product review, know
@@ -69,7 +69,7 @@ function Introduction() {
               recommend something, it's because I'd buy it again, lg stop 🎯.
             </p>
           </Card>
-          <Card className="cols-lg">
+          <Card as="section" className="cols-full">
             <h2>can he cook?</h2>
             <p>
               <i>Barely</i>
@@ -85,7 +85,7 @@ function Introduction() {
               , my wife has made them many times and I find them delicious 😋.
             </p>
           </Card>
-          <Card className="cols-lg">
+          <Card as="section" className="cols-full">
             <h2>you're still here?</h2>{' '}
             <p>
               🙇‍♂️ If you made it this far, thanks! You just read roughly 500
@@ -95,13 +95,10 @@ function Introduction() {
               say hello 👋!
             </p>
           </Card>
-          <QuoteCard as="div" className="cols-sm">
+          <QuoteCard as="section" className="cols-full">
             <p>
-              👨‍💻 <i>Written by me</i>
-            </p>
-            <br />
-            <p>
-              🤖 <i>Proof-read by my good friend Claude</i>
+              👨‍💻 <i>Written by me;</i> 🤖{' '}
+              <i>Proof-read by my good friend Claude</i>
             </p>
           </QuoteCard>
         </Grid>

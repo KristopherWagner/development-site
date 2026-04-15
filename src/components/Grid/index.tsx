@@ -7,7 +7,7 @@ export default function Grid({
   className,
   children,
 }: React.PropsWithChildren<{
-  as?: 'div' | 'ul' | 'main';
+  as?: 'div' | 'ul' | 'main' | 'article';
   className?: string;
 }>) {
   const Component = as;
