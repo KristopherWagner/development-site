@@ -63,7 +63,7 @@ html {
   }
 
   main {
-    margin: 0.67rem auto;
+    margin: 1rem auto;
     overflow: auto;
     width: var(--application-width);
 

@@ -9,7 +9,3 @@
 .block:hover {
   box-shadow: 0 4px 12px var(--shadow-color);
 }
-
-.block-testimonial {
-  border-left: 4px solid var(--accent-green);
-}
