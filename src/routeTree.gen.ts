@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as WeddingIndexRouteImport } from './routes/wedding/index'
 import { Route as CookbookIndexRouteImport } from './routes/cookbook/index'
+import { Route as BlogIndexRouteImport } from './routes/blog/index'
 import { Route as ArticlesIndexRouteImport } from './routes/articles/index'
 import { Route as CookbookRecipeNameRouteImport } from './routes/cookbook/$recipeName'
 import { Route as BlogIntroductionRouteImport } from './routes/blog/introduction'
@@ -29,6 +30,11 @@ const WeddingIndexRoute = WeddingIndexRouteImport.update({
 const CookbookIndexRoute = CookbookIndexRouteImport.update({
   id: '/cookbook/',
   path: '/cookbook/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ArticlesIndexRoute = ArticlesIndexRouteImport.update({
@@ -52,6 +58,7 @@ export interface FileRoutesByFullPath {
   '/blog/introduction': typeof BlogIntroductionRoute
   '/cookbook/$recipeName': typeof CookbookRecipeNameRoute
   '/articles/': typeof ArticlesIndexRoute
+  '/blog/': typeof BlogIndexRoute
   '/cookbook/': typeof CookbookIndexRoute
   '/wedding/': typeof WeddingIndexRoute
 }
@@ -60,6 +67,7 @@ export interface FileRoutesByTo {
   '/blog/introduction': typeof BlogIntroductionRoute
   '/cookbook/$recipeName': typeof CookbookRecipeNameRoute
   '/articles': typeof ArticlesIndexRoute
+  '/blog': typeof BlogIndexRoute
   '/cookbook': typeof CookbookIndexRoute
   '/wedding': typeof WeddingIndexRoute
 }
@@ -69,6 +77,7 @@ export interface FileRoutesById {
   '/blog/introduction': typeof BlogIntroductionRoute
   '/cookbook/$recipeName': typeof CookbookRecipeNameRoute
   '/articles/': typeof ArticlesIndexRoute
+  '/blog/': typeof BlogIndexRoute
   '/cookbook/': typeof CookbookIndexRoute
   '/wedding/': typeof WeddingIndexRoute
 }
@@ -79,6 +88,7 @@ export interface FileRouteTypes {
     | '/blog/introduction'
     | '/cookbook/$recipeName'
     | '/articles/'
+    | '/blog/'
     | '/cookbook/'
     | '/wedding/'
   fileRoutesByTo: FileRoutesByTo
@@ -87,6 +97,7 @@ export interface FileRouteTypes {
     | '/blog/introduction'
     | '/cookbook/$recipeName'
     | '/articles'
+    | '/blog'
     | '/cookbook'
     | '/wedding'
   id:
@@ -95,6 +106,7 @@ export interface FileRouteTypes {
     | '/blog/introduction'
     | '/cookbook/$recipeName'
     | '/articles/'
+    | '/blog/'
     | '/cookbook/'
     | '/wedding/'
   fileRoutesById: FileRoutesById
@@ -104,6 +116,7 @@ export interface RootRouteChildren {
   BlogIntroductionRoute: typeof BlogIntroductionRoute
   CookbookRecipeNameRoute: typeof CookbookRecipeNameRoute
   ArticlesIndexRoute: typeof ArticlesIndexRoute
+  BlogIndexRoute: typeof BlogIndexRoute
   CookbookIndexRoute: typeof CookbookIndexRoute
   WeddingIndexRoute: typeof WeddingIndexRoute
 }
@@ -129,6 +142,13 @@ declare module '@tanstack/react-router' {
       path: '/cookbook'
       fullPath: '/cookbook/'
       preLoaderRoute: typeof CookbookIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/': {
+      id: '/blog/'
+      path: '/blog'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/articles/': {
@@ -160,6 +180,7 @@ const rootRouteChildren: RootRouteChildren = {
   BlogIntroductionRoute: BlogIntroductionRoute,
   CookbookRecipeNameRoute: CookbookRecipeNameRoute,
   ArticlesIndexRoute: ArticlesIndexRoute,
+  BlogIndexRoute: BlogIndexRoute,
   CookbookIndexRoute: CookbookIndexRoute,
   WeddingIndexRoute: WeddingIndexRoute,
 }
