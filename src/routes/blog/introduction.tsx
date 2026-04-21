@@ -1,5 +1,4 @@
 import { createFileRoute, Link } from '@tanstack/react-router';
-import clsx from 'clsx';
 
 import Footer from '../../components/Footer';
 import HomeLink from '../../components/Footer/HomeLink';
@@ -11,7 +10,7 @@ function Introduction() {
   return (
     <>
       <Header heading="introduction" />
-      <main className={clsx('main', 'hyper-legible')}>
+      <main>
         <section>
           <p>
             ❄️ In 2016 after shoveling my car and my girlfriend's car out of 31"
