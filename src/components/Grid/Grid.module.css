@@ -40,4 +40,29 @@
   :global(ul.contents) {
     display: contents;
   }
+
+  :global(.btn) {
+    background: var(--accent-green);
+    border: none;
+    border-radius: 8px;
+    color: var(--bg-primary);
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 500;
+    margin-left: auto;
+    padding: 14px 32px;
+    text-align: center;
+    text-decoration: none;
+    width: max-content;
+
+    &:focus {
+      outline: 2px solid var(--text-primary);
+      outline-offset: 2px;
+    }
+
+    &:hover {
+      background: var(--accent-wood);
+      box-shadow: 0 4px 12px var(--shadow-color);
+    }
+  }
 }
