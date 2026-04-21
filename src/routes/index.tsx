@@ -10,6 +10,7 @@ import Seo from '../components/SEO';
 import { imageFolder } from '../constants';
 
 import { Route as Articles } from './articles';
+import { Route as Blog } from './blog';
 import { Route as Cookbook } from './cookbook';
 import { Route as Wedding } from './wedding';
 
@@ -35,8 +36,8 @@ export default function IndexPage() {
         <Grid className={styles.grid}>
           <Card as="article" className="cols-lg">
             <h2>
-              <i className="fa-duotone fa-rings-wedding" />
-              Husband
+              <i className="fa-duotone fa-family" />
+              Husband & Father
             </h2>
             <p>
               Check out the{' '}
@@ -100,7 +101,8 @@ export default function IndexPage() {
             <p>
               I like to learn and once I find something interesting (or
               something I like), I make sure everyone knows about it. Read some
-              of my <Link to={Articles.to}>favorite articles</Link>.
+              of my <Link to={Articles.to}>favorite articles</Link>. Or check
+              out some of <Link to={Blog.to}>my blog posts</Link>.
             </p>
           </Card>
         </Grid>
