@@ -22,10 +22,10 @@
   "devDependencies": {
     "@mdx-js/loader": "^3.1.1",
     "@mdx-js/react": "^3.1.1",
-    "@rsbuild/core": "^1.5.17",
+    "@rsbuild/core": "^1.7.5",
     "@rsbuild/plugin-mdx": "^1.1.1",
-    "@rsbuild/plugin-react": "^1.4.1",
-    "@rsbuild/plugin-typed-css-modules": "^1.2.0",
+    "@rsbuild/plugin-react": "^1.4.6",
+    "@rsbuild/plugin-typed-css-modules": "^1.2.2",
     "@swc/core": "^1.15.11",
     "@swc/jest": "^0.2.38",
     "@tanstack/router-plugin": "^1.160.2",
