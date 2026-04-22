@@ -71,7 +71,7 @@ function Introduction() {
             <i>Barely</i>
             <br />
             🙃 I'm not a chef, though I do make a mean breakfast, so if you cook
-            any of our
+            any of our{' '}
             <Link
               aria-label="Navigate to the Wagner family cookbook"
               to={Cookbook.to}
