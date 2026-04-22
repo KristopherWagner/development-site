@@ -1,0 +1,55 @@
+name: Claude PR Review
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - 'src/**'
+      - '*.ts'
+      - '*.tsx'
+      - '*.css'
+      - '*.html'
+    branches:
+      - 'master'
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+      id-token: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 1
+
+      - name: PR Review
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          prompt: |
+            Review this pull request for the kwagner.dev personal site.
+
+            Stack context:
+            - Rsbuild bundler with React 19 and TypeScript
+            - TanStack Router with file-based routing (routes live in src/routes/)
+            - Typed CSS modules (*.module.css)
+            - AWS Amplify deployment via GitHub Actions
+
+            Focus on:
+            - TypeScript type safety and correct use of generics
+            - React 19 patterns (avoid legacy patterns like class components or old useEffect anti-patterns)
+            - TanStack Router conventions — correct route file naming, loader usage, and search param types
+            - Typed CSS module imports (no untyped style references)
+            - Anything that could break the Amplify build or cause a runtime error
+            - Security issues like hardcoded keys, exposed env vars, or unsafe data handling
+            - WCAG 2.1 AAA compliance, correct AIRA html usage, and Section 508 compliance 
+
+            Skip:
+            - Purely stylistic nitpicks with no functional impact
+            - Lock files, generated files, and build artifacts
+            - Formatting issues (that's what Prettier/ESLint handle)
+
+            Be concise and actionable. Flag real problems, not hypotheticals.
