@@ -60,6 +60,12 @@ html {
   h5,
   h6 {
     color: var(--accent-green);
+
+    &:focus {
+      font-weight: bold;
+      outline: none;
+      text-decoration: underline;
+    }
   }
 
   main {
