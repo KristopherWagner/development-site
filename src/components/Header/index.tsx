@@ -7,7 +7,9 @@ export default function Header({
   return (
     <header className={styles.root}>
       <div className={styles.heading}>
-        <h1>{heading}</h1>
+        <h1 tabIndex={-1} ref={(ref) => ref?.focus()}>
+          {heading}
+        </h1>
       </div>
       <div className={styles.content}>{children}</div>
     </header>
