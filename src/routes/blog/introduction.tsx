@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from '@tanstack/react-router';
 
 import Footer from '../../components/Footer';
+import BlogLink from '../../components/Footer/BlogLink';
 import HomeLink from '../../components/Footer/HomeLink';
 import Header from '../../components/Header';
 
@@ -100,6 +101,7 @@ function Introduction() {
       </main>
       <Footer>
         <HomeLink />
+        <BlogLink />
       </Footer>
     </>
   );
