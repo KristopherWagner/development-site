@@ -20,10 +20,7 @@
     "react-dom": "^19.2.5"
   },
   "devDependencies": {
-    "@mdx-js/loader": "^3.1.1",
-    "@mdx-js/react": "^3.1.1",
     "@rsbuild/core": "^1.7.5",
-    "@rsbuild/plugin-mdx": "^1.1.1",
     "@rsbuild/plugin-react": "^1.4.6",
     "@rsbuild/plugin-typed-css-modules": "^1.2.2",
     "@swc/core": "^1.15.30",
@@ -33,7 +30,6 @@
     "@testing-library/react": "^16.3.2",
     "@testing-library/user-event": "^14.6.1",
     "@types/jest": "^30.0.0",
-    "@types/mdx": "^2.0.13",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.2",
     "jest": "^30.3.0",
