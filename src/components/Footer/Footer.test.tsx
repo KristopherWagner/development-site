@@ -1,11 +1,12 @@
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 
+import ArticlesLink from './ArticlesLink';
+import BlogLink from './BlogLink';
 import CookbookLink from './CookbookLink';
 import Footer from '.';
 import HomeLink from './HomeLink';
 import SocialLinks from './SocialLinks';
-import ArticlesLink from './ArticlesLink';
 
 describe('Footer component tests', () => {
   it('renders accesible social media links', () => {
@@ -15,6 +16,7 @@ describe('Footer component tests', () => {
         <HomeLink />
         <CookbookLink />
         <ArticlesLink />
+        <BlogLink />
       </Footer>,
     );
 
@@ -37,6 +39,9 @@ describe('Footer component tests', () => {
     ).toBeInTheDocument();
     expect(
       screen.getByRole('link', { name: 'Return to the list of articles' }),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('link', { name: 'Return to blog' }),
     ).toBeInTheDocument();
   });
 });

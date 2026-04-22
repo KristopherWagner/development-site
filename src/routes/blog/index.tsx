@@ -1,9 +1,11 @@
 import { createFileRoute, Link } from '@tanstack/react-router';
 
 import Seo from '../../components/SEO';
-import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import HomeLink from '../../components/Footer/HomeLink';
 import Grid from '../../components/Grid';
 import Card from '../../components/Grid/Card';
+import Header from '../../components/Header';
 
 import { Route as Introduction } from './introduction';
 
@@ -35,6 +37,9 @@ export default function Blog() {
           </Card>
         </Grid>
       </main>
+      <Footer>
+        <HomeLink />
+      </Footer>
     </>
   );
 }
