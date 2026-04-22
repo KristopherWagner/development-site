@@ -26,7 +26,7 @@
     "@rsbuild/plugin-mdx": "^1.1.1",
     "@rsbuild/plugin-react": "^1.4.6",
     "@rsbuild/plugin-typed-css-modules": "^1.2.2",
-    "@swc/core": "^1.15.11",
+    "@swc/core": "^1.15.30",
     "@swc/jest": "^0.2.38",
     "@tanstack/router-plugin": "^1.160.2",
     "@testing-library/jest-dom": "^6.9.1",
