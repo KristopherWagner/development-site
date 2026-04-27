@@ -5,15 +5,16 @@
   --color-green-forest: #2d5016;
   --color-moss: #4a7023;
   --color-bamboo: #8b9e6e;
-  --color-stone: #2a2520;
-  --color-sakura: #c8617a;
+  --color-stone-dark: #1c1c1e;
+  --color-stone-light: #202023;
+  --color-sakura: #cb6c84;
   --color-plum: #8f4155;
 
   --bg-primary: var(--color-sand);
   --bg-card: var(--color-tatami);
 
   --text-heading: var(--color-green-forest);
-  --text-body: var(--color-stone);
+  --text-body: var(--color-stone-dark);
   --text-link: var(--color-plum);
   --text-hover: var(--color-sakura);
 
@@ -35,12 +36,19 @@
     0 4px 8px rgba(42, 37, 32, 0.08), 0 8px 24px rgba(200, 160, 80, 0.16),
     0 0 48px rgba(220, 175, 100, 0.12), 0 0 3px rgba(245, 210, 140, 0.22) inset;
 
-  --shadow-lantern-float:
-    0 8px 16px rgba(42, 37, 32, 0.09), 0 16px 40px rgba(200, 160, 80, 0.18),
-    0 0 64px rgba(220, 175, 100, 0.13), 0 0 4px rgba(245, 210, 140, 0.25) inset;
-
   @media (prefers-color-scheme: dark) {
-    --bg-primary: var(--color-tatami);
-    --bg-card: var(--color-soji);
+    --bg-primary: var(--color-stone-dark);
+    --bg-card: var(--color-stone-light);
+
+    --text-heading: var(--color-bamboo);
+    --text-body: var(--color-sand);
+    --text-link: var(--color-sakura);
+    --text-hover: var(--color-plum);
+
+    --accent-primary: var(--color-moss);
+    --accent-secondary: var(--color-bamboo);
+    --accent-tertiary: var(--color-sakura);
+
+    --border-color: var(--color-tatami);
   }
 }
