@@ -27,7 +27,7 @@ html {
   color-scheme: light dark;
 
   background-color: var(--bg-primary);
-  color: var(--text-primary);
+  color: var(--text-body);
 
   font-family: 'AtkinsonHyperlegibleNextVF', serif;
   font-size: 17pt;
@@ -36,19 +36,19 @@ html {
 
   a {
     border-bottom: 2px solid transparent;
-    color: var(--accent-green);
+    color: var(--text-link);
     text-decoration: none;
     transition: all 0.2s ease;
 
     &:hover {
-      border-bottom-color: var(--accent-wood);
-      color: var(--accent-wood);
+      border-bottom-color: var(--text-hover);
+      color: var(--text-hover);
     }
 
     &:focus {
-      color: var(--accent-wood);
+      color: var(--accent-tertiary);
       border-radius: 2px;
-      outline: 2px solid var(--accent-wood);
+      outline: 2px solid var(--accent-tertiary);
       outline-offset: 3px;
     }
   }
@@ -59,12 +59,16 @@ html {
   h4,
   h5,
   h6 {
-    color: var(--accent-green);
+    color: var(--text-heading);
 
     &:focus {
       font-weight: bold;
       outline: none;
       text-decoration: underline;
+    }
+
+    i {
+      color: var(--accent-secondary);
     }
   }
 
