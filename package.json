@@ -14,7 +14,7 @@
   "dependencies": {
     "@fontsource/montserrat": "^5.2.8",
     "@fontsource/roboto": "^5.2.10",
-    "@tanstack/react-router": "^1.168.23",
+    "@tanstack/react-router": "^1.168.25",
     "clsx": "^2.1.1",
     "react": "^19.2.5",
     "react-dom": "^19.2.5"
@@ -23,9 +23,9 @@
     "@rsbuild/core": "^1.7.5",
     "@rsbuild/plugin-react": "^1.4.6",
     "@rsbuild/plugin-typed-css-modules": "^1.2.2",
-    "@swc/core": "^1.15.30",
+    "@swc/core": "^1.15.32",
     "@swc/jest": "^0.2.38",
-    "@tanstack/router-plugin": "^1.167.22",
+    "@tanstack/router-plugin": "^1.167.28",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
     "@testing-library/user-event": "^14.6.1",
