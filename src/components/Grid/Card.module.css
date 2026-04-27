@@ -21,7 +21,3 @@
     box-shadow: var(--shadow-lantern-float);
   }
 }
-
-.card-quote {
-  border-left: 4px solid var(--accent-primary);
-}
