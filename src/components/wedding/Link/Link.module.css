@@ -4,6 +4,6 @@ a.link {
   text-decoration-line: underline;
 
   &:hover {
-    color: var(--secondary);
+    color: var(--text-hover);
   }
 }
