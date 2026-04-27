@@ -41,7 +41,7 @@ a.link {
   transition: 0.3s;
 
   &:hover {
-    color: var(--secondary);
+    color: var(--text-hover);
   }
 }
 
