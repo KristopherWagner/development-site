@@ -61,7 +61,7 @@
     }
 
     &:hover {
-      background: var(--accent-secondary);
+      background: var(--accent-tertiary);
       box-shadow: var(--shadow-lantern-sm);
     }
   }
