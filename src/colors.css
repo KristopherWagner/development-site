@@ -1,54 +1,46 @@
 :root {
-  --color-sand: #f5f0e8;
-  --color-tatami: #e8e2d4;
+  --color-sand: oklch(0.9425 0.0068 97.36);
 
-  --color-green-forest: #2d5016;
-  --color-moss: #4a7023;
-  --color-bamboo: #8b9e6e;
-  --color-stone-dark: #1c1c1e;
-  --color-stone-light: #202023;
-  --color-sakura: #cb6c84;
-  --color-plum: #8f4155;
+  --color-green-forest: oklch(0.2804 0.0709 125.79);
+  --color-bamboo: oklch(0.7318 0.0709 125.79);
+  --color-stone-dark: oklch(0.1473 0.0038 286.09);
+  --color-stone-mid: oklch(0.1773 0.0038 286.09);
+  --color-stone-light: oklch(0.8238 0.0038 286.09);
+  --color-sakura: oklch(0.7163 0.1223 4.98);
+  --color-plum: oklch(0.3053 0.1223 4.98);
+  --color-blue-sky: oklch(0.7883 0.1102 210.71);
+  --color-blue-water: oklch(0.2398 0.0805 255.53);
 
-  --bg-primary: var(--color-sand);
-  --bg-card: var(--color-tatami);
+  --bg-primary: var(--color-stone-light);
+  --bg-card: var(--color-sand);
 
   --text-heading: var(--color-green-forest);
   --text-body: var(--color-stone-dark);
   --text-link: var(--color-plum);
-  --text-hover: var(--color-sakura);
+  --text-hover: var(--color-blue-water);
+  --text-focus: var(--color-blue-water);
 
-  --accent-primary: var(--color-moss);
-  --accent-secondary: var(--color-bamboo);
-  --accent-tertiary: var(--color-sakura);
+  --accent-primary: var(--color-green-forest);
+  --accent-secondary: var(--color-plum);
 
-  --border-color: var(--color-moss);
+  --border-color: var(--color-stone-dark);
 
-  --shadow-lantern-sm:
-    0 1px 2px rgba(42, 37, 32, 0.06), 0 2px 6px rgba(200, 160, 80, 0.1),
-    0 0 12px rgba(220, 175, 100, 0.08);
-
-  --shadow-lantern-md:
-    0 2px 4px rgba(42, 37, 32, 0.07), 0 4px 12px rgba(200, 160, 80, 0.13),
-    0 0 24px rgba(220, 175, 100, 0.11), 0 0 2px rgba(245, 210, 140, 0.18) inset;
-
-  --shadow-lantern-lg:
-    0 4px 8px rgba(42, 37, 32, 0.08), 0 8px 24px rgba(200, 160, 80, 0.16),
-    0 0 48px rgba(220, 175, 100, 0.12), 0 0 3px rgba(245, 210, 140, 0.22) inset;
+  --shadow-lantern-sm: rgba(220, 175, 100, 0.24) 0px 3px 8px;
+  --shadow-lantern-lg: rgba(220, 175, 100, 0.35) 0px 5px 15px;
 
   @media (prefers-color-scheme: dark) {
     --bg-primary: var(--color-stone-dark);
-    --bg-card: var(--color-stone-light);
+    --bg-card: var(--color-stone-mid);
 
     --text-heading: var(--color-bamboo);
     --text-body: var(--color-sand);
     --text-link: var(--color-sakura);
-    --text-hover: var(--color-plum);
+    --text-hover: var(--color-blue-sky);
+    --text-focus: var(--color-blue-sky);
 
-    --accent-primary: var(--color-moss);
-    --accent-secondary: var(--color-bamboo);
-    --accent-tertiary: var(--color-sakura);
+    --accent-primary: var(--color-bamboo);
+    --accent-secondary: var(--color-sakura);
 
-    --border-color: var(--color-tatami);
+    --border-color: var(--color-sand);
   }
 }

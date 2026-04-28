@@ -46,9 +46,9 @@ html {
     }
 
     &:focus {
-      color: var(--accent-tertiary);
+      color: var(--text-focus);
       border-radius: 2px;
-      outline: 2px solid var(--accent-tertiary);
+      outline: 2px solid var(--text-focus);
       outline-offset: 3px;
     }
   }
@@ -62,13 +62,10 @@ html {
     color: var(--text-heading);
 
     &:focus {
+      color: var(--text-focus);
       font-weight: bold;
       outline: none;
       text-decoration: underline;
-    }
-
-    i {
-      color: var(--accent-secondary);
     }
   }
 
