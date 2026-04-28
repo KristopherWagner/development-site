@@ -56,12 +56,12 @@
     width: max-content;
 
     &:focus {
-      outline: 2px solid var(--accent-tertiary);
+      outline: 2px solid var(--text-focus);
       outline-offset: 2px;
     }
 
     &:hover {
-      background: var(--accent-tertiary);
+      background: var(--text-focus);
       box-shadow: var(--shadow-lantern-sm);
     }
   }
