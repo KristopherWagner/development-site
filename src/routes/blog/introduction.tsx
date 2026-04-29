@@ -62,7 +62,7 @@ function Introduction() {
             card debt, so I know what's it like to not be able to afford rent
             and debt payments (this was another reason I moved to Florida).
             Today our only debt is our mortgage and my wife's car. If I
-            recommend something, it's because I'd buy it again, lg stop 🎯.
+            recommend something, it's because I'd buy it again, full stop 🎯.
           </p>
         </section>
         <section>
