@@ -774,5 +774,56 @@
       "href": "https://impossiblefoods.com/blog/impossible-the-cookbook-is-here",
       "title": "Original recipe"
     }
+  },
+  {
+    "url": "wassail",
+    "description": "A warm Wagner family tradition",
+    "title": "Wassail",
+    "servings": "6 servings",
+    "time": "15 minutes",
+    "ingredients": [
+      {
+        "quantity": "6",
+        "unit": "cups",
+        "ingredient": "Apple cider"
+      },
+      {
+        "quantity": "2",
+        "unit": "tablespoons",
+        "ingredient": "brown sugar"
+      },
+      {
+        "quantity": "9",
+        "ingredient": "cinnamon sticks"
+      },
+      {
+        "quantity": "6",
+        "ingredient": "whole cloves"
+      },
+      {
+        "quantity": "0.25",
+        "unit": "teaspoon",
+        "ingredient": "nutmeg"
+      },
+      {
+        "quantity": "1",
+        "ingredient": "orange"
+      }
+    ],
+    "instructions": [
+      "Slice the orange and remove some of the peels to use as garnish later.",
+      "In a large pot over medium heat, combine the apple cider, brown sugar, 3 cinnamon sticks, cloves, and nutmeg.",
+      "Place the orange slices on top.",
+      "Simmer for 10 minutes (or longer, I leave it on a warmer all day while I drink it).",
+      "Strain the cider to discard the cinnamon sticks and cloves.",
+      "Ladle into a mug.",
+      "Garnish with an orange peel and cinnamon stick."
+    ],
+    "tags": ["vegan", "vegetarian"],
+    "source": {
+      "citation": "Fujikawa, J., & Sumerak, M. (2021). Star Wars The Life Day Cookbook. London: Insight Editions.",
+      "href": "https://www.simonandschuster.com/books/Star-Wars-The-Life-Day-Cookbook/Jenn-Fujikawa/9781647224776",
+      "title": "Star Wars The Life Day Cookbook"
+    }
   }
 ]
