@@ -99,4 +99,10 @@ html {
     margin: 0px;
     min-height: 100vh;
   }
+
+  blockquote {
+    border-left: 4px solid var(--accent-primary);
+    margin-left: 0px;
+    padding-left: 40px;
+  }
 }
