@@ -5,7 +5,6 @@ import SocialLinks from '../components/Footer/SocialLinks';
 import Grid from '../components/Grid';
 import Card from '../components/Grid/Card';
 import Header from '../components/Header';
-import MakerIcon from '../components/MakerIcon';
 import Seo from '../components/SEO';
 import { imageFolder } from '../constants';
 
@@ -54,6 +53,7 @@ export default function IndexPage() {
             <h2>
               <i className="fa-solid fa-person-running" /> Runner
             </h2>
+
             <p>
               I maintain a running group with weekly blog posts, statistics, and
               discussions,{' '}
@@ -65,8 +65,16 @@ export default function IndexPage() {
           </Card>
           <Card as="article" className="cols-lg">
             <h2>
-              <MakerIcon height="100%" /> Maker
+              <i className="fa-duotone fa-code" /> Engineer
             </h2>
+            <p>
+              I am a computer science engineer by trade and occasionally I write
+              some code on my free time (this site included!). You can{' '}
+              <a href="https://github.com/KristopherWagner">
+                look at my GitHub profile
+              </a>{' '}
+              to see what I've been working on.
+            </p>
             <p>
               I just started using a 3D printer, you can{' '}
               <a href="https://www.printables.com/@kwagner">
