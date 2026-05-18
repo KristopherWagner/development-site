@@ -87,7 +87,7 @@ export default function Recipe() {
         </ol>
         <h2>Source</h2>
         <p>
-          Modified from{' '}
+          Inspired by{' '}
           <a
             aria-label={'Visit the external source for ' + recipe.title}
             href={recipe.source.href}
