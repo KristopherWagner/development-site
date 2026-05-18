@@ -91,6 +91,14 @@ export default function IndexPage() {
             <h2>
               <i className="fa-duotone fa-rabbit-running" /> Vegetarian
             </h2>
+            <blockquote>
+              "The four highest-impact things an individual can do to tackle
+              climate change are eat a plant-based diet, avoid air travel, live
+              car-free, and have fewer children. Of those four actions, only
+              plant-based eating immediately addresses methane and nitrous
+              oxide, the most urgently important greenhouse gases."
+            </blockquote>
+            - Jonathan Safran Foer
             <p>
               Cook some of our{' '}
               <Link
@@ -99,7 +107,8 @@ export default function IndexPage() {
               >
                 favorite recipes
               </Link>
-              .
+              . They're better for your body, slow climate change, and relieve
+              the global hunger crisis.
             </p>
           </Card>
           <Card as="article" className="cols-lg">
