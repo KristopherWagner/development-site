@@ -37,6 +37,10 @@
     grid-column: 1 / -1;
   }
 
+  :global(.row-2) {
+    grid-row: span 2;
+  }
+
   :global(ul.contents) {
     display: contents;
   }

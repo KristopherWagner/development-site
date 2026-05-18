@@ -14,6 +14,7 @@ import { Route as Cookbook } from './cookbook';
 import { Route as Wedding } from './wedding';
 
 import styles from './index.module.css';
+import clsx from 'clsx';
 
 export default function IndexPage() {
   return (
@@ -87,7 +88,7 @@ export default function IndexPage() {
               .
             </p>
           </Card>
-          <Card as="article" className="cols-lg">
+          <Card as="article" className={clsx('cols-lg', 'row-2')}>
             <h2>
               <i className="fa-duotone fa-rabbit-running" /> Vegetarian
             </h2>
