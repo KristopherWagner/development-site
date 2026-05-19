@@ -21,7 +21,7 @@ jobs:
       id-token: write
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v4
         with:
           fetch-depth: 1
 
@@ -29,6 +29,23 @@ jobs:
         uses: anthropics/claude-code-action@v1
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          claude_args: '--model claude-sonnet-4-6  --max-turns 20'
+          settings: |
+            {
+              "permissions": {
+                "allow": [
+                  "Bash(gh pr review:*)",
+                  "Bash(gh pr comment:*)",
+                  "Bash(gh api:*)",
+                  "Bash(git diff:*)",
+                  "Bash(git log:*)",
+                  "Bash(git show:*)",
+                  "Read",
+                  "Glob",
+                  "Grep"
+                ]
+              }
+            }
           prompt: |
             Review this pull request for the kwagner.dev personal site.
 
