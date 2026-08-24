@@ -85,18 +85,6 @@ export default function Recipe() {
             </li>
           ))}
         </ol>
-        <h2>Source</h2>
-        <p>
-          Inspired by{' '}
-          <a
-            aria-label={'Visit the external source for ' + recipe.title}
-            href={recipe.source.href}
-            referrerPolicy="origin-when-cross-origin"
-          >
-            {recipe.source.title}
-          </a>
-        </p>
-        <p>{recipe.source.citation}</p>
       </main>
       {pageFooter}
     </>
