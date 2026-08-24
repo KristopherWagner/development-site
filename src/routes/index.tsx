@@ -35,8 +35,7 @@ export default function IndexPage() {
         <Grid className={styles.grid}>
           <Card as="article" className="cols-lg">
             <h2>
-              <i className="fa-duotone fa-family" />
-              Husband & Father
+              <i className="fa-duotone fa-family" /> Husband & Daddy
             </h2>
             <p>
               Check out the{' '}
