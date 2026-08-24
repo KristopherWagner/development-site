@@ -35,7 +35,7 @@
     "jest": "^30.3.0",
     "jest-environment-jsdom": "^30.3.0",
     "ts-node": "^10.9.2",
-    "typescript": "^5.9.3"
+    "typescript": "^7.0.2"
   },
   "optionalDependencies": {
     "@rspack/binding-linux-x64-gnu": "^1.6.4"
