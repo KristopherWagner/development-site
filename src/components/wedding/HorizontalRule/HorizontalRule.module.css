@@ -4,7 +4,7 @@ div.root {
   width: 75%;
 }
 
-div.background-light-text {
+div.backgroundLightText {
   border-color: var(--background-light-text);
 }
 
@@ -12,10 +12,10 @@ div.primary {
   border-color: var(--primary);
 }
 
-div.primary-container-text {
+div.primaryContainerText {
   border-color: var(--primary-container-text);
 }
 
-div.secondary-continer-text {
+div.secondaryContainerText {
   border-color: var(--secondary-container-text);
 }
