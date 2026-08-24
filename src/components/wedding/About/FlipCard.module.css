@@ -58,7 +58,4 @@ div.back {
   padding: 16px 8px;
   transition: box-shadow 1.6s;
   transform: rotateY(180deg);
-
-  height: calc(300px - 32px);
-  width: calc(300px - 16px);
 }

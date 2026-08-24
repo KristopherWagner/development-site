@@ -2,6 +2,6 @@ i.icon {
   color: var(--primary);
 }
 
-i.youtube {
+:global(p.body1) a i.youtube {
   color: red;
 }

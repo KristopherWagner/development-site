@@ -5,15 +5,43 @@ section.root {
 
 section.light {
   background-color: var(--background-light);
-  color: var(--background-light-text);
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  a {
+    color: var(--background-light-text);
+  }
 }
 
 section.primary {
   background-color: var(--primary-container);
-  color: var(--primary-container-text);
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  a {
+    color: var(--primary-container-text);
+  }
 }
 
 section.secondary {
   background-color: var(--secondary-container);
-  color: var(--secondary-container-text);
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  a {
+    color: var(--secondary-container-text);
+  }
 }
