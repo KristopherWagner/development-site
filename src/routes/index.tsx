@@ -9,7 +9,6 @@ import Seo from '../components/SEO';
 import { imageFolder } from '../constants';
 
 import { Route as Articles } from './articles';
-import { Route as Blog } from './blog';
 import { Route as Cookbook } from './cookbook';
 import { Route as Wedding } from './wedding';
 
@@ -119,8 +118,7 @@ export default function IndexPage() {
             <p>
               I like to learn and once I find something interesting (or
               something I like), I make sure everyone knows about it. Read some
-              of my <Link to={Articles.to}>favorite articles</Link>. Or check
-              out some of <Link to={Blog.to}>my blog posts</Link>.
+              of my <Link to={Articles.to}>favorite articles</Link>.
             </p>
           </Card>
         </Grid>
