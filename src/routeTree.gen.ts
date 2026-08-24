@@ -12,10 +12,8 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as WeddingIndexRouteImport } from './routes/wedding/index'
 import { Route as CookbookIndexRouteImport } from './routes/cookbook/index'
-import { Route as BlogIndexRouteImport } from './routes/blog/index'
 import { Route as ArticlesIndexRouteImport } from './routes/articles/index'
 import { Route as CookbookRecipeNameRouteImport } from './routes/cookbook/$recipeName'
-import { Route as BlogIntroductionRouteImport } from './routes/blog/introduction'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -32,11 +30,6 @@ const CookbookIndexRoute = CookbookIndexRouteImport.update({
   path: '/cookbook/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const BlogIndexRoute = BlogIndexRouteImport.update({
-  id: '/blog/',
-  path: '/blog/',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const ArticlesIndexRoute = ArticlesIndexRouteImport.update({
   id: '/articles/',
   path: '/articles/',
@@ -47,37 +40,26 @@ const CookbookRecipeNameRoute = CookbookRecipeNameRouteImport.update({
   path: '/cookbook/$recipeName',
   getParentRoute: () => rootRouteImport,
 } as any)
-const BlogIntroductionRoute = BlogIntroductionRouteImport.update({
-  id: '/blog/introduction',
-  path: '/blog/introduction',
-  getParentRoute: () => rootRouteImport,
-} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/blog/introduction': typeof BlogIntroductionRoute
   '/cookbook/$recipeName': typeof CookbookRecipeNameRoute
   '/articles/': typeof ArticlesIndexRoute
-  '/blog/': typeof BlogIndexRoute
   '/cookbook/': typeof CookbookIndexRoute
   '/wedding/': typeof WeddingIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/blog/introduction': typeof BlogIntroductionRoute
   '/cookbook/$recipeName': typeof CookbookRecipeNameRoute
   '/articles': typeof ArticlesIndexRoute
-  '/blog': typeof BlogIndexRoute
   '/cookbook': typeof CookbookIndexRoute
   '/wedding': typeof WeddingIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/blog/introduction': typeof BlogIntroductionRoute
   '/cookbook/$recipeName': typeof CookbookRecipeNameRoute
   '/articles/': typeof ArticlesIndexRoute
-  '/blog/': typeof BlogIndexRoute
   '/cookbook/': typeof CookbookIndexRoute
   '/wedding/': typeof WeddingIndexRoute
 }
@@ -85,38 +67,25 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
-    | '/blog/introduction'
     | '/cookbook/$recipeName'
     | '/articles/'
-    | '/blog/'
     | '/cookbook/'
     | '/wedding/'
   fileRoutesByTo: FileRoutesByTo
-  to:
-    | '/'
-    | '/blog/introduction'
-    | '/cookbook/$recipeName'
-    | '/articles'
-    | '/blog'
-    | '/cookbook'
-    | '/wedding'
+  to: '/' | '/cookbook/$recipeName' | '/articles' | '/cookbook' | '/wedding'
   id:
     | '__root__'
     | '/'
-    | '/blog/introduction'
     | '/cookbook/$recipeName'
     | '/articles/'
-    | '/blog/'
     | '/cookbook/'
     | '/wedding/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  BlogIntroductionRoute: typeof BlogIntroductionRoute
   CookbookRecipeNameRoute: typeof CookbookRecipeNameRoute
   ArticlesIndexRoute: typeof ArticlesIndexRoute
-  BlogIndexRoute: typeof BlogIndexRoute
   CookbookIndexRoute: typeof CookbookIndexRoute
   WeddingIndexRoute: typeof WeddingIndexRoute
 }
@@ -144,13 +113,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CookbookIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/blog/': {
-      id: '/blog/'
-      path: '/blog'
-      fullPath: '/blog/'
-      preLoaderRoute: typeof BlogIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/articles/': {
       id: '/articles/'
       path: '/articles'
@@ -165,22 +127,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CookbookRecipeNameRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/blog/introduction': {
-      id: '/blog/introduction'
-      path: '/blog/introduction'
-      fullPath: '/blog/introduction'
-      preLoaderRoute: typeof BlogIntroductionRouteImport
-      parentRoute: typeof rootRouteImport
-    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  BlogIntroductionRoute: BlogIntroductionRoute,
   CookbookRecipeNameRoute: CookbookRecipeNameRoute,
   ArticlesIndexRoute: ArticlesIndexRoute,
-  BlogIndexRoute: BlogIndexRoute,
   CookbookIndexRoute: CookbookIndexRoute,
   WeddingIndexRoute: WeddingIndexRoute,
 }
