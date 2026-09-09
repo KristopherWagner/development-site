@@ -85,6 +85,14 @@ export default function IndexPage() {
               </a>
               .
             </p>
+            <p>
+              Or, if you really want to support me, please{' '}
+              <a href="https://kwagnerdevelopment.etsy.com/">
+                {' '}
+                buy something from my etsy shop
+              </a>
+              !
+            </p>
           </Card>
           <Card as="article" className={clsx('cols-lg', 'row-2')}>
             <h2>
