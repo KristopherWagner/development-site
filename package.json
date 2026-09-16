@@ -8,6 +8,7 @@
   "scripts": {
     "build": "rsbuild build",
     "dev": "rsbuild dev --open",
+    "prebuild": "node scripts/generate-sitemap.mjs",
     "preview": "rsbuild preview",
     "test": "jest"
   },
