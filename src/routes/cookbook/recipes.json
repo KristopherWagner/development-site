@@ -770,5 +770,62 @@
       "Garnish with an orange peel and cinnamon stick."
     ],
     "tags": ["vegan", "vegetarian"]
+  },
+  {
+    "url": "cornbread",
+    "description": "The Wagners' take on Disney cornbread",
+    "title": "Cornbread",
+    "servings": "4",
+    "time": "30 minutes",
+    "ingredients": [
+      {
+        "quantity": "3/4",
+        "unit": "cup",
+        "ingredient": "cornmeal"
+      },
+      {
+        "quantity": "1 1/4",
+        "unit": "cups",
+        "ingredient": "sugar"
+      },
+      {
+        "quantity": "1.5",
+        "unit": "teaspoon",
+        "ingredient": "salt"
+      },
+      {
+        "quantity": "1",
+        "unit": "tablespoon",
+        "ingredient": "baking powder"
+      },
+      {
+        "quantity": "1 3/4",
+        "unit": "cups",
+        "ingredient": "flour"
+      },
+      {
+        "quantity": "1/2",
+        "unit": "cup",
+        "ingredient": "vegetable oil"
+      },
+      {
+        "quantity": "1",
+        "unit": "cup",
+        "ingredient": "milk"
+      },
+      {
+        "quantity": "2",
+        "ingredient": "eggs"
+      }
+    ],
+    "instructions": [
+      "Preheat the oven to 375° F.",
+      "In a large bowl, blend all dry ingredients",
+      "In a separate mixing bowl combine in the wet ingredients",
+      "Slowly add the dry ingredients to the wet ingredients while mixing.",
+      "Pour the mixture into a greased 9x13\" pan",
+      "Cook for 20-25 minutes"
+    ],
+    "tags": ["vegetarian"]
   }
 ]
