@@ -2,26 +2,98 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://kwagner.dev/</loc>
-    <lastmod>2026-09-16</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthy</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://kwagner.dev/wedding</loc>
-    <lastmod>2026-09-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthy</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://kwagner.dev/cookbook</loc>
-    <lastmod>2026-09-16</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthy</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://kwagner.dev/cookbook/walnut-pasta</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthy</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kwagner.dev/cookbook/smoky-black-bean-grilled-cheese</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthy</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kwagner.dev/cookbook/lemon-pepper-tofu</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthy</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kwagner.dev/cookbook/tofu-parm</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthy</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kwagner.dev/cookbook/chicken-and-biscuits</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthy</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kwagner.dev/cookbook/vegetarian-beef-stroganoff</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthy</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kwagner.dev/cookbook/tofu-fried-rice</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthy</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kwagner.dev/cookbook/japanese-curry</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthy</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kwagner.dev/cookbook/impossible-cheesesteaks</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthy</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kwagner.dev/cookbook/impossible-chili</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthy</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kwagner.dev/cookbook/wassail</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthy</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kwagner.dev/cookbook/cornbread</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthy</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://kwagner.dev/articles</loc>
-    <lastmod>2026-09-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>monthy</changefreq>
+    <priority>0.9</priority>
   </url>
 </urlset>
