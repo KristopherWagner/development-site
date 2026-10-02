@@ -5,3 +5,5 @@ dist/
 node_modules/
 *.module.css.d.ts
 PR_DESCRIPTION.md
+.env*
+!.env.example

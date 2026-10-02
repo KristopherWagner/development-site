@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as ArticlesIndexRouteImport } from './routes/articles/index'
 import { Route as CookbookIndexRouteImport } from './routes/cookbook/index'
 import { Route as CookbookRecipeNameRouteImport } from './routes/cookbook/$recipeName'
+import { Route as LightningFitnessChallengeIndexRouteImport } from './routes/lightning-fitness-challenge/index'
 import { Route as WeddingIndexRouteImport } from './routes/wedding/index'
 
 const IndexRoute = IndexRouteImport.update({
@@ -35,6 +36,12 @@ const CookbookRecipeNameRoute = CookbookRecipeNameRouteImport.update({
   path: '/cookbook/$recipeName',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LightningFitnessChallengeIndexRoute =
+  LightningFitnessChallengeIndexRouteImport.update({
+    id: '/lightning-fitness-challenge/',
+    path: '/lightning-fitness-challenge/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const WeddingIndexRoute = WeddingIndexRouteImport.update({
   id: '/wedding/',
   path: '/wedding/',
@@ -46,6 +53,7 @@ export interface FileRoutesByFullPath {
   '/cookbook/$recipeName': typeof CookbookRecipeNameRoute
   '/articles/': typeof ArticlesIndexRoute
   '/cookbook/': typeof CookbookIndexRoute
+  '/lightning-fitness-challenge/': typeof LightningFitnessChallengeIndexRoute
   '/wedding/': typeof WeddingIndexRoute
 }
 export interface FileRoutesByTo {
@@ -53,6 +61,7 @@ export interface FileRoutesByTo {
   '/cookbook/$recipeName': typeof CookbookRecipeNameRoute
   '/articles': typeof ArticlesIndexRoute
   '/cookbook': typeof CookbookIndexRoute
+  '/lightning-fitness-challenge': typeof LightningFitnessChallengeIndexRoute
   '/wedding': typeof WeddingIndexRoute
 }
 export interface FileRoutesById {
@@ -61,20 +70,33 @@ export interface FileRoutesById {
   '/cookbook/$recipeName': typeof CookbookRecipeNameRoute
   '/articles/': typeof ArticlesIndexRoute
   '/cookbook/': typeof CookbookIndexRoute
+  '/lightning-fitness-challenge/': typeof LightningFitnessChallengeIndexRoute
   '/wedding/': typeof WeddingIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    '/' | '/cookbook/$recipeName' | '/articles/' | '/cookbook/' | '/wedding/'
+    | '/'
+    | '/cookbook/$recipeName'
+    | '/articles/'
+    | '/cookbook/'
+    | '/lightning-fitness-challenge/'
+    | '/wedding/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/cookbook/$recipeName' | '/articles' | '/cookbook' | '/wedding'
+  to:
+    | '/'
+    | '/cookbook/$recipeName'
+    | '/articles'
+    | '/cookbook'
+    | '/lightning-fitness-challenge'
+    | '/wedding'
   id:
     | '__root__'
     | '/'
     | '/cookbook/$recipeName'
     | '/articles/'
     | '/cookbook/'
+    | '/lightning-fitness-challenge/'
     | '/wedding/'
   fileRoutesById: FileRoutesById
 }
@@ -83,6 +105,7 @@ export interface RootRouteChildren {
   CookbookRecipeNameRoute: typeof CookbookRecipeNameRoute
   ArticlesIndexRoute: typeof ArticlesIndexRoute
   CookbookIndexRoute: typeof CookbookIndexRoute
+  LightningFitnessChallengeIndexRoute: typeof LightningFitnessChallengeIndexRoute
   WeddingIndexRoute: typeof WeddingIndexRoute
 }
 
@@ -116,6 +139,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CookbookRecipeNameRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/lightning-fitness-challenge/': {
+      id: '/lightning-fitness-challenge/'
+      path: '/lightning-fitness-challenge'
+      fullPath: '/lightning-fitness-challenge/'
+      preLoaderRoute: typeof LightningFitnessChallengeIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/wedding/': {
       id: '/wedding/'
       path: '/wedding'
@@ -131,6 +161,7 @@ const rootRouteChildren: RootRouteChildren = {
   CookbookRecipeNameRoute: CookbookRecipeNameRoute,
   ArticlesIndexRoute: ArticlesIndexRoute,
   CookbookIndexRoute: CookbookIndexRoute,
+  LightningFitnessChallengeIndexRoute: LightningFitnessChallengeIndexRoute,
   WeddingIndexRoute: WeddingIndexRoute,
 }
 export const routeTree = rootRouteImport
