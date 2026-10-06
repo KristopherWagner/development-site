@@ -7,3 +7,4 @@ node_modules/
 PR_DESCRIPTION.md
 .env*
 !.env.example
+.tanstack
