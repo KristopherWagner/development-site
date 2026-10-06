@@ -68,7 +68,7 @@ export default function IndexPage() {
             </h2>
             <p>
               I am a computer science engineer by trade and occasionally I write
-              some code on my free time (this site included!). You can{' '}
+              some code in my free time (this site included!). You can{' '}
               <a href="https://github.com/KristopherWagner">
                 look at my GitHub profile
               </a>{' '}
