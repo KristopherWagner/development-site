@@ -105,4 +105,33 @@ html {
     margin-left: 0px;
     padding-left: 40px;
   }
+
+  button {
+    border: 2px solid var(--accent-primary);
+    border-radius: 0.25rem;
+
+    background-color: var(--bg-primary);
+    color: var(--accent-primary);
+    cursor: pointer;
+
+    font-weight: bold;
+    font-family: AtkinsonHyperlegibleNextVF;
+    font-size: 1.05rem;
+
+    line-height: 0.9rem;
+    margin: 6px;
+    padding: 0.75rem 1.25rem;
+  }
+
+  button:hover,
+  button:focus {
+    border-color: var(--text-hover);
+    color: var(--text-hover);
+  }
+
+  button:focus {
+    outline: 3px solid var(--text-focus);
+    outline-offset: 3px;
+    text-decoration: underline;
+  }
 }
