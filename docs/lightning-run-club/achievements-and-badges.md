@@ -3,7 +3,8 @@ type: Reference
 title: Achievements & Badges
 description: Configuration for the badge engine and historical backfill.
 ---
-## Achievements & Badges (long-term goal — designed now, built in Phase 4)
+
+# Achievements & Badges
 
 **Principle:** rules are **data, not code** — a `CONFIG/BADGES` JSON document the Scorer evaluates each recompute. Adding a badge never requires a deploy.
 

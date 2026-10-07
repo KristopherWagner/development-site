@@ -3,7 +3,8 @@ type: Reference
 title: Failure Modes & Monitoring
 description: Resilience patterns and alerting for the LRC system.
 ---
-## Failure Modes & Monitoring
+
+# Failure Modes & Monitoring
 
 | Failure                 | Detection                       | Handling                                                                 |
 | ----------------------- | ------------------------------- | ------------------------------------------------------------------------ |

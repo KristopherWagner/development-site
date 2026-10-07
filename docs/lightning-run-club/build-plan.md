@@ -3,12 +3,13 @@ type: Plan
 title: Build & Deploy Plan
 description: Roadmap and execution plan for the LRC automation system.
 ---
-## Build & Deploy Plan
+
+# Build & Deploy Plan
 
 - **IaC:** AWS SAM — 4 Lambdas, 1 DynamoDB table, 2 schedules, 1 private S3 bucket + 1 versioned archive bucket, HTTP API + Cognito authorizer, Cognito user pool. ~350 lines; `sam deploy`.
 - **Frontend:** `run-club/` routes in existing Amplify app behind Amplify Auth.
 
-### Phases
+## Phases
 
 | Phase         | Scope                                                                                                      | Effort                         |
 | ------------- | ---------------------------------------------------------------------------------------------------------- | ------------------------------ |
@@ -19,7 +20,7 @@ description: Roadmap and execution plan for the LRC automation system.
 | P4            | Badge engine + badge backfill + Badge/History pages                                                        | ~1 week post-launch            |
 | P5 (optional) | Strava webhooks, weekly digests, social login, partial-credit standings                                    | As desired                     |
 
-### P3 — Legacy Migration Runbook
+## P3 — Legacy Migration Runbook
 
 1. **Archive first:** upload original `.xlsm` to versioned S3 archive bucket (immutable source of truth; keep writing the spreadsheet in parallel until P3 validation passes).
 2. **Extract:** import script with per-season format handlers (L1: modern two-block layout vs. 2018-19 minimal layout; Sunday → Monday week normalization).
@@ -28,5 +29,3 @@ description: Roadmap and execution plan for the LRC automation system.
 5. **Recompute & validate:** Scorer runs against legacy seasons → compare recomputed completion %, streaks, season totals, and `Overall` aggregates vs. the spreadsheet's recorded values. Target: **≥ 95% aggregate agreement**; every discrepancy logged to `MIGRATION/REPORT#{run_id}` with cause hypotheses (rule drift — e.g., walks not counted in early seasons — data-entry typos, name splits).
 6. **Reconcile:** you review the discrepancy queue; fixes are alias/rule/config changes, never hand-edited database rows. Re-run until the report is clean or discrepancies are accepted and documented.
 7. **Backfill badges (P4):** evaluate `CONFIG/BADGES` against full history; award backlog.
-
----
