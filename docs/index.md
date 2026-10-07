@@ -1,10 +1,17 @@
 ---
 okf_version: 0.2
+type: Directory Listing
 ---
 
 # Documentation Index
 
 This directory contains the core documentation and templates for the development site.
+
+## Specifications
+* [OKF Specification](OKF_SPEC.md) - The Open Knowledge Format specification.
+
+## Knowledge Bundles
+* [Lightning Run Club](lightning-run-club/index.md) - Design specifications for the LRC automated tracker.
 
 ## Routes
 * [Articles](/routes/articles.md) - A repository of articles and long-form content.
