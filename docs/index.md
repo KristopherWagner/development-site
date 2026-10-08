@@ -17,11 +17,11 @@ This directory contains the core documentation and templates for the development
 
 ## Routes
 
-- [Articles](/routes/articles.md) - A repository of articles and long-form content.
-- [Cookbook](/routes/cookbook.md) - A collection of recipes and culinary content.
-- [Lightning Fitness Challenge](/routes/lightning-fitness-challenge.md) - Fitness challenge application with Cognito auth.
-- [Wedding](/routes/wedding.md) - Wedding-related content and layout.
-- [Routes Index](/routes/index.md) - Documentation of the file-based routing structure.
+- [Articles](/docs/routes/articles.md) - A repository of articles and long-form content.
+- [Cookbook](/docs/routes/cookbook.md) - A collection of recipes and culinary content.
+- [Lightning Fitness Challenge](/docs/routes/lightning-fitness-challenge.md) - Fitness challenge application with Cognito auth.
+- [Wedding](/docs/routes/wedding.md) - Wedding-related content and layout.
+- [Routes Index](/docs/routes/index.md) - Documentation of the file-based routing structure.
 
 ## Infrastructure
 

@@ -12,6 +12,6 @@ verified: { by: human:kristopher, at: 2026-10-07T10:32:00Z }
 This route hosts the lightning-fitness-challenge application.
 
 ## Features
-- User authentication via [Amazon Cognito](/cognito-setup.md).
+- User authentication via [Amazon Cognito](/docs/cognito-setup.md).
 - Interactive fitness challenge UI.
 - Progress tracking and analytics.

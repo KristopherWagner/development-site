@@ -2,6 +2,7 @@
 type: Directory Listing
 title: Lightning Run Club Automation Design
 description: Design specifications for the Lightning Run Club's automated tracker.
+tags: [architecture, summary, project-overview]
 ---
 # Lightning Run Club Automation Design (OKF)
 
@@ -19,6 +20,5 @@ This bundle contains the design specifications for the Lightning Run Club's auto
 - [Security](security-and-privacy.md)
 - [Failure Modes](failure-modes.md)
 - [Deployment Plan](build-plan.md)
-- [OAuth Connect Flow](Appendices/appendix-b.md)
-- [Background](background.md)
-- [Appendices](Appendices/appendix-a.md)
+- [OAuth Connect Flow](appendices/appendix-b.md)
+- [Appendices](appendices/appendix-a.md)

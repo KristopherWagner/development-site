@@ -19,7 +19,7 @@ We use **TanStack Router** for navigation, specifically leveraging its **file-ba
 
 ## Directory Structure
 The following directories represent the primary routes:
-- [Articles](/routes/articles.md)
-- [Cookbook](/routes/cookbook.md)
-- [Lightning Fitness Challenge](/routes/lightning-fitness-challenge.md)
-- [Wedding](/routes/wedding.md)
+- [Articles](/docs/routes/articles.md) - A repository of articles and long-form content.
+- [Cookbook](/docs/routes/cookbook.md) - A collection of recipes and culinary content.
+- [Lightning Fitness Challenge](/docs/routes/lightning-fitness-challenge.md) - Fitness challenge application with Cognito auth.
+- [Wedding](/docs/routes/wedding.md) - Wedding-related content and layout.
