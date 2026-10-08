@@ -7,6 +7,7 @@ import { AuthProvider } from 'react-oidc-context';
 import { routeTree } from './routeTree.gen';
 import './colors.css';
 import './theme.css';
+import { COGNITO_CONFIG } from './config';
 
 const router = createRouter({ routeTree });
 
@@ -17,9 +18,9 @@ declare module '@tanstack/react-router' {
 }
 
 const cognitoAuthConfig = {
-  authority: import.meta.env.PUBLIC_COGNITO_AUTHORITY,
-  client_id: import.meta.env.PUBLIC_COGNITO_CLIENT_ID,
-  redirect_uri: import.meta.env.PUBLIC_COGNITO_REDIRECT_URI,
+  authority: COGNITO_CONFIG.authority,
+  client_id: COGNITO_CONFIG.clientId,
+  redirect_uri: COGNITO_CONFIG.redirectUri,
   response_type: 'code',
   scope: 'email',
 };

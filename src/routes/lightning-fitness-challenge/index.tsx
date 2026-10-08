@@ -1,13 +1,31 @@
 import { createFileRoute } from '@tanstack/react-router';
-import { useAuth, withAuthenticationRequired } from 'react-oidc-context';
+import { useAuth } from 'react-oidc-context';
 
 import Footer from '../../components/Footer';
 import HomeLink from '../../components/Footer/HomeLink';
 import Header from '../../components/Header';
 import Seo from '../../components/SEO';
 
+import { STRAVA_CONFIG } from '../../config';
+
 function LightningFitnessChallenge() {
   const auth = useAuth();
+  const { clientId, redirectUri, scope } = STRAVA_CONFIG;
+
+  const url = `https://www.strava.com/oauth/authorize?client_id=${clientId}&response_type=code&redirect_uri=${encodeURIComponent(redirectUri)}&exchange_token=true&approval_prompt=force&scope=${scope}`;
+
+  console.log(JSON.stringify(auth, null, 2));
+
+  if (!auth.isAuthenticated) {
+    return (
+      <Header heading="Lightning Fitness Challenge">
+        <p>
+          Welcome, please{' '}
+          <button onClick={() => auth.signinRedirect()}>Sign in</button>
+        </p>
+      </Header>
+    );
+  }
 
   return (
     <>
@@ -19,11 +37,13 @@ function LightningFitnessChallenge() {
       />
 
       <Header heading="Lightning Fitness Challenge">
-        <p>Success! Thanks for signing in</p>
+        <p>
+          Success! Thanks for signing in, you'll need to authorize Strava now.
+        </p>
       </Header>
 
       <main>
-        <button onClick={() => auth.removeUser()}>Sign out</button>
+        <a href={url}>Authorize Strava</a>
       </main>
 
       <Footer>
@@ -33,23 +53,6 @@ function LightningFitnessChallenge() {
   );
 }
 
-function RedirectingToLogin() {
-  return (
-    <>
-      <Header heading="Lightning Fitness Challenge">
-        <p>Redirecting to the login page...</p>
-      </Header>
-    </>
-  );
-}
-
-const LightningFitnessChallengeRoute = withAuthenticationRequired(
-  LightningFitnessChallenge,
-  {
-    OnRedirecting: () => <RedirectingToLogin />,
-  },
-);
-
 export const Route = createFileRoute('/lightning-fitness-challenge/')({
-  component: LightningFitnessChallengeRoute,
+  component: LightningFitnessChallenge,
 });
