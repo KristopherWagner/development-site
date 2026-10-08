@@ -22,5 +22,8 @@ This bundle contains the design specifications for the Lightning Run Club's auto
 - [Security](security-and-privacy.md)
 - [Failure Modes](failure-modes.md)
 - [Deployment Plan](build-plan.md)
+
+## Infrastructure References
+- See [`../infra`](../infra/) for AWS infrastructure configuration docs.
 - [OAuth Connect Flow](appendices/appendix-b.md)
 - [Appendices](appendices/appendix-a.md)
