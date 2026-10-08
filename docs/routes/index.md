@@ -4,8 +4,8 @@ title: Routes Index
 description: Documentation of the file-based routing structure using TanStack Router.
 resource: https://kwagner.de/
 tags: [routing, tanstack, infrastructure]
-generated: { by: human:kristopher, at: 2026-10-07T10:37:00Z }
-verified: { by: human:kristopher, at: 2026-10-07T10:37:00Z }
+generated: { by: claude-code, at: 2026-10-08T15:20:00Z }
+verified: { by: human:kristopher, at: 2026-10-08T15:25:00Z }
 ---
 
 # Routes Index
