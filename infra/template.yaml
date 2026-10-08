@@ -1,0 +1,115 @@
+Resources:
+  LrcTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: lrc
+      BillingMode: PAY_PER_REQUEST
+      # Define the attributes used in Keys and Indexes
+      AttributeDefinitions:
+        - AttributeName: PK
+          AttributeType: S
+        - AttributeName: SK
+          AttributeType: S
+        - AttributeName: week_key
+          AttributeType: S
+      # Primary Key structure
+      KeySchema:
+        - AttributeName: PK
+          KeyType: HASH
+        - AttributeName: SK
+          KeyType: RANGE
+      # Global Secondary Index for pulling weekly aggregates
+      GlobalSecondaryIndexes:
+        - IndexName: GSI1
+          KeySchema:
+            - AttributeName: week_key
+              KeyType: HASH
+            - AttributeName: PK
+              KeyType: RANGE
+          Projection:
+            ProjectionType: ALL
+      # TTL for 2-year expiration on ACT items
+      TimeToLiveSpecification:
+        AttributeName: ttl
+        Enabled: true
+
+  # --- Auth Section ---
+
+  # The User Pool
+  LrcUserPool:
+    Type: AWS::Cognito::UserPool
+    Properties:
+      UserPoolName: lrc-user-pool
+      UsernameAttributes:
+        - email
+      autoConfirm_sign_up: true
+      mfaConfiguration: 'OFF'
+      messageAction: 'SUPPRESS'
+      passwordPolicy:
+        minimumLength: 16
+        requireLowercase: true
+        requireNumbers: true
+        requireUppercase: true
+        requireSymbols: true
+      signInExperience:
+        smsMfa:
+          enabled: false
+      # Link to your frontend's Redirect URI
+      Client_Names:
+        - lightning-run-club-client
+      # Note: For 'react-oidc-context', we need standard scopes
+      ScopeCreationPolicy: 'ALLOW_ALL'
+
+  # The App Client used by the frontend
+  LrcAppClient:
+    Type: AWS::Cognito::UserPoolClient
+    Properties:
+      ClientName: lightning-run-club-client
+      UserPoolId:
+        Ref: LrcUserPool
+      # No client secret as per your request
+      ClientSecret: ''
+      # Standard flow for React apps
+      AllowedOAuthFlows:
+        - 'code'
+        - 'refresh_token_grant'
+      AllowedOAuthScopes:
+        - 'email'
+        - 'openid'
+        - 'profile'
+      # The redirect URIs that are allowed
+      AllowedOAuthRedirectUris:
+        - 'http://localhost:3000/lightning-fitness-challenge'
+        - 'https://kwagner.dev/lightning-fitness-challenge'
+      # This allows the frontend to handle the code exchange
+      ExplicitAuthFlows:
+        - 'ALLOW_REFRESH_TOKEN_SECRET'
+
+  # --- Lambda Section ---
+
+  StravaAuth:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: bootstrap
+      Runtime: provided.al2
+      CodeUri: backend/strava-auth/
+      Environment:
+        Variables:
+          TABLE_NAME: !Ref LrcTable
+      Policies:
+        - DynamoDBWritePolicy:
+            TableName: !Ref LrcTable
+      Events:
+        AuthCallback:
+          Type: Api
+          Properties:
+            Path: /auth/callback
+            Method: get
+
+Outputs:
+  UserPoolId:
+    Description: 'The ID of the Cognito User Pool'
+    Value: !Ref LrcUserPool
+  AppClientId:
+    Description: 'The ID of the Cognito App Client'
+    Value: !Ref LrcAppClient
