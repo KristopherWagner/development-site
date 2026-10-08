@@ -2,6 +2,7 @@
 type: Route
 title: Articles
 description: A repository of articles and long-form content.
+resource: https://kwagner.dev/articles
 tags: [content, articles]
 generated: { by: human:kristopher, at: 2026-10-07T10:32:00Z }
 verified: { by: human:kristopher, at: 2026-10-07T10:32:00Z }

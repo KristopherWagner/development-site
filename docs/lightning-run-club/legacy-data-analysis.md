@@ -2,6 +2,7 @@
 type: Reference
 title: Legacy Data Analysis
 description: Analysis of the legacy spreadsheet and migration findings.
+resource: 
 tags: [migration, legacy-data, spreadsheet]
 ---
 

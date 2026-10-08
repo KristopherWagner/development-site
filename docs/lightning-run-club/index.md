@@ -2,8 +2,10 @@
 type: Directory Listing
 title: Lightning Run Club Automation Design
 description: Design specifications for the Lightning Run Club's automated tracker.
+resource: 
 tags: [architecture, summary, project-overview]
 ---
+
 # Lightning Run Club Automation Design (OKF)
 
 This bundle contains the design specifications for the Lightning Run Club's automated tracker.

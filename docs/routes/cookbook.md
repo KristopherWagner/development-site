@@ -2,6 +2,7 @@
 type: Route
 title: Cookbook
 description: A collection of recipes and culinary content.
+resource: https://kwagner.dev/cookbook
 tags: [content, cookbook]
 generated: { by: human:kristopher, at: 2026-10-07T10:32:00Z }
 verified: { by: human:kristopher, at: 2026-10-07T10:32:00Z }

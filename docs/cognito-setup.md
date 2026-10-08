@@ -2,6 +2,7 @@
 type: Infrastructure
 title: Amazon Cognito Setup
 description: Configuration details for the Amazon Cognito user pool and client used by the lightning-fitness-challenge route.
+resource: infra\template.yaml
 tags: [auth, cognito, lightning-fitness-challenge]
 generated: { by: human:kristopher, at: 2026-10-07T10:23:00Z }
 verified: { by: human:kristopher, at: 2026-10-07T10:23:00Z }
@@ -35,5 +36,5 @@ This document outlines the Amazon Cognito setup for the `lightning-fitness-chall
 
 The client is configured to allow:
 
-- `callback` URLs: `https://kwagner.dev/lightning-fitness-challenge`
+- `callback` URLs: `http://localhost:3000/lightning-fitness-challenge`, `https://kwagner.dev/lightning-fitness-challenge`
 - `Allowed OAuth Scopes`: `email`

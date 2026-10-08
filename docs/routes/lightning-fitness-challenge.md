@@ -2,6 +2,7 @@
 type: Route
 title: Lightning Fitness Challenge
 description: A fitness challenge application featuring user authentication and progress tracking.
+resource: https://kwagner.dev/lightning-fitness-challenge
 tags: [fitness, challenge, lightning-fitness]
 generated: { by: human:kristopher, at: 2026-10-07T10:32:00Z }
 verified: { by: human:kristopher, at: 2026-10-07T10:32:00Z }

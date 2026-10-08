@@ -2,6 +2,7 @@
 type: Reference
 title: External Constraints
 description: Constraints imposed by the Strava API.
+resource: 
 tags: [strava, api, constraints]
 ---
 

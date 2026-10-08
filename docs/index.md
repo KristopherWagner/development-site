@@ -1,6 +1,7 @@
 ---
 okf_version: 0.2
 type: Directory Listing
+resource: https://kwagner.dev/
 ---
 
 # Documentation Index

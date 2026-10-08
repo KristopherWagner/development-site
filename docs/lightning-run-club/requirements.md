@@ -2,6 +2,7 @@
 type: Reference
 title: Requirements
 description: Functional and non-functional requirements for the tracker.
+resource: 
 tags: [requirements, project-goals]
 ---
 

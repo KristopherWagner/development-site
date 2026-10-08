@@ -1,30 +1,21 @@
 ---
-type: Reference
+type: Infrastructure
 title: Environment Variables
-description: Configuration of system environment variables and their purposes.
+description: Description of how environment variables are stored and referenced
 resource: .env
-tags: [config, environment, auth]
+tags: [infrastructure, devops]
+generated: { by: human:kristopher, at: 2026-10-07T10:23:00Z }
+verified: { by: human:kristopher, at: 2026-10-07T10:23:00Z }
 ---
 
-# Schema
-The following variables are defined in the `.env` file and accessed via `src/config.ts`.
+# Environment Variables
 
-| Key | Description | Example Value |
-| --- | --- | --- |
-| `PUBLIC_COGNITO_AUTHORITY` | The Cognito authority URL. | `https://cognito-idp.<REGION>.amazonaws.com/<ID>` |
-| `PUBLIC_COGNITO_CLIENT_ID` | The Cognito App Client ID. | `<COGNITO_CLIENT_ID>` |
-| `PUBLIC_COGNITO_REDIRECT_URI` | The authorized redirect URI for Cognito. | `http://localhost:3000/lightning-fitness-challenge` |
-| `PUBLIC_STRAVA_CLIENT_ID` | The Strava OAuth Client ID. | `<STRAVA_CLIENT_ID>` |
-| `PUBLIC_STRAVA_REDIRECT_URI` | The authorized redirect URI for Strava. | `http://localhost:3000/lightning-fitness-challenge` |
-| `PUBLIC_STRAVA_SCOPE` | The permissions requested from Strava. | `read,activity:read_all` |
+Description of how environment variables are stored and referenced in the project.
 
-# Usage
-Variables are accessed in the frontend via `import.meta.env`.
-To ensure consistency, all variables are wrapped in the `src/config.ts` file.
+## Usage
 
-# Examples
-To get the Strava Client ID in a component:
-```typescript
-import { STRAVA_CONFIG } from '../../config';
+Example:
+
+```javascript
 console.log(STRAVA_CONFIG.clientId);
 ```

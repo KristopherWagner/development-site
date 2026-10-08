@@ -75,8 +75,6 @@ Resources:
         - 'refresh_token_grant'
       AllowedOAuthScopes:
         - 'email'
-        - 'openid'
-        - 'profile'
       # The redirect URIs that are allowed
       AllowedOAuthRedirectUris:
         - 'http://localhost:3000/lightning-fitness-challenge'

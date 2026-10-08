@@ -2,6 +2,7 @@
 type: Reference
 title: Data Model
 description: DynamoDB schema for the Lightning Run Club automation.
+resource: 
 tags: [database, dynamoDB, schema]
 ---
 
@@ -11,7 +12,7 @@ The system uses a single table `lrc` with a composite primary key (Partition Key
 
 ```
 PK                        SK                       Attributes
-───────────────────────── ──────────────────────── ─────────────────────────────────────
+──────────────────────── ──────────────────────── ─────────────────────────────────────
 MEMBER#{athlete_id}       PROFILE                  name, avatar_url, status, club_email,
                                                    joined_at, lifetime_miles (denorm cache)
 MEMBER#{athlete_id}       TOKEN                    access_token (enc), refresh_token (enc), expires_at
