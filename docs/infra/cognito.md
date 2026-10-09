@@ -1,6 +1,6 @@
 ---
 type: Infrastructure
-title: Amazon Cognito Setup
+title: Amazon Cognito Configuration
 description: Configuration for the Cognito User Pool and App Client used by authentication.
 resource: Amazon Cognito
 tags: [auth, cognito]
