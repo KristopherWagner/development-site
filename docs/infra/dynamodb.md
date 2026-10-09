@@ -6,18 +6,18 @@ resource: DynamoDB Tables
 tags: [database, dynamodb, lightning-fitness-challenge]
 ---
 
-# DynamoDB Table `lfc`
+# DynamoDB Table `lightning-fitness-challenge`
 
 This document describes the AWS DynamoDB table created manually via the AWS Console for the Lightning Fitness Club (LFC) automation system.
 
 ## Table Properties
 
-| Property           | Value                    | Notes                                                  |
-| ------------------ | ------------------------ | ------------------------------------------------------ |
-| **Table Name**     | `lfc`                    | Used by all Lambda functions and API Gateway           |
-| **Billing Mode**   | PAY_PER_REQUEST          | On-demand pricing, free tier compliant for ~65 members |
-| **Region**         | us-east-1                | N. Virginia                                            |
-| **Stream Enabled** | Yes (new and old images) | Captures write/delete events for audit trail           |
+| Property           | Value                         | Notes                                                  |
+| ------------------ | ----------------------------- | ------------------------------------------------------ |
+| **Table Name**     | `lightning-fitness-challenge` | Used by all Lambda functions and API Gateway           |
+| **Billing Mode**   | PAY_PER_REQUEST               | On-demand pricing, free tier compliant for ~65 members |
+| **Region**         | us-east-1                     | N. Virginia                                            |
+| **Stream Enabled** | Yes (new and old images)      | Captures write/delete events for audit trail           |
 
 ## Primary Key Structure
 
@@ -119,3 +119,73 @@ Activities older than 2 years are automatically purged to control storage costs.
 ## Data Model Reference
 
 See [`../lightning-run-club/data-model.md`](../lightning-run-club/data-model.md) for the complete attribute schema and field descriptions per itemType.
+
+# Actual settings
+
+Table name: lightning-fitness-challenge
+
+## Settings
+
+### General information
+
+Partition key
+stravaMemberId (String)
+Sort key
+itemType (String)
+Capacity mode
+On-demand
+Table status
+Active
+Alarms
+No active alarms
+Point-in-time recovery (PITR)Info
+Off
+Item count
+0
+Table size
+0 bytes
+Average item size
+0 bytes
+Resource-based policyInfo
+Not active
+Amazon Resource Name (ARN)
+arn:aws:dynamodb:us-east-1:575108915575:table/lightning-fitness-challenge
+
+### Time to Live (TTL)
+
+TTL status
+On
+TTL attribute
+ttl View items
+Items deleted in the last 24 hours
+0 View graph
+
+## Backups
+
+### Point-in-time recovery (PITR)
+
+Status
+On
+Backup recovery period
+35 days
+Earliest restore point
+October 9, 2026, 13:40:42 (UTC-04:00)
+Latest restore point
+October 9, 2026, 13:40:42 (UTC-04:00)
+
+## Exports and stream
+
+### Exports to S3
+
+Empty
+
+### DynamoDB stream details
+
+Stream status
+On
+Resource-based policy
+Not active
+View type
+New and old images
+Latest stream ARN
+arn:aws:dynamodb:us-east-1:575108915575:table/lightning-fitness-challenge/stream/2026-10-09T17:30:02.538
