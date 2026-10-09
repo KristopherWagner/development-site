@@ -30,7 +30,7 @@ This directory contains the core documentation and templates for the development
 - [DynamoDB](infra/dynamodb.md) - Schema and configuration for the LFC DynamoDB table.
 - [Environment Variables](environment-variables.md) - Description of how environment variables are stored and referenced.
 - [EventBridge Scheduler](infra/eventbridge-scheduler-setup.md) - Configuration for weekly data collection triggers.
-- [S3 Storage](infra/s3-storage-setup.md) - Configuration for results and archive buckets.
+- [S3 Storage](infra/s3.md) - Configuration for results and archive buckets.
 
 ## Templates
 

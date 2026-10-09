@@ -6,7 +6,7 @@ resource: DynamoDB Tables
 tags: [database, dynamodb, lightning-fitness-challenge]
 ---
 
-# DynamoDB Table `lightning-fitness-challenge`
+# Amazon DynamoDB Configuration
 
 This document describes the AWS DynamoDB table for the Lightning Fitness Club (LFC) automation system.
 
