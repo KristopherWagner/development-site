@@ -13,22 +13,9 @@ tags: [deployment, infrastructure]
 
 ## Infrastructure Setup (Manual AWS Console)
 
-**Cognito**: See [`cognito.md`](../infra/cognito.md) for details.
-**Amazon DynamoDB**: See [`dynamodb.md`](../infra/dynamodb.md) for details.
-
-**S3 Buckets** (`S3 Console`):
-
-1. Create `LFC-Archive` bucket:
-   - Bucket name: `lfc-archive.kwagner.dev`
-   - Access control: Block all public access (private only)
-   - Default encryption: SSE-S3 enabled
-   - Versioning: **Disabled** (immutable archive via lifecycle rules to delete after 1 year)
-2. Create `LFC-Results` bucket:
-   - Bucket name: `lfc-results.kwagner.dev`
-   - Access control: Block all public access (private only)
-   - Default encryption: SSE-S3 enabled
-   - Versioning: **Enabled** (results storage with version history for audit/recovery)
-   - Lifecycle rule: Overwrite weekly results JSON files each week
+[**Cognito**](../infra/cognito.md)
+[**Amazon DynamoDB**](../infra/dynamodb.md)
+[**S3 Buckets**](../infra/s3.md)
 
 **AWS Lambda Functions** (`Lambda Console`):
 Deploy each function via **Create function → Choose from AWS Marketplace** or **Author from scratch**:
