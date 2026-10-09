@@ -20,53 +20,39 @@ tags: [deployment, infrastructure]
 **AWS Lambda Functions** (`Lambda Console`):
 Deploy each function via **Create function → Choose from AWS Marketplace** or **Author from scratch**:
 
-1. **Collector Lambda** (`lrc-collector`):
+1. **Collector Lambda** (`lfc-collector`):
    - Runtime: Python 3.12
    - Timeout: 300s (5 minutes)
    - Memory: 512 MB
-   - Trigger: EventBridge rule `LRC-Collector-Schedule` (every 6 hours)
+   - Trigger: EventBridge rule `LFC-Collector-Schedule` (every 6 hours)
    - Permissions: Strava API, DynamoDB, S3 (results bucket)
 
-2. **Scorer Lambda** (`lrc-scorer`):
+2. **Scorer Lambda** (`lfc-scorer`):
    - Runtime: Python 3.12
    - Timeout: 300s
    - Memory: 512 MB
-   - Trigger: EventBridge rule `LRC-Scorer-Schedule` (weekly)
+   - Trigger: EventBridge rule `LFC-Scorer-Schedule` (weekly)
    - Permissions: DynamoDB, API Gateway
 
 **API Gateway** (`Lambda Console → Add a trigger → Add API trigger`):
 
 1. Create REST API from Lambda:
-   - Select existing Lambdas: `lrc-collector`, `lrc-scorer`
+   - Select existing Lambdas: `lfc-collector`, `lfc-scorer`
    - Configure methods: GET/POST for /activities, /standings, /members
 2. Go to **Authorizers** tab → Add authorizer:
    - Type: Cognito User Pool
-   - Select your LRC-Auth user pool
+   - Select your LFC-Auth user pool
    - JWT configuration as needed
 
 **Amazon EventBridge Rules** (`EventBridge Console`):
 
 1. Navigate to [AWS EventBridge Console](https://console.aws.amazon.com/eventbridge/)
-2. Create rule `LRC-Collector-Schedule`:
+2. Create rule `LFC-Collector-Schedule`:
    - Schedule: cron expression `cron(0 */6 * * ? *)` (every 6 hours)
-   - Target: Lambda function `lrc-collector`
-3. Create rule `LRC-Scorer-Schedule`:
+   - Target: Lambda function `lfc-collector`
+3. Create rule `LFC-Scorer-Schedule`:
    - Schedule: cron expression `cron(0 2 ? * MON *)` (weekly on Monday at 2 AM)
-   - Target: Lambda function `lrc-scorer`
-
-### Environment Variables Setup
-
-Each Lambda function needs environment variables configured in its **Configuration → Environment variables** tab:
-
-| Variable             | Value                                               | Description                    |
-| -------------------- | --------------------------------------------------- | ------------------------------ |
-| `LRC_REGION`         | [your-region]                                       | AWS region (e.g., us-east-1)   |
-| `LRC_USER_POOL_ID`   | See Cognito setup                                   | From Cognito console           |
-| `LRC_API_URL`        | https://[api-id].execute-api.[region].amazonaws.com | API Gateway endpoint           |
-| `LRC_DYNAMODB_TABLE` | lfc                                                 | DynamoDB table name            | ([`../../infra/dynamodb.md`](../../infra/dynamodb.md)) |
-| `LFC_ARCHIVE_BUCKET` | lfc-archive.kwagner.dev                             | Archive S3 bucket              |
-| `LFC_RESULTS_BUCKET` | lfc-results.kwagner.dev                             | Results S3 bucket              |
-| `STRAVA_CLIENT_ID`   | [from-strava]                                       | From Strava OAuth app settings |
+   - Target: Lambda function `lfc-scorer`
 
 ### Security & Compliance
 
