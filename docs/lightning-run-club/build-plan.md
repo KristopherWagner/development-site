@@ -85,7 +85,7 @@ Each Lambda function needs environment variables configured in its **Configurati
 | `LRC_REGION`         | [your-region]                                       | AWS region (e.g., us-east-1)   |
 | `LRC_USER_POOL_ID`   | See Cognito setup                                   | From Cognito console           |
 | `LRC_API_URL`        | https://[api-id].execute-api.[region].amazonaws.com | API Gateway endpoint           |
-| `LRC_DYNAMODB_TABLE` | lfc                                                  | DynamoDB table name            |
+| `LRC_DYNAMODB_TABLE` | lfc                                                  | DynamoDB table name            | ([`../../infra/dynamodb.md`](../../infra/dynamodb.md))
 | `LRC_ARCHIVE_BUCKET` | lrc-archive.kwagner.dev                             | Archive S3 bucket              |
 | `LRC_UPLOADS_BUCKET` | lrc-uploads.kwagner.dev                             | Uploads S3 bucket              |
 | `STRAVA_CLIENT_ID`   | [from-strava]                                       | From Strava OAuth app settings |
