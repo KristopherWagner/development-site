@@ -8,7 +8,7 @@ tags: [database, dynamodb, lightning-fitness-challenge]
 
 # DynamoDB Table `lightning-fitness-challenge`
 
-This document describes the AWS DynamoDB table created manually via the AWS Console for the Lightning Fitness Club (LFC) automation system.
+This document describes the AWS DynamoDB table for the Lightning Fitness Club (LFC) automation system.
 
 ## Table Properties
 
@@ -54,25 +54,14 @@ The `itemType` field acts like a folder selector. Each athlete's data is stored 
 | `CONFIG.BADGES`            | Achievement definitions                                     | No            | Badge rules (JSON)                   |
 | `MIGRATIONREPORT#{run_id}` | Migration validation reports                                | No            | Legacy spreadsheet import results    |
 
-## Provisioned Throughput
-
-Since we're using PAY_PER_REQUEST billing mode, capacity scales automatically. Initial recommendations:
-
-| Setting                    | Recommended Value    | Notes                              |
-| -------------------------- | -------------------- | ---------------------------------- |
-| Read Capacity Units (RCU)  | Auto-scaling enabled | Start at 5 RCU-equivalent baseline |
-| Write Capacity Units (WCU) | Auto-scaling enabled | Start at 2 WCU-equivalent baseline |
-
-AWS will automatically scale based on utilization patterns. Monitor CloudWatch metrics and adjust if needed.
-
 ## Time-to-Live (TTL)
 
 - **Enabled**: Yes
 - **Attribute Name**: `ttl`
-- **Expiration**: 2 years from item creation/last update
-- **Applies to**: `ACT` (activity) items only
+- **Expiration**: 2 years from item creation
+- **Applies to**: Items in the `ACT#{...}` type only
 
-Activities older than 2 years are automatically purged to control storage costs.
+DynamoDB TTL is a table-level feature. When enabled, you must use application logic to add the `ttl` attribute only to items that need auto-expiration (currently only `ACT` items). AWS automatically deletes items whose `ttl` has expired without additional code or charges.
 
 ## Global Secondary Index (GSI)
 
@@ -85,107 +74,6 @@ Activities older than 2 years are automatically purged to control storage costs.
 | **Projection Type** | ALL                                                                                          |
 | **Purpose**         | Enables efficient querying of weekly aggregates across all athletes for scoring computations |
 
-## Deployment Steps (Manual Console Setup)
-
-### 1. Create the Table
-
-1. Go to [AWS DynamoDB Console](https://console.aws.amazon.com/dynamodb/)
-2. Click **Create table**
-3. Configure:
-   - Table name: `lfc`
-   - Partition key: `stravaMemberId` (String)
-   - Sort key: `itemType` (String)
-   - Billing mode: On-demand (PAY_PER_REQUEST)
-   - Streams: Enabled with "New and old image"
-4. After table creation, go to **Streams** tab and add TTL attribute:
-   - Attribute name: `ttl`
-   - Select items with TTL: Type in field or use selector
-   - TTL type: Number (timestamp)
-
-### 2. Add TTL Setting for ACT Items
-
-1. Go to **Table settings** → **Time to live** tab
-2. Click **Add time to live attribute**
-3. Name: `ttl`
-4. Select items with TTL: Type `ACT#.*` or similar pattern
-5. Set expiration in days (730 = 2 years)
-
-### 3. Configure Streams for Auditing
-
-1. Go to **Table settings** → **Streams** tab
-2. Verify "New and old image" is selected
-3. This enables CloudWatch Logs to capture every item change
-
 ## Data Model Reference
 
 See [`../lightning-run-club/data-model.md`](../lightning-run-club/data-model.md) for the complete attribute schema and field descriptions per itemType.
-
-# Actual settings
-
-Table name: lightning-fitness-challenge
-
-## Settings
-
-### General information
-
-Partition key
-stravaMemberId (String)
-Sort key
-itemType (String)
-Capacity mode
-On-demand
-Table status
-Active
-Alarms
-No active alarms
-Point-in-time recovery (PITR)Info
-Off
-Item count
-0
-Table size
-0 bytes
-Average item size
-0 bytes
-Resource-based policyInfo
-Not active
-Amazon Resource Name (ARN)
-arn:aws:dynamodb:us-east-1:575108915575:table/lightning-fitness-challenge
-
-### Time to Live (TTL)
-
-TTL status
-On
-TTL attribute
-ttl View items
-Items deleted in the last 24 hours
-0 View graph
-
-## Backups
-
-### Point-in-time recovery (PITR)
-
-Status
-On
-Backup recovery period
-35 days
-Earliest restore point
-October 9, 2026, 13:40:42 (UTC-04:00)
-Latest restore point
-October 9, 2026, 13:40:42 (UTC-04:00)
-
-## Exports and stream
-
-### Exports to S3
-
-Empty
-
-### DynamoDB stream details
-
-Stream status
-On
-Resource-based policy
-Not active
-View type
-New and old images
-Latest stream ARN
-arn:aws:dynamodb:us-east-1:575108915575:table/lightning-fitness-challenge/stream/2026-10-09T17:30:02.538
