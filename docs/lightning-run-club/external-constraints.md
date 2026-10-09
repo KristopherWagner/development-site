@@ -1,4 +1,5 @@
 ---
+okf_version: 0.2
 type: Reference
 title: External Constraints
 description: Constraints imposed by the Strava API.

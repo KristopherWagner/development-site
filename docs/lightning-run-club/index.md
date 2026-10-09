@@ -1,7 +1,7 @@
 ---
 okf_version: 0.2
 type: Directory Listing
-title: Lightning Run Club Automation Design
+title: Lightning Run Club Automation Design (OKF)
 description: Design specifications for the Lightning Run Club's automated tracker.
 tags: [architecture, summary, project-overview]
 ---

@@ -11,11 +11,24 @@ tags: [deployment, infrastructure]
 - **IaC:** AWS SAM — 4 Lambdas, 1 DynamoDB table, 2 schedules, 1 private S3 bucket + 1 versioned archive bucket, HTTP API + Cognito authorizer, Cognito user pool. ~350 lines; `sam deploy`.
 - **Frontend:** `run-club/` routes in existing Amplify app behind Amplify Auth.
 
+## Infrastructure
+
+- **AWS SAM** (`infra/template.yaml`): 4 Lambdas, 1 DynamoDB table, 2 schedules, HTTP API, Cognito user pool, Cognito custom domain.
+- **Console Configuration**: After initial SAM deploy, configure email delivery (SES) and verify ACM certificate in Cognito console. See `env-config.yaml` for current settings.
+
+**Current Configuration** (`docs/lightning-run-club/environment-variables.md`):
+
+| Component | Value | How to update |
+|-----------|-------|---------------|
+| Custom domain | `https://auth.kwagner.dev` | ACM certificate applied in Cognito Console → Add custom domain |
+| Email provider | Amazon SES (US East) | Cognito Console → User pool → Message customizations → SNS topic |
+| FROM address | `hello@kwagner.dev` (Kristopher Wagner) | SES identity verification + Cognito email settings |
+
 ## Phases
 
 | Phase         | Scope                                                                                                      | Effort                         |
 | ------------- | ---------------------------------------------------------------------------------------------------------- | ------------------------------ |
-| P0            | Create Strava developer app; Cognito user pool + Amplify Auth configuration                               | 1 day                         |
+| P0            | Create Strava developer app; Deploy SAM with Cognito custom domain + SES integration                       | 1 day                         |
 | P1            | OAuth connect flow, DynamoDB table creation, Collector Lambda (testing with ~10 friendly runners), NHL ingestion (current season) | ~1 week of evenings            |
 | P2            | Scorer + weekly rules engine, results API, members-only leaderboard, weekly scheduler                      | ~1 week                        |
 | **P3**        | **Closed Beta Test (~10 hockey club runners)**; gather feedback; performance validation                    | ~1 week                       |

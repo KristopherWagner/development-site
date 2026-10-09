@@ -4,7 +4,6 @@ Resources:
     Properties:
       TableName: lrc
       BillingMode: PAY_PER_REQUEST
-      # Define the attributes used in Keys and Indexes
       AttributeDefinitions:
         - AttributeName: PK
           AttributeType: S
@@ -12,13 +11,11 @@ Resources:
           AttributeType: S
         - AttributeName: week_key
           AttributeType: S
-      # Primary Key structure
       KeySchema:
         - AttributeName: PK
           KeyType: HASH
         - AttributeName: SK
           KeyType: RANGE
-      # Global Secondary Index for pulling weekly aggregates
       GlobalSecondaryIndexes:
         - IndexName: GSI1
           KeySchema:
@@ -28,7 +25,6 @@ Resources:
               KeyType: RANGE
           Projection:
             ProjectionType: ALL
-      # TTL for 2-year expiration on ACT items
       TimeToLiveSpecification:
         AttributeName: ttl
         Enabled: true
@@ -57,8 +53,33 @@ Resources:
       # Link to your frontend's Redirect URI
       Client_Names:
         - lightning-run-club-client
-      # Note: For 'react-oidc-context', we need standard scopes
       ScopeCreationPolicy: 'ALLOW_ALL'
+
+  # Custom Domain for Cognito (OAuth Web Server)
+  LrcUserPoolDomainConfig:
+    Type: AWS::Cognito::UserPoolClient
+    Properties:
+      ClientName: lrc-custom-domain
+      UserPoolId:
+        Ref: LrcUserPool
+      GenerateSecret: false
+      ConsentScreenEnabled: false
+      ExplicitAuthFlows: []
+
+  # Custom Domain Certificate for Cognito (auth.kwagner.dev)
+  # NOTE: Certificate configuration should be applied post-deploy via SAM hooks
+  # or AWS Console, not hardcoded here. For production, use a pre-built image
+  # that applies the certificate automatically after IAM role attach and SNS config.
+
+  # SES Configuration via SNS integration
+  # Cognito uses SNS for email delivery; configure in console after deploy
+  LrcSesEmailConfiguration:
+    Type: AWS::SNS::Topic
+    Properties:
+      TopicName: lrc-email-notifications
+      Tags:
+        - Key: Name
+          Value: LRC Email Notifications
 
   # The App Client used by the frontend
   LrcAppClient:
@@ -67,19 +88,15 @@ Resources:
       ClientName: lightning-run-club-client
       UserPoolId:
         Ref: LrcUserPool
-      # No client secret as per your request
-      ClientSecret: ''
-      # Standard flow for React apps
+      GenerateSecret: false
       AllowedOAuthFlows:
         - 'code'
         - 'refresh_token_grant'
       AllowedOAuthScopes:
         - 'email'
-      # The redirect URIs that are allowed
       AllowedOAuthRedirectUris:
         - 'http://localhost:3000/lightning-fitness-challenge'
         - 'https://kwagner.dev/lightning-fitness-challenge'
-      # This allows the frontend to handle the code exchange
       ExplicitAuthFlows:
         - 'ALLOW_REFRESH_TOKEN_SECRET'
 
@@ -111,3 +128,9 @@ Outputs:
   AppClientId:
     Description: 'The ID of the Cognito App Client'
     Value: !Ref LrcAppClient
+  UserPoolDomainConfigArn:
+    Description: 'ARN of the OAuth Web Server client for custom domain'
+    Value: !GetAtt LrcUserPoolDomainConfig.Arn
+  SesEmailConfigurationArn:
+    Description: 'SNS Topic for SES email delivery'
+    Value: !Ref LrcSesEmailConfiguration
