@@ -13,17 +13,8 @@ tags: [deployment, infrastructure]
 
 ## Infrastructure Setup (Manual AWS Console)
 
-**Cognito**: See [`cognito.md`](../../infra/cognito.md) for details.
-
-**Amazon DynamoDB** (`DynamoDB Console`):
-
-1. Go to [AWS DynamoDB Console](https://console.aws.amazon.com/dynamodb/)
-2. Create table:
-   - Table name: `lfc`
-   - Partition key: `stravaMemberId` (String)
-   - Sort key: `itemType` (String) — see [`../infra/dynamodb-setup.md`](../infra/dynamodb-setup.md) for all item types
-   - Stream enabled: **Yes** (new and old image) for audit trail
-3. Enable Auto-scaling (read capacity 5, write capacity 2 initially, scale based on utilization)
+**Cognito**: See [`cognito.md`](../infra/cognito.md) for details.
+**Amazon DynamoDB**: See [`dynamodb.md`](../infra/dynamodb.md) for details.
 
 **S3 Buckets** (`S3 Console`):
 
@@ -85,7 +76,7 @@ Each Lambda function needs environment variables configured in its **Configurati
 | `LRC_REGION`         | [your-region]                                       | AWS region (e.g., us-east-1)   |
 | `LRC_USER_POOL_ID`   | See Cognito setup                                   | From Cognito console           |
 | `LRC_API_URL`        | https://[api-id].execute-api.[region].amazonaws.com | API Gateway endpoint           |
-| `LRC_DYNAMODB_TABLE` | lfc                                                  | DynamoDB table name            | ([`../../infra/dynamodb.md`](../../infra/dynamodb.md))
+| `LRC_DYNAMODB_TABLE` | lfc                                                 | DynamoDB table name            | ([`../../infra/dynamodb.md`](../../infra/dynamodb.md)) |
 | `LFC_ARCHIVE_BUCKET` | lfc-archive.kwagner.dev                             | Archive S3 bucket              |
 | `LFC_RESULTS_BUCKET` | lfc-results.kwagner.dev                             | Results S3 bucket              |
 | `STRAVA_CLIENT_ID`   | [from-strava]                                       | From Strava OAuth app settings |
