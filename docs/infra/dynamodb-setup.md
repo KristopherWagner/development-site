@@ -1,71 +1,121 @@
 ---
 type: Infrastructure
 title: DynamoDB Table Configuration
-description: Schema and configuration for the LRC DynamoDB table used by the Lightning Run Club system.
-resource: infra/template.yaml
-tags: [database, dynamodb, lightning-run-club]
-generated: { by: claude-code, at: 2026-10-08T15:15:00Z }
-verified: { by: human:kristopher, at: 2026-10-08T15:20:00Z }
+description: Schema and configuration for the LFC DynamoDB table used by the Lightning Fitness Club system.
+resource: DynamoDB Tables
+tags: [database, dynamodb, lightning-fitness-challenge]
 ---
 
-# DynamoDB Table Configuration
+# DynamoDB Table `lfc`
 
-This document describes the AWS DynamoDB table `lrc` deployed via [`infra/template.yaml`](../template.yaml).
+This document describes the AWS DynamoDB table created manually via the AWS Console for the Lightning Fitness Club (LFC) automation system.
 
 ## Table Properties
 
-| Property         | Value           | Source                                            |
-| ---------------- | --------------- | ------------------------------------------------- |
-| **Table Name**   | `lrc`           | [`infra/template.yaml`](../template.yaml) Line 2. |
-| **Billing Mode** | PAY_PER_REQUEST | Default for cost efficiency (N1).                 |
-| **Region**       | us-east-1       | Deployment region per infrastructure setup.       |
+| Property           | Value                    | Notes                                                  |
+| ------------------ | ------------------------ | ------------------------------------------------------ |
+| **Table Name**     | `lfc`                    | Used by all Lambda functions and API Gateway           |
+| **Billing Mode**   | PAY_PER_REQUEST          | On-demand pricing, free tier compliant for ~65 members |
+| **Region**         | us-east-1                | N. Virginia                                            |
+| **Stream Enabled** | Yes (new and old images) | Captures write/delete events for audit trail           |
 
 ## Primary Key Structure
 
-The table uses a composite primary key:
+The table uses a **composite primary key** with two attributes:
 
-| Attribute Name | Attribute Type | Role                 |
-| -------------- | -------------- | -------------------- |
-| `PK`           | String         | Partition Key (HASH) |
-| `SK`           | String         | Sort Key (RANGE)     |
+| Attribute Name   | Attribute Type | Role                 | Description                                             |
+| ---------------- | -------------- | -------------------- | ------------------------------------------------------- |
+| `stravaMemberId` | String         | Partition Key (HASH) | Athlete's Strava ID (unique across all athletes)        |
+| `itemType`       | String         | Sort Key (RANGE)     | Type of data item (PROFILE, TOKEN, ACT, WEEKMILE, etc.) |
 
-### Item Types by PK#SK
+### What is `itemType`?
 
-| PK Pattern            | SK Pattern                 | Purpose                      | TTL Attribute |
-| --------------------- | -------------------------- | ---------------------------- | ------------- |
-| `MEMBER#{athlete_id}` | `PROFILE`                  | Member profile data          | No            |
-| `MEMBER#{athlete_id}` | `TOKEN`                    | OAuth tokens (encrypted)     | No            |
-| `MEMBER#{athlete_id}` | `ALIAS#{legacy_name}`      | Canonical member mapping     | No            |
-| `MEMBER#{athlete_id}` | `ACT#{activity_id}`        | Weekly activity records      | Yes (2 years) |
-| `MEMBER#{athlete_id}` | `WEEKMILE#{season}#{week}` | Weekly mile aggregates       | No            |
-| `MEMBER#{athlete_id}` | `STREAK`                   | Streak tracking              | No            |
-| `MEMBER#{athlete_id}` | `ACHV#{badge_id}`          | Awarded achievements/badges  | No            |
-| `GAME#{game_id}`      | `INFO`                     | Game information             | No            |
-| `WEEK#{week_key}`     | `GAMES`                    | Weekly game aggregates       | No            |
-| `SEASON#{yyyyyyyy}`   | `SUMMARY`                  | Per-member season aggregates | No            |
-| `RESULTS`             | `LATEST`                   | Latest results blob          | No            |
-| `CONFIG`              | `RULES`                    | Scoring rule parameters      | No            |
-| `CONFIG`              | `BADGES`                   | Achievement definitions      | No            |
-| `MIGRATION`           | `REPORT#{run_id}`          | Migration validation reports | No            |
+The `itemType` field acts like a folder selector. Each athlete's data is stored under their Strava ID, and the itemType determines which "sub-folder" the data goes into. This allows efficient querying:
 
-## Global Secondary Index (GSI)
+- Query by partition key alone (`stravaMemberId = 12345`) → Get all data for athlete #12345
+- Query by partition + sort key (`stravaMemberId = 12345`, `itemType = ACT`) → Get just that athlete's activities
 
-### GSI1: Weekly Aggregates Index
+### Item Types (Sort Key Values)
 
-- **Index Name**: `GSI1`
-- **Key Schema**:
-  - `week_key` (HASH)
-  - `PK` (RANGE)
-- **Projection Type**: ALL
-- **Purpose**: Enables the Scorer Lambda to pull weekly aggregates directly for efficient recompute operations.
+| itemType                   | Purpose                                                     | TTL Enabled   | Notes                                |
+| -------------------------- | ----------------------------------------------------------- | ------------- | ------------------------------------ |
+| `PROFILE`                  | Member profile data (name, email, avatar, club affiliation) | No            | Core identity record                 |
+| `TOKEN`                    | OAuth tokens (access_token, refresh_token)                  | No            | Encrypted at rest                    |
+| `ALIAS#{legacy_name}`      | Legacy name → canonical member mapping                      | No            | Enables legacy spreadsheet migration |
+| `ACT#{activity_id}`        | Weekly activity records (distance, type, date)              | Yes (2 years) | Raw Strava activities                |
+| `WEEKMILE#{season}#{week}` | Weekly mile aggregates for scoring                          | No            | Scoring calculation cache            |
+| `STREAK`                   | Current streak tracking                                     | No            | Lifetime streak data                 |
+| `ACHV#{badge_id}`          | Awarded achievements/badges                                 | No            | Badge metadata                       |
+| `GAME#{game_id}`           | Game information (opponent, date)                           | No            | Hockey game records                  |
+| `WEEK#{week_key}`          | Weekly game aggregates                                      | No            | Week summary                         |
+| `SEASON#{yyyyyyyy}`        | Per-member season aggregates                                | No            | Season totals                        |
+| `RESULTS`                  | Latest results blob                                         | No            | Current standings snapshot           |
+| `CONFIG`                   | Scoring rule parameters                                     | No            | Hard-coded configuration             |
+| `CONFIG.BADGES`            | Achievement definitions                                     | No            | Badge rules (JSON)                   |
+| `MIGRATIONREPORT#{run_id}` | Migration validation reports                                | No            | Legacy spreadsheet import results    |
+
+## Provisioned Throughput
+
+Since we're using PAY_PER_REQUEST billing mode, capacity scales automatically. Initial recommendations:
+
+| Setting                    | Recommended Value    | Notes                              |
+| -------------------------- | -------------------- | ---------------------------------- |
+| Read Capacity Units (RCU)  | Auto-scaling enabled | Start at 5 RCU-equivalent baseline |
+| Write Capacity Units (WCU) | Auto-scaling enabled | Start at 2 WCU-equivalent baseline |
+
+AWS will automatically scale based on utilization patterns. Monitor CloudWatch metrics and adjust if needed.
 
 ## Time-to-Live (TTL)
 
 - **Enabled**: Yes
 - **Attribute Name**: `ttl`
 - **Expiration**: 2 years from item creation/last update
-- **Applies to**: ACT (activity) items only
+- **Applies to**: `ACT` (activity) items only
+
+Activities older than 2 years are automatically purged to control storage costs.
+
+## Global Secondary Index (GSI)
+
+### GSI1: Weekly Aggregates Index
+
+| Property            | Value                                                                                        |
+| ------------------- | -------------------------------------------------------------------------------------------- |
+| **Index Name**      | `GSI1`                                                                                       |
+| **Key Schema**      | `week_key` (HASH), `stravaMemberId` (RANGE)                                                  |
+| **Projection Type** | ALL                                                                                          |
+| **Purpose**         | Enables efficient querying of weekly aggregates across all athletes for scoring computations |
+
+## Deployment Steps (Manual Console Setup)
+
+### 1. Create the Table
+
+1. Go to [AWS DynamoDB Console](https://console.aws.amazon.com/dynamodb/)
+2. Click **Create table**
+3. Configure:
+   - Table name: `lfc`
+   - Partition key: `stravaMemberId` (String)
+   - Sort key: `itemType` (String)
+   - Billing mode: On-demand (PAY_PER_REQUEST)
+   - Streams: Enabled with "New and old image"
+4. After table creation, go to **Streams** tab and add TTL attribute:
+   - Attribute name: `ttl`
+   - Select items with TTL: Type in field or use selector
+   - TTL type: Number (timestamp)
+
+### 2. Add TTL Setting for ACT Items
+
+1. Go to **Table settings** → **Time to live** tab
+2. Click **Add time to live attribute**
+3. Name: `ttl`
+4. Select items with TTL: Type `ACT#.*` or similar pattern
+5. Set expiration in days (730 = 2 years)
+
+### 3. Configure Streams for Auditing
+
+1. Go to **Table settings** → **Streams** tab
+2. Verify "New and old image" is selected
+3. This enables CloudWatch Logs to capture every item change
 
 ## Data Model Reference
 
-See [`../lightning-run-club/data-model.md`](../lightning-run-club/data-model.md) for the complete attribute schema and field descriptions.
+See [`../lightning-run-club/data-model.md`](../lightning-run-club/data-model.md) for the complete attribute schema and field descriptions per itemType.
