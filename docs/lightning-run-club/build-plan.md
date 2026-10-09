@@ -27,17 +27,17 @@ tags: [deployment, infrastructure]
 
 **S3 Buckets** (`S3 Console`):
 
-1. Create `LRC-Archive` bucket:
-   - Bucket name: `lrc-archive.kwagner.dev`
+1. Create `LFC-Archive` bucket:
+   - Bucket name: `lfc-archive.kwagner.dev`
    - Access control: Block all public access (private only)
    - Default encryption: SSE-S3 enabled
    - Versioning: **Disabled** (immutable archive via lifecycle rules to delete after 1 year)
-2. Create `LRC-Uploads` bucket:
-   - Bucket name: `lrc-uploads.kwagner.dev`
+2. Create `LFC-Results` bucket:
+   - Bucket name: `lfc-results.kwagner.dev`
    - Access control: Block all public access (private only)
    - Default encryption: SSE-S3 enabled
-   - Versioning: **Enabled** (versioned archive bucket for uploads)
-   - Lifecycle rule: Move objects older than 90 days to cold storage
+   - Versioning: **Enabled** (results storage with version history for audit/recovery)
+   - Lifecycle rule: Overwrite weekly results JSON files each week
 
 **AWS Lambda Functions** (`Lambda Console`):
 Deploy each function via **Create function → Choose from AWS Marketplace** or **Author from scratch**:
@@ -47,7 +47,7 @@ Deploy each function via **Create function → Choose from AWS Marketplace** or 
    - Timeout: 300s (5 minutes)
    - Memory: 512 MB
    - Trigger: EventBridge rule `LRC-Collector-Schedule` (every 6 hours)
-   - Permissions: Strava API, DynamoDB, S3 (upload bucket)
+   - Permissions: Strava API, DynamoDB, S3 (results bucket)
 
 2. **Scorer Lambda** (`lrc-scorer`):
    - Runtime: Python 3.12
@@ -86,8 +86,8 @@ Each Lambda function needs environment variables configured in its **Configurati
 | `LRC_USER_POOL_ID`   | See Cognito setup                                   | From Cognito console           |
 | `LRC_API_URL`        | https://[api-id].execute-api.[region].amazonaws.com | API Gateway endpoint           |
 | `LRC_DYNAMODB_TABLE` | lfc                                                  | DynamoDB table name            | ([`../../infra/dynamodb.md`](../../infra/dynamodb.md))
-| `LRC_ARCHIVE_BUCKET` | lrc-archive.kwagner.dev                             | Archive S3 bucket              |
-| `LRC_UPLOADS_BUCKET` | lrc-uploads.kwagner.dev                             | Uploads S3 bucket              |
+| `LFC_ARCHIVE_BUCKET` | lfc-archive.kwagner.dev                             | Archive S3 bucket              |
+| `LFC_RESULTS_BUCKET` | lfc-results.kwagner.dev                             | Results S3 bucket              |
 | `STRAVA_CLIENT_ID`   | [from-strava]                                       | From Strava OAuth app settings |
 
 ### Security & Compliance

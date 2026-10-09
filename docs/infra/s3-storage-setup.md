@@ -34,8 +34,8 @@ Two S3 bucket patterns are referenced in the architecture:
 ## Bucket Naming Convention (Example)
 
 ```
-{account-id}-lrc-results       # Weekly results, archives, lifetime stats
-{account-id}-lrc-archive       # Versioned migration sources
+{account-id}-lfc-results       # Weekly results, archives, lifetime stats
+{account-id}-lfc-archive       # Versioned migration sources
 ```
 
 > **Note**: Actual bucket names are typically derived from AWS account ID and deployment region. See AWS SAM deploy output for exact naming.
@@ -53,7 +53,7 @@ Two S3 bucket patterns are referenced in the architecture:
       "Effect": "Allow",
       "Principal": "*",
       "Action": "s3:GetObject",
-      "Resource": "arn:aws:s3:::lrc-{account-id}/*",
+      "Resource": "arn:aws:s3:::lfc-{account-id}/*",
       "Condition": {
         "StringEquals": {
           "aws:username": "cognito-identity.amazonaws.com/*"
