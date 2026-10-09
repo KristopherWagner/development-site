@@ -18,7 +18,7 @@ The API Gateway is configured with **Cognito JWT authorizer**:
 
 | Property            | Value             | Source                                            |
 | ------------------- | ----------------- | ------------------------------------------------- |
-| **Authorizer Type** | Cognito User Pool | [`docs/infra/cognito-setup.md`](cognito-setup.md) |
+| **Authorizer Type** | Cognito User Pool | [`../cognito.md`](../cognito.md) |
 | **JWT Validation**  | Enabled           | Enforces N3 (privacy: members-only access)        |
 | **Token Scope**     | email             | OAuth scope from Cognito client                   |
 
@@ -27,7 +27,7 @@ The API Gateway is configured with **Cognito JWT authorizer**:
 - **Protected Endpoints**: All results/history/badges endpoints
 - **No Public Buckets**: S3 buckets are private; no `NONE`-auth Function URLs
 - **Access Flow**:
-  1. Client authenticates via Cognito (see [`cognito-setup.md`](cognito-setup.md))
+  1. Client authenticates via Cognito (see [`../cognito.md`](../cognito.md))
   2. Returns JWT token
   3. API Gateway validates JWT → forwards to Scorer Lambda
 

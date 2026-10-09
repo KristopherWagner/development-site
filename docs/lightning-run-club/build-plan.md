@@ -13,7 +13,7 @@ tags: [deployment, infrastructure]
 
 ## Infrastructure Setup (Manual AWS Console)
 
-**Cognito**: See [`cognito-setup.md`](../../infra/cognito-setup.md) for details.
+**Cognito**: See [`cognito.md`](../../infra/cognito.md) for details.
 
 **Amazon DynamoDB** (`DynamoDB Console`):
 
