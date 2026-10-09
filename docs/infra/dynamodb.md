@@ -73,7 +73,3 @@ DynamoDB TTL is a table-level feature. When enabled, you must use application lo
 | **Key Schema**      | `week_key` (HASH), `stravaMemberId` (RANGE)                                                  |
 | **Projection Type** | ALL                                                                                          |
 | **Purpose**         | Enables efficient querying of weekly aggregates across all athletes for scoring computations |
-
-## Data Model Reference
-
-See [`../lightning-run-club/data-model.md`](../lightning-run-club/data-model.md) for the complete attribute schema and field descriptions per itemType.
