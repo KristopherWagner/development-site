@@ -111,9 +111,14 @@ Resources:
       Environment:
         Variables:
           TABLE_NAME: !Ref LrcTable
+          COGNITO_USER_POOL_ID: !Ref LrcUserPool
+          COGNITO_USER_POOL_CLIENT_ID: !Ref LrcAppClient
       Policies:
         - DynamoDBWritePolicy:
             TableName: !Ref LrcTable
+        - SSMAccessPolicy:
+            Resource:
+              - arn:aws:ssm:*:*:parameter/lrc/*
       Events:
         AuthCallback:
           Type: Api

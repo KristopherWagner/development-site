@@ -20,9 +20,10 @@ FROM_SENDER_NAME: "Kristopher Wagner <hello@kwagner.dev>"
 # 3. Verify email templates work with your SES configuration
 
 # Strava Integration
-STRAVA_CLIENT_ID: "YOUR_STRAVA_CLIENT_ID"
+STRAVA_CLIENT_ID: "YOUR_STRAVA_CLIENT_ID"  # from .env file or console output
 STRAVA_REDIRECT_URI: "https://auth.kwagner.dev/strava/callback"
 
 # Environment Variables for Lambda Functions (from SAM deploy outputs)
 AWS_REGION: "us-east-1"
 ENVIRONMENT: "production"
+
