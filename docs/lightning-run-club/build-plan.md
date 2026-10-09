@@ -21,14 +21,14 @@ tags: [deployment, infrastructure]
 Deploy each function via **Create function → Choose from AWS Marketplace** or **Author from scratch**:
 
 1. **Collector Lambda** (`lfc-collector`):
-   - Runtime: Python 3.12
+   - Runtime: Golang
    - Timeout: 300s (5 minutes)
    - Memory: 512 MB
    - Trigger: EventBridge rule `LFC-Collector-Schedule` (every 6 hours)
    - Permissions: Strava API, DynamoDB, S3 (results bucket)
 
 2. **Scorer Lambda** (`lfc-scorer`):
-   - Runtime: Python 3.12
+   - Runtime: Golang
    - Timeout: 300s
    - Memory: 512 MB
    - Trigger: EventBridge rule `LFC-Scorer-Schedule` (weekly)
