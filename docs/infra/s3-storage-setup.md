@@ -10,7 +10,7 @@ verified: { by: human:kristopher, at: 2026-10-08T15:20:00Z }
 
 # S3 Storage Configuration
 
-This document describes the AWS S3 storage configuration for the Lightning Run Club system.
+This document describes the AWS S3 storage configuration for the Lightning Fitness Club system.
 
 ## Bucket Types
 
