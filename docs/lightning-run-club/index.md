@@ -1,8 +1,8 @@
 ---
+okf_version: 0.2
 type: Directory Listing
 title: Lightning Run Club Automation Design
 description: Design specifications for the Lightning Run Club's automated tracker.
-resource: 
 tags: [architecture, summary, project-overview]
 ---
 
