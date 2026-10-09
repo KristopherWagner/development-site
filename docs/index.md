@@ -9,7 +9,7 @@ This directory contains the core documentation and templates for the development
 
 ## Specifications
 
-- [OKF Specification](OKF_SPEC.md) - The Open Knowledge Format specification.
+- [OKF Specification](https://github.com/GoogleCloudPlatform/open-knowledge-format/blob/main/SPEC.md) - The Open Knowledge Format specification.
 
 ## Knowledge Bundles
 
@@ -26,8 +26,8 @@ This directory contains the core documentation and templates for the development
 ## Infrastructure
 
 - [API Gateway & HTTP API](infra/api-gateway-setup.md) - Configuration for the AWS API Gateway with Cognito JWT authorizer.
-- [Cognito Setup](infra/cognito.md) - Configuration for Cognito used by lightning-fitness-challenge.
-- [DynamoDB Table](infra/dynamodb.md) - Schema and configuration for the LFC DynamoDB table.
+- [Cognito](infra/cognito.md) - Configuration for Cognito used by lightning-fitness-challenge.
+- [DynamoDB](infra/dynamodb.md) - Schema and configuration for the LFC DynamoDB table.
 - [Environment Variables](environment-variables.md) - Description of how environment variables are stored and referenced.
 - [EventBridge Scheduler](infra/eventbridge-scheduler-setup.md) - Configuration for weekly data collection triggers.
 - [S3 Storage](infra/s3-storage-setup.md) - Configuration for results and archive buckets.
