@@ -1,53 +1,56 @@
 ---
 type: Infrastructure
 title: Amazon Cognito Setup
-description: Configuration for the Cognito User Pool and App Client used by the lightning-fitness-challenge route.
-resource: infra/template.yaml
-tags: [auth, cognito, lightning-fitness-challenge]
-generated: { by: claude-code, at: 2026-10-08T15:00:00Z }
-verified: { by: human:kristopher, at: 2026-10-08T15:20:00Z }
+description: Configuration for the Cognito User Pool and App Client used by authentication.
+resource: Amazon Cognito
+tags: [auth, cognito]
 ---
 
 # Amazon Cognito Configuration
 
-This document describes the AWS Cognito User Pool and App Client setup deployed via [`infra/template.yaml`](../template.yaml).
+This document describes the AWS Cognito User Pool and App Client setup deployed in the AWS console.
 
 ## User Pool Configuration
 
-The Cognito User Pool is defined in [`infra/template.yaml`](../template.yaml) with the following properties:
-
-| Property                 | Value                                                           |
-| ------------------------ | --------------------------------------------------------------- |
-| **User Pool Name**       | `lrc-user-pool`                                                 |
-| **Username Attribute**   | `email`                                                         |
-| **Auto-confirm Sign-up** | `true`                                                          |
-| **MFA Configuration**    | `OFF`                                                           |
-| **Password Policy**      | 16+ characters, lowercase, numbers, uppercase, symbols required |
+| Property                 | Value               |
+| ------------------------ | ------------------- |
+| **User Pool Name**       | `User pool - -9nj7` |
+| **Username Attribute**   | `email`             |
+| **Auto-confirm Sign-up** | `true`              |
+| **MFA Configuration**    | `OFF`               |
 
 ## App Client Configuration
 
-The App Client configured for the frontend application:
-
 | Property                | Value                         |
 | ----------------------- | ----------------------------- |
-| **Client Name**         | `lightning-run-club-client`   |
+| **Client Name**         | `Lightning Fitness Challenge` |
 | **Client Secret**       | Not enabled (empty string)    |
 | **OAuth Flows**         | `code`, `refresh_token_grant` |
 | **Explicit Auth Flows** | `ALLOW_REFRESH_TOKEN_SECRET`  |
 
-### Allowed OAuth Redirect URIs
+### OAuth Redirect URIs
 
-The following redirect URIs are whitelisted:
+| Type                      | URL                                                                                                    |
+| ------------------------- | ------------------------------------------------------------------------------------------------------ |
+| **Allowed callback URLs** | `http://localhost:3000/lightning-fitness-challenge`, `https://kwagner.dev/lightning-fitness-challenge` |
+| **Default redirect URL**  | `https://kwagner.dev/lightning-fitness-challenge`                                                      |
+| **Allowed sign-out URLs** | `https://kwagner.dev`                                                                                  |
 
-- `http://localhost:3000/lightning-fitness-challenge`
-- `https://kwagner.dev/lightning-fitness-challenge`
+## Domain & Email Configuration
 
-### Allowed OAuth Scopes
+| Property               | Value                                 |
+| ---------------------- | ------------------------------------- |
+| **Custom Domain**      | `https://auth.kwagner.dev`            |
+| **Branding Version**   | Managed login                         |
+| **Email Provider**     | Amazon SES                            |
+| **SES Region**         | US East (N. Virginia)                 |
+| **Verified Domain**    | `kwagner.dev`                         |
+| **FROM email address** | `hello@kwagner.dev`                   |
+| **FROM sender name**   | Kristopher Wagner <hello@kwagner.dev> |
+| **Reply-To address**   | -                                     |
 
-- `email`
+## SMS Configuration
 
-## Lifecycle Notes
-
-- **Account Creation**: Sign-up is automatically enabled with auto-confirm. When a user signs up, they receive an email from `hello@kwagner.dev`.
-- **Manual Provisioning**: No manual provisioning workflow; accounts are created through the standard sign-up flow.
-- **Region**: Deployed in `us-east-1`.
+| Setting         | Value               |
+| --------------- | ------------------- |
+| **SMS Enabled** | No (not configured) |
