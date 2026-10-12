@@ -21,3 +21,4 @@ These documents describe the AWS services configured in the production environme
 - [DynamoDB Tables](dynamodb.md) — Schema and configuration for the LFC DynamoDB table.
 - [S3 Buckets](s3.md) — Actual AWS S3 bucket settings as configured in the AWS Console.
 - [EventBridge Scheduler](eventbridge-scheduler-setup.md) — Configuration for EventBridge Scheduler triggering collector Lambda weekly.
+- [Strava Collector Lambda](strava-collector-setup.md) — Lambda function that collects Strava activities from authenticated members.
