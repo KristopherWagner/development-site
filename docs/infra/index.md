@@ -12,13 +12,9 @@ This directory contains documentation for AWS infrastructure components used by 
 
 ## Overview
 
-These documents describe the AWS services configured in the production environment, including authentication, API Gateway, DynamoDB tables, S3 buckets, and EventBridge schedulers.
+These documents describe the AWS services configured in the production environment, including authentication, API Gateway, DynamoDB table, S3 buckets, and EventBridge schedulers.
 
 ## Resources
 
 - [Amazon Cognito Configuration](cognito.md) — Configuration for the Cognito User Pool and App Client used by authentication.
-- [API Gateway Setup](api-gateway-setup.md) — AWS API Gateway HTTP API configuration with Cognito JWT authorizer.
-- [DynamoDB Tables](dynamodb.md) — Schema and configuration for the LFC DynamoDB table.
-- [S3 Buckets](s3.md) — Actual AWS S3 bucket settings as configured in the AWS Console.
-- [EventBridge Scheduler](eventbridge-scheduler-setup.md) — Configuration for EventBridge Scheduler triggering collector Lambda weekly.
-- [Strava Collector Lambda](strava-collector-setup.md) — Lambda function that collects Strava activities from authenticated members.
+- [DynamoDB Table](dynamodb.md) — Schema and configuration for the LFC DynamoDB table.
