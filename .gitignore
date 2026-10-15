@@ -8,3 +8,5 @@ PR_DESCRIPTION.md
 .env*
 !.env.example
 .tanstack
+
+.aws*
