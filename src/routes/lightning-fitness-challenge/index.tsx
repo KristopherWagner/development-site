@@ -1,5 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router';
-import { useAuth, withAuthenticationRequired } from 'react-oidc-context';
+import { useAuth } from 'react-oidc-context';
 
 import Footer from '../../components/Footer';
 import HomeLink from '../../components/Footer/HomeLink';
@@ -8,6 +8,17 @@ import Seo from '../../components/SEO';
 
 function LightningFitnessChallenge() {
   const auth = useAuth();
+
+  if (!auth.isAuthenticated) {
+    return (
+      <Header heading="Lightning Fitness Challenge">
+        <p>
+          Welcome, please{' '}
+          <button onClick={() => auth.signinRedirect()}>Sign in</button>
+        </p>
+      </Header>
+    );
+  }
 
   return (
     <>
@@ -19,11 +30,14 @@ function LightningFitnessChallenge() {
       />
 
       <Header heading="Lightning Fitness Challenge">
-        <p>Success! Thanks for signing in</p>
+        <p>
+          Success! Thanks for signing in, you'll need to authorize Strava now.
+        </p>
       </Header>
 
       <main>
-        <button onClick={() => auth.removeUser()}>Sign out</button>
+        Todo: Add Strava authorization and display the Lightning Fitness
+        Challenge content here.
       </main>
 
       <Footer>
@@ -33,23 +47,6 @@ function LightningFitnessChallenge() {
   );
 }
 
-function RedirectingToLogin() {
-  return (
-    <>
-      <Header heading="Lightning Fitness Challenge">
-        <p>Redirecting to the login page...</p>
-      </Header>
-    </>
-  );
-}
-
-const LightningFitnessChallengeRoute = withAuthenticationRequired(
-  LightningFitnessChallenge,
-  {
-    OnRedirecting: () => <RedirectingToLogin />,
-  },
-);
-
 export const Route = createFileRoute('/lightning-fitness-challenge/')({
-  component: LightningFitnessChallengeRoute,
+  component: LightningFitnessChallenge,
 });
