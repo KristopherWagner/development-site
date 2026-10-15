@@ -1,0 +1,87 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Cognito User Pool and App Client for Lightning Fitness Challenge
+
+Parameters:
+  DomainName:
+    Type: String
+    Description: 'The custom domain for Cognito (e.g., auth.lfc.com)'
+    Default: 'auth.kwagner.dev'
+
+Resources:
+  LFCUserPool:
+    Type: AWS::Cognito::UserPool
+    Properties:
+      UserPoolName: LFC-Runners
+      UsernameAttributes:
+        - email
+      Policies:
+        PasswordPolicy:
+          MinimumLength: 16
+          PasswordHistorySize: 2
+          RequireLowercase: true
+          RequireUppercase: true
+          RequireNumbers: true
+          RequireSymbols: true
+          TemporaryPasswordValidityDays: 7
+      MfaConfiguration: 'OPTIONAL'
+      EmailConfiguration:
+        EmailSendingAccount: DEVELOPER
+        From: 'Kristopher Wagner <hello@kwagner.dev>'
+        SourceArn: arn:aws:ses:us-east-1:575108915575:identity/hello@kwagner.dev
+      AdminCreateUserConfig:
+        AllowAdminCreateUserOnly: true
+
+  LFCUserPoolClient:
+    Type: AWS::Cognito::UserPoolClient
+    Properties:
+      AllowedOAuthFlows:
+        - code
+      AllowedOAuthFlowsUserPoolClient: true
+      AllowedOAuthScopes:
+        - email
+        - openid
+        - profile
+      CallbackURLs:
+        - http://localhost:3000/lightning-fitness-challenge
+        - https://kwagner.dev/lightning-fitness-challenge
+      ClientName: Lightning Fitness Challenge
+      DefaultRedirectURI: https://kwagner.dev/lightning-fitness-challenge
+      ExplicitAuthFlows:
+        - ALLOW_USER_PASSWORD_AUTH
+        - ALLOW_REFRESH_TOKEN_AUTH
+      LogoutURLs:
+        - http://localhost:3000
+        - https://kwagner.dev
+      PreventUserExistenceErrors: ENABLED
+      SupportedIdentityProviders:
+        - COGNITO
+      UserPoolId: !Ref LFCUserPool
+
+  LFCUserPoolDomain:
+    Type: AWS::Cognito::UserPoolDomain
+    Properties:
+      CustomDomainConfig:
+        CertificateArn: arn:aws:acm:us-east-1:575108915575:certificate/9c3ce001-1ff7-44e5-9884-dba1a3611ab8
+        SecurityPolicy: TLS_V1_2_2021
+      Domain: !Ref DomainName
+      ManagedLoginVersion: 2
+      UserPoolId: !Ref LFCUserPool
+
+  LFCUserPoolBranding:
+    Type: AWS::Cognito::ManagedLoginBranding
+    Properties:
+      ClientId: !GetAtt LFCUserPoolClient.ClientId
+      UseCognitoProvidedValues: true
+      UserPoolId: !Ref LFCUserPool
+
+Outputs:
+  UserPoolId:
+    Description: 'The ID of the Cognito User Pool'
+    Value: !Ref LFCUserPool
+  UserPoolClientId:
+    Description: 'The ID of the Cognito App Client'
+    Value: !GetAtt LFCUserPoolClient.ClientId
+  DomainName:
+    Description: 'The Custom Domain assigned to the User Pool'
+    Value: !Ref LFCUserPoolDomain
