@@ -14,7 +14,12 @@ function LightningFitnessChallenge() {
       <Header heading="Lightning Fitness Challenge">
         <p>
           Welcome, please{' '}
-          <button onClick={() => auth.signinRedirect()}>Sign in</button>
+          <button
+            aria-label="sign in through Amazon cognito"
+            onClick={() => auth.signinRedirect()}
+          >
+            Sign in
+          </button>
         </p>
       </Header>
     );
