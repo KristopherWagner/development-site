@@ -14,7 +14,8 @@ This directory contains the core documentation and templates for the development
 * [Routes Index](/routes/index.md) - Documentation of the file-based routing structure.
 
 ## Infrastructure
-* [Amazon Cognito Setup](cognito-setup.md) - Configuration details for Cognito used by lightning-fitness-challenge.
+* [Amazon Cognito Setup](cognito.md) - Configuration details for Cognito used by lightning-fitness-challenge.
+* [DynamoDB Setup](dynamodb.md) - Configuration details for DynamoDB tables used by lightning-fitness-challenge.
 
 ## Templates
 * [Pull Request Template](pull_request_template.md) - Standard template for new PRs.

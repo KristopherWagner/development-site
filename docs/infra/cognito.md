@@ -3,6 +3,7 @@ type: Infrastructure
 title: Amazon Cognito Setup
 description: Configuration details for the Amazon Cognito user pool and client used by the lightning-fitness-challenge route.
 tags: [auth, cognito, lightning-fitness-challenge]
+resource: infra/template.yaml
 generated: { by: ai:qwen3.5:9b, at: 2026-10-15T12:00:00Z }
 verified: { by: human:kristopher, at: 2026-10-15T12:00:00Z }
 ---
