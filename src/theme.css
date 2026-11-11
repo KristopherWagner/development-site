@@ -65,7 +65,7 @@ html {
       color: var(--text-focus);
       font-weight: bold;
       outline: none;
-      text-decoration: underline;
+      text-decoration: underline dotted;
     }
   }
 
