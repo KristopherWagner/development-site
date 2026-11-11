@@ -1,3 +1,4 @@
+import { imageFolder } from '../../constants';
 import styles from './Header.module.css';
 
 export default function Header({
@@ -7,6 +8,10 @@ export default function Header({
   return (
     <header className={styles.root}>
       <div className={styles.heading}>
+        <img
+          src={imageFolder + 'Kristopher.webp'}
+          alt="Kristopher Wagner headshot"
+        />
         <h1 tabIndex={-1} ref={(ref) => ref?.focus()}>
           {heading}
         </h1>

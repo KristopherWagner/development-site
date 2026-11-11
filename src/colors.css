@@ -1,4 +1,7 @@
 :root {
+  --color-hunter-green: oklch(0.3659 0.0359 173.58);
+  --color-cloud-white: oklch(0.9559 0.0146 102.46);
+
   --color-sand: oklch(0.9425 0.0068 97.36);
 
   --color-green-forest: oklch(0.2804 0.0709 125.79);
