@@ -9,9 +9,11 @@ export default function Header({
     <header className={styles.root}>
       <div className={styles.heading}>
         <img
-          src={imageFolder + 'Kristopher.webp'}
           alt="Kristopher Wagner headshot"
+          loading="lazy"
+          src={imageFolder + 'Kristopher.webp'}
         />
+
         <h1 tabIndex={-1} ref={(ref) => ref?.focus()}>
           {heading}
         </h1>
