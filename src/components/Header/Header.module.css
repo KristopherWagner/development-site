@@ -1,14 +1,14 @@
+div.heading,
+div.content {
+  max-width: var(--application-width);
+  margin: 0px auto;
+}
+
 .root {
   background-color: var(--color-hunter-green);
   margin: 0px auto;
   padding: 0.67rem 0;
   width: 100vw;
-
-  .heading,
-  .content {
-    max-width: var(--application-width);
-    margin: 0px auto;
-  }
 
   .heading {
     display: grid;

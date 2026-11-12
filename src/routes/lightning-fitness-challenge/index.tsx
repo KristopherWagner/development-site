@@ -11,17 +11,20 @@ function LightningFitnessChallenge() {
 
   if (!auth.isAuthenticated) {
     return (
-      <Header heading="Lightning Fitness Challenge">
-        <p>
-          Welcome, please{' '}
-          <button
-            aria-label="sign in through Amazon cognito"
-            onClick={() => auth.signinRedirect()}
-          >
-            Sign in
-          </button>
-        </p>
-      </Header>
+      <>
+        <Header>Lightning Fitness Challenge</Header>
+        <main>
+          <p>
+            Welcome, please{' '}
+            <button
+              aria-label="sign in through Amazon cognito"
+              onClick={() => auth.signinRedirect()}
+            >
+              Sign in
+            </button>
+          </p>
+        </main>
+      </>
     );
   }
 
@@ -34,13 +37,12 @@ function LightningFitnessChallenge() {
         url={'https://kwagner.dev' + Route.to}
       />
 
-      <Header heading="Lightning Fitness Challenge">
+      <Header>Lightning Fitness Challenge</Header>
+
+      <main>
         <p>
           Success! Thanks for signing in, you'll need to authorize Strava now.
         </p>
-      </Header>
-
-      <main>
         Todo: Add Strava authorization and display the Lightning Fitness
         Challenge content here.
       </main>

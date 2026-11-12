@@ -18,7 +18,8 @@ export default function NotFound() {
         imageUrl=""
         title="404 Not Found"
       />
-      <Header heading="Page not found">
+      <Header>Page not found</Header>
+      <main className={clsx('main', 'hyper-legible')}>
         <div className={styles.crow}>🐦‍⬛</div>
         <h2>Well, this is awkward</h2>
         <p>
@@ -26,8 +27,6 @@ export default function NotFound() {
           everywhere, but even with their legendary intelligence and
           problem-solving skills, they couldn't find what you're looking for.
         </p>
-      </Header>
-      <main className={clsx('main', 'hyper-legible')}>
         <p className={clsx(styles.instructions, 'cols-full')}>
           You can{' '}
           <Link aria-label="Return home" preload="intent" to={Route.to}>
