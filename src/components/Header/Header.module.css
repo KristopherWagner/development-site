@@ -1,9 +1,3 @@
-div.heading,
-div.content {
-  max-width: var(--application-width);
-  margin: 0px auto;
-}
-
 .root {
   background-color: var(--color-hunter-green);
   margin: 0px auto;
@@ -13,6 +7,8 @@ div.content {
   .heading {
     display: grid;
     grid-template-columns: min-content 2fr;
+    max-width: var(--application-width);
+    margin: 0px auto;
 
     img {
       border-radius: 50%;
@@ -26,25 +22,6 @@ div.content {
       font-weight: 300;
       line-height: 2.5rem;
       margin: auto 0px;
-    }
-  }
-
-  .content {
-    :last-child {
-      margin-block-end: 0px;
-    }
-
-    h2 {
-      color: var(--color-cloud-white);
-      font-size: 1.5rem;
-      font-weight: 400;
-      margin-block: 0.83rem;
-    }
-
-    p {
-      color: var(--color-cloud-white);
-      text-wrap: balance;
-      text-wrap: pretty;
     }
   }
 }
