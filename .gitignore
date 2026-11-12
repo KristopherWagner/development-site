@@ -10,3 +10,5 @@ PR_DESCRIPTION.md
 .tanstack
 
 .aws*
+
+memory/
