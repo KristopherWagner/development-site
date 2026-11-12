@@ -10,6 +10,7 @@ const config: Config = {
     'routeTree.gen.ts',
     '__root.tsx',
     '<rootDir>/src/index.tsx',
+    '<rootDir>/src/routes/',
   ],
   coverageProvider: 'v8',
   moduleFileExtensions: ['js', 'ts', 'tsx'],
