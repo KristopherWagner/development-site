@@ -28,10 +28,9 @@ export default function Recipe() {
   if (recipe == null) {
     return (
       <>
-        <Header heading="Not found">
-          <p>Recipe not found, check your url and try again.</p>
-        </Header>
+        <Header>Not found</Header>
         <main className={clsx('main', 'hyper-legible')}>
+          <p>Recipe not found, check your url and try again.</p>
           <p>
             Or you can{' '}
             <Link preload="intent" to={cookbookRoute.to}>
@@ -53,7 +52,8 @@ export default function Recipe() {
         title={recipe.title}
         url={`https://kwagner.dev/cookbook/recipes/${recipeName}`}
       />
-      <Header heading={recipe.title}>
+      <Header>{recipe.title}</Header>
+      <main className={clsx('main', 'hyper-legible')}>
         <h2>Overview</h2>
         <p>{recipe.description}</p>
         <ul>
@@ -67,8 +67,6 @@ export default function Recipe() {
             ))}
           </ul>
         </ul>
-      </Header>
-      <main className={clsx('main', 'hyper-legible')}>
         <h2>Ingredients</h2>
         <ul>
           {recipe.ingredients.map((ingredient) => (

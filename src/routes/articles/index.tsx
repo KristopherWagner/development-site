@@ -19,7 +19,8 @@ export default function Articles() {
         title="Kristopher's favorite articles"
         url={'https://kwagner.dev' + Route.to}
       />
-      <Header heading="Articles">
+      <Header>Articles</Header>
+      <main>
         <p>
           Below you'll find a list of my favorite articles (or in some cases
           products).
@@ -28,8 +29,6 @@ export default function Articles() {
           I am not an affiliate and I make no money from you reading any of
           these articles.
         </p>
-      </Header>
-      <main>
         <Grid className={styles.grid}>
           {articles.map((article) => (
             <CardLink

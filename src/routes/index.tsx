@@ -24,14 +24,13 @@ export default function IndexPage() {
         title="Kristopher Wagner's Development Site"
         url="https://kwagner.dev"
       />
-      <Header heading="Kristopher Wagner">
+      <Header>Kristopher Wagner</Header>
+      <main className={styles.body}>
         <p>
           This is my simple development website. The goal of this site is to
           share my hobbies and help people who share my interests learn from my
           successes and failures.
         </p>
-      </Header>
-      <main className={styles.body}>
         <Grid className={styles.grid}>
           <Card as="article" className="cols-lg">
             <h2>

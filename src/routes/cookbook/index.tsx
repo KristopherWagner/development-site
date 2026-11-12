@@ -19,13 +19,12 @@ export default function Cookbook() {
         title="Wagner Family Cookbook"
         url={'https://kwagner.dev' + Route.to}
       />
-      <Header heading="Cookbook">
+      <Header>Cookbook</Header>
+      <main className={styles.root}>
         <p>
           This page will slowly aggregate our favorite recipes. I'll (hopefully)
           add some fun features to the page over time as well.
         </p>
-      </Header>
-      <main className={styles.root}>
         <Grid>
           <h2 className="cols-full">Recipes</h2>
           {[...recipes].map((recipe) => (
