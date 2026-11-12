@@ -2,7 +2,7 @@ import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 
 import Cookbook from '.';
-import Recipe, { Route } from './$recipeName';
+import Recipe from './recipe';
 
 describe('cookbook page unit tests', () => {
   it('renders a list of recipes', () => {
@@ -15,17 +15,14 @@ describe('cookbook page unit tests', () => {
 
 describe('recipe page unit tests', () => {
   it('renders a not found page', () => {
-    render(<Recipe />);
+    render(<Recipe recipeName="non-existent" />);
     expect(
       screen.getByRole('link', { name: 'return to the cookbook' }),
     ).toBeInTheDocument();
   });
 
   it('renders a recipe', () => {
-    (Route.useParams as any).mockImplementation(() => ({
-      recipeName: 'walnut-pasta',
-    }));
-    render(<Recipe />);
+    render(<Recipe recipeName="walnut-pasta" />);
     expect(
       screen.getByRole('heading', { level: 1, name: 'Walnut Pasta' }),
     ).toBeInTheDocument();

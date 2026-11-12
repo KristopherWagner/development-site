@@ -10,20 +10,25 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as ArticlesIndexRouteImport } from './routes/articles/index'
+import { Route as ArticlesRouteImport } from './routes/articles'
+import { Route as WeddingRouteImport } from './routes/wedding'
 import { Route as CookbookIndexRouteImport } from './routes/cookbook/index'
 import { Route as CookbookRecipeNameRouteImport } from './routes/cookbook/$recipeName'
 import { Route as LightningFitnessChallengeIndexRouteImport } from './routes/lightning-fitness-challenge/index'
-import { Route as WeddingIndexRouteImport } from './routes/wedding/index'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ArticlesIndexRoute = ArticlesIndexRouteImport.update({
-  id: '/articles/',
-  path: '/articles/',
+const ArticlesRoute = ArticlesRouteImport.update({
+  id: '/articles',
+  path: '/articles',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WeddingRoute = WeddingRouteImport.update({
+  id: '/wedding',
+  path: '/wedding',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CookbookIndexRoute = CookbookIndexRouteImport.update({
@@ -42,71 +47,66 @@ const LightningFitnessChallengeIndexRoute =
     path: '/lightning-fitness-challenge/',
     getParentRoute: () => rootRouteImport,
   } as any)
-const WeddingIndexRoute = WeddingIndexRouteImport.update({
-  id: '/wedding/',
-  path: '/wedding/',
-  getParentRoute: () => rootRouteImport,
-} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/articles': typeof ArticlesRoute
+  '/wedding': typeof WeddingRoute
   '/cookbook/$recipeName': typeof CookbookRecipeNameRoute
-  '/articles/': typeof ArticlesIndexRoute
   '/cookbook/': typeof CookbookIndexRoute
   '/lightning-fitness-challenge/': typeof LightningFitnessChallengeIndexRoute
-  '/wedding/': typeof WeddingIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/articles': typeof ArticlesRoute
+  '/wedding': typeof WeddingRoute
   '/cookbook/$recipeName': typeof CookbookRecipeNameRoute
-  '/articles': typeof ArticlesIndexRoute
   '/cookbook': typeof CookbookIndexRoute
   '/lightning-fitness-challenge': typeof LightningFitnessChallengeIndexRoute
-  '/wedding': typeof WeddingIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/articles': typeof ArticlesRoute
+  '/wedding': typeof WeddingRoute
   '/cookbook/$recipeName': typeof CookbookRecipeNameRoute
-  '/articles/': typeof ArticlesIndexRoute
   '/cookbook/': typeof CookbookIndexRoute
   '/lightning-fitness-challenge/': typeof LightningFitnessChallengeIndexRoute
-  '/wedding/': typeof WeddingIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/articles'
+    | '/wedding'
     | '/cookbook/$recipeName'
-    | '/articles/'
     | '/cookbook/'
     | '/lightning-fitness-challenge/'
-    | '/wedding/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
-    | '/cookbook/$recipeName'
     | '/articles'
+    | '/wedding'
+    | '/cookbook/$recipeName'
     | '/cookbook'
     | '/lightning-fitness-challenge'
-    | '/wedding'
   id:
     | '__root__'
     | '/'
+    | '/articles'
+    | '/wedding'
     | '/cookbook/$recipeName'
-    | '/articles/'
     | '/cookbook/'
     | '/lightning-fitness-challenge/'
-    | '/wedding/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ArticlesRoute: typeof ArticlesRoute
+  WeddingRoute: typeof WeddingRoute
   CookbookRecipeNameRoute: typeof CookbookRecipeNameRoute
-  ArticlesIndexRoute: typeof ArticlesIndexRoute
   CookbookIndexRoute: typeof CookbookIndexRoute
   LightningFitnessChallengeIndexRoute: typeof LightningFitnessChallengeIndexRoute
-  WeddingIndexRoute: typeof WeddingIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -118,11 +118,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/articles/': {
-      id: '/articles/'
+    '/articles': {
+      id: '/articles'
       path: '/articles'
-      fullPath: '/articles/'
-      preLoaderRoute: typeof ArticlesIndexRouteImport
+      fullPath: '/articles'
+      preLoaderRoute: typeof ArticlesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/wedding': {
+      id: '/wedding'
+      path: '/wedding'
+      fullPath: '/wedding'
+      preLoaderRoute: typeof WeddingRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/cookbook/': {
@@ -146,23 +153,16 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LightningFitnessChallengeIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/wedding/': {
-      id: '/wedding/'
-      path: '/wedding'
-      fullPath: '/wedding/'
-      preLoaderRoute: typeof WeddingIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ArticlesRoute: ArticlesRoute,
+  WeddingRoute: WeddingRoute,
   CookbookRecipeNameRoute: CookbookRecipeNameRoute,
-  ArticlesIndexRoute: ArticlesIndexRoute,
   CookbookIndexRoute: CookbookIndexRoute,
   LightningFitnessChallengeIndexRoute: LightningFitnessChallengeIndexRoute,
-  WeddingIndexRoute: WeddingIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

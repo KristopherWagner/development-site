@@ -1,94 +1,13 @@
-import { createFileRoute, Link } from '@tanstack/react-router';
-import clsx from 'clsx';
+import { createFileRoute } from '@tanstack/react-router';
 
-import Footer from '../../components/Footer';
-import CookbookLink from '../../components/Footer/CookbookLink';
-import HomeLink from '../../components/Footer/HomeLink';
-import Header from '../../components/Header';
-import Seo from '../../components/SEO';
-import Tag from '../../components/Tag';
+import Recipe from '../../components/pages/cookbook/recipe';
 
-import { Route as cookbookRoute } from '.';
-import recipes from './recipes.json' with { type: 'json' };
-
-import styles from './cookbook.module.css';
-
-export default function Recipe() {
+function Component() {
   const { recipeName } = Route.useParams();
 
-  const recipe = recipes.find((r) => r.url === recipeName);
-
-  const pageFooter = (
-    <Footer>
-      <HomeLink />
-      <CookbookLink />
-    </Footer>
-  );
-
-  if (recipe == null) {
-    return (
-      <>
-        <Header>Not found</Header>
-        <main className={clsx('main', 'hyper-legible')}>
-          <p>Recipe not found, check your url and try again.</p>
-          <p>
-            Or you can{' '}
-            <Link preload="intent" to={cookbookRoute.to}>
-              return to the cookbook
-            </Link>
-            .
-          </p>
-        </main>
-        {pageFooter}
-      </>
-    );
-  }
-
-  return (
-    <>
-      <Seo
-        description={recipe.description}
-        imageUrl=""
-        title={recipe.title}
-        url={`https://kwagner.dev/cookbook/recipes/${recipeName}`}
-      />
-      <Header>{recipe.title}</Header>
-      <main className={clsx('main', 'hyper-legible')}>
-        <h2>Overview</h2>
-        <p>{recipe.description}</p>
-        <ul>
-          <li>Makes {recipe.servings}</li>
-          <li>Total time: {recipe.time}</li>
-          <ul className={styles['no-padding']}>
-            {recipe.tags.map((tag) => (
-              <Tag as="li" key={tag}>
-                {tag}
-              </Tag>
-            ))}
-          </ul>
-        </ul>
-        <h2>Ingredients</h2>
-        <ul>
-          {recipe.ingredients.map((ingredient) => (
-            <li key={ingredient.ingredient}>
-              {ingredient.quantity} {ingredient.unit} {ingredient.ingredient}
-            </li>
-          ))}
-        </ul>
-        <h2>Instructions</h2>
-        <ol>
-          {recipe.instructions.map((step) => (
-            <li className={styles.pretty} key={step}>
-              {step}
-            </li>
-          ))}
-        </ol>
-      </main>
-      {pageFooter}
-    </>
-  );
+  return <Recipe recipeName={recipeName} />;
 }
 
 export const Route = createFileRoute('/cookbook/$recipeName')({
-  component: Recipe,
+  component: Component,
 });

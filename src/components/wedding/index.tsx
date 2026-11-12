@@ -1,19 +1,19 @@
 import '@fontsource/montserrat';
 import '@fontsource/roboto';
-import { createFileRoute } from '@tanstack/react-router';
 
-import Seo from '../../components/SEO';
-
-import About from '../../components/wedding/About';
-import Covid from '../../components/wedding/Covid';
-import EventDetails from '../../components/wedding/EventDetails';
-import Faq from '../../components/wedding/FAQ';
-import Navigation from '../../components/wedding/Navigation';
-import Parallax from '../../components/wedding/Parallax';
-import Schedule from '../../components/wedding/Schedule';
-import Section from '../../components/wedding/Section';
-import Travel from '../../components/wedding/Travel';
 import { imageFolder } from '../../constants';
+
+import Seo from '../SEO';
+
+import About from './About';
+import Covid from './Covid';
+import EventDetails from './EventDetails';
+import Faq from './FAQ';
+import Navigation from './Navigation';
+import Parallax from './Parallax';
+import Schedule from './Schedule';
+import Section from './Section';
+import Travel from './Travel';
 
 import styles from './wedding.module.css';
 
@@ -104,7 +104,3 @@ export default function WeddingPage() {
     </>
   );
 }
-
-export const Route = createFileRoute('/wedding/')({
-  component: WeddingPage,
-});
