@@ -37,15 +37,12 @@ describe('Header component tests', () => {
     const { container } = render(<Header />);
     const headerElement = container.querySelector('header');
 
-    // Verify the header element is rendered and contains children
     expect(headerElement).not.toBeNull();
   });
 
   it('renders with a React element child (JSX fragment)', () => {
-    // This simulates having a JSX fragment or other children passed
     render(<Header>{<span className="custom-child">Test</span>}</Header>);
 
-    // The content should still be present in the h1
     expect(screen.getByRole('heading')).toBeInTheDocument();
   });
 
@@ -86,9 +83,12 @@ describe('Header component tests', () => {
   });
 
   it('handles special characters and nested elements in children', () => {
-    render(<Header>Special: <span>Hello</span></Header>);
+    render(
+      <Header>
+        Special: <span>Hello</span>
+      </Header>,
+    );
 
-    // Should render safely with nested elements
     expect(screen.getByRole('heading')).toHaveTextContent('Hello');
   });
 });
