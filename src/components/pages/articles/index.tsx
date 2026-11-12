@@ -1,11 +1,10 @@
-import { createFileRoute } from '@tanstack/react-router';
-
-import Footer from '../../components/Footer';
-import HomeLink from '../../components/Footer/HomeLink';
-import Grid from '../../components/Grid';
-import { CardLink } from '../../components/Grid/Card';
-import Header from '../../components/Header';
-import Seo from '../../components/SEO';
+import { Route } from '../../../routes/articles';
+import Footer from '../../Footer';
+import HomeLink from '../../Footer/HomeLink';
+import Grid from '../../Grid';
+import { CardLink } from '../../Grid/Card';
+import Header from '../../Header';
+import Seo from '../../SEO';
 
 import articles from './articles.json' with { type: 'json' };
 import styles from './articles.module.css';
@@ -52,7 +51,3 @@ export default function Articles() {
     </>
   );
 }
-
-export const Route = createFileRoute('/articles/')({
-  component: Articles,
-});

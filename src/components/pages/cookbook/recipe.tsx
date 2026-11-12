@@ -1,0 +1,89 @@
+import { Link } from '@tanstack/react-router';
+import clsx from 'clsx';
+
+import { Route as cookbookRoute } from '../../../routes/cookbook';
+
+import Footer from '../../Footer';
+import CookbookLink from '../../Footer/CookbookLink';
+import HomeLink from '../../Footer/HomeLink';
+import Header from '../../Header';
+import Seo from '../../SEO';
+import Tag from '../../Tag';
+
+import recipes from './recipes.json' with { type: 'json' };
+
+import styles from './cookbook.module.css';
+
+export default function Recipe({ recipeName }: { recipeName: string }) {
+  const recipe = recipes.find((r) => r.url === recipeName);
+
+  const pageFooter = (
+    <Footer>
+      <HomeLink />
+      <CookbookLink />
+    </Footer>
+  );
+
+  if (recipe == null) {
+    return (
+      <>
+        <Header>Not found</Header>
+        <main className={clsx('main', 'hyper-legible')}>
+          <p>Recipe not found, check your url and try again.</p>
+          <p>
+            Or you can{' '}
+            <Link preload="intent" to={cookbookRoute.to}>
+              return to the cookbook
+            </Link>
+            .
+          </p>
+        </main>
+        {pageFooter}
+      </>
+    );
+  }
+
+  return (
+    <>
+      <Seo
+        description={recipe.description}
+        imageUrl=""
+        title={recipe.title}
+        url={`https://kwagner.dev/cookbook/recipes/${recipeName}`}
+      />
+      <Header>{recipe.title}</Header>
+      <main className={clsx('main', 'hyper-legible')}>
+        <h2>Overview</h2>
+        <p>{recipe.description}</p>
+        <ul>
+          <li>Makes {recipe.servings}</li>
+          <li>Total time: {recipe.time}</li>
+          <ul className={styles['no-padding']}>
+            {recipe.tags.map((tag) => (
+              <Tag as="li" key={tag}>
+                {tag}
+              </Tag>
+            ))}
+          </ul>
+        </ul>
+        <h2>Ingredients</h2>
+        <ul>
+          {recipe.ingredients.map((ingredient) => (
+            <li key={ingredient.ingredient}>
+              {ingredient.quantity} {ingredient.unit} {ingredient.ingredient}
+            </li>
+          ))}
+        </ul>
+        <h2>Instructions</h2>
+        <ol>
+          {recipe.instructions.map((step) => (
+            <li className={styles.pretty} key={step}>
+              {step}
+            </li>
+          ))}
+        </ol>
+      </main>
+      {pageFooter}
+    </>
+  );
+}
